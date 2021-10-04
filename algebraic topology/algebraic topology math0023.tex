@@ -1,0 +1,56 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{centernot}
+
+\begin{document}
+
+
+\title{\textbf{Algebraic Topology - MATH0023}}
+\author{\textbf{Based on lectures by Prof FEA Johnson}\\ Notes taken by Imran Radzi}
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+Notes based on the Autumn 2021 Algebraic Topology lectures by Prof FEA Johnson.
+\begingroup
+\let\cleardoublepage\clearpage
+\tableofcontents
+\endgroup
+\newpage
+\pagenumbering{arabic}
+
+\vspace{12pt}
+
+\section{Simplicial complexes}
+
+\noindent\textbf{Definition.} A \textit{simplicial complex} $X$ is a pair $(V_X,\mathcal{S}_X)$ where $V_X$ denotes the vertex set of $X$ and $\mathcal{S}_X$ is the set of
+\textit{finite, non-empty} subsetse of $V_X$ satisfying
+\begin{enumerate}
+	\item $\forall v\in V_X$, then $\{v\}\in\mathcal{S}_X$
+	\item If $\sigma\in\mathcal{S}_X, \,\tau\subset\sigma, \,\tau\neq\emptyset$, then $\tau\in\mathcal{S}_X$. 
+\end{enumerate}
+$\mathcal{S}_X$ is called the set of \textit{simplices} of $X$. \\
+
+\vspace{12pt}
+
+\noindent\textbf{Examples.} \\
+
+\noindent A standard 1-simplex, denoted by $\Delta^1$ is simply the line segment (or usually denoted by $I$). 
+\[V_{\Delta^1}=\{0,1\}\] \[\mathcal{S}_{\Delta^1}=\{\{0\},\{1\},\{0,1\}\}\]
+
+\vspace{12pt}
+
+\noindent A standard 2-simplex, denoted by $\Delta^2$ is the equilateral triangle.
+\[V_{\Delta^2}=\{0,1,2\}\] \[\mathcal{S}_{\Delta^2}=\{\{0\},\{1\},\{2\},\{0,1\},\{0,2\},\{1,2\},\{0,1,2\}\}\]
+
+\vspace{12pt}
+
+In general, the \textit{standard $n$-simplex} $\Delta^n$, is $\Delta^n=(V_{\Delta^n},\mathcal{S}_{\Delta^n})$ where
+\[V_{\Delta^n}=\{0,1,\ldots,n\}\] \[\mathcal{S}_{\Delta^n}=\{\alpha:\alpha\subset\{0,\ldots,n\}, \,\alpha\neq\emptyset\}\]
+
+
+
+
+\end{document}
