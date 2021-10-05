@@ -1,0 +1,169 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{tikz-cd}
+
+\theoremstyle{definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{eg}{Example}
+
+\begin{document}
+
+
+\title{\textbf{Multivariable Analysis - MATH0019}}
+\author{\textbf{Based on lectures by Prof Yiannis Petridis}\\ Notes taken by Imran Radzi}
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+Notes based on the Autumn 2021 Multivariable Analysis lectures by Prof Yiannis Petridis.
+
+\begingroup
+\let\cleardoublepage\clearpage
+\tableofcontents
+\endgroup
+\newpage
+\pagenumbering{arabic}
+
+\section{Review of Euclidean space and some linear algebra}
+\subsection{Euclidean space}
+Recall the \emph{Euclidean $n$-space} $\mathbb{R}^n$ \[\mathbb{R}^n=\{(x^1,x^2,\ldots,x^n)\,:\,x^i\in\mathbb{R}\}\]
+Note that use of superscripts instead of subscripts. We also have the \emph{Euclidean norm} given by \[|x|=\Bigl((x^1)^2+\ldots+(x^n)^2\Bigr)^{\frac{1}{2}}\]
+and the \emph{inner product} \[x\cdot y=\sum_{i=1}^n x^i\cdot y^i\] where \[x=(x^1,\ldots,x^n)\] \[y=(y^1,\ldots,y^n)\]
+
+\noindent Recall the \emph{standard basis} \[\{e_1,e_2,\ldots,e_n\}\] where $e_i\in\mathbb{R}^n$ where the only non-zero component is the $i^{\text{th}}$ component whose value is 1.
+Hence we can represent $x\in\mathbb{R}^n$ as \[x=\sum_{i=1}^n x^i e_i\]
+
+\begin{proposition} \hfill
+	\begin{enumerate}
+		\item $|x|\geq0,\,|x|=0\iff x=0$
+		\item $|x\cdot y|\leq|x||y|$ \hfill (Cauchy-Schwarz inequality)
+		\item $|x+y|\leq|x|+|y|$ \hfill (Triangle inequality)
+		\item $|a\cdot x|=|a||x|$ \hfill (for $a\in\mathbb{R})$
+		\item $x\cdot y=y\cdot x$
+	\end{enumerate}
+\end{proposition}
+
+We may also write $x\cdot y=\langle x,y \rangle$ as the inner product is a bilinear form. Recall the properties of a bilinear form which are
+\begin{enumerate}
+	\item $\langle x+1+x_2,y\rangle=\langle x_1,y\rangle+\langle x_2,y\rangle$
+	\item $\langle a\cdot x,y\rangle = a\langle x,y\rangle$
+\end{enumerate}
+
+Also note that \[\langle x,x\rangle = |x|^2\]
+
+\subsection{Some linear algebra}
+Recall that a mapping $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$ is said to be \emph{linear} if and only if, for $x,y\in\mathbb{R}^n, \,a\in\mathbb{R}$,
+\[T(x+y)=T(x)+T(y)\]\[T(a\cdot  x)=a\cdot T(x)\] Note that in both equations, the operations taking place on the left hand side is done in $\mathbb{R}^n$ and $\mathbb{R}^m$
+on the right hand side.
+
+\noindent Recall that we can recover $M$, the matrix representation of a linear mapping $T$ by applying $T$ to each of the standard basis. So if
+\[T(e_j)=a_{ij}e_1+a_{2j}e_2+\ldots+a_{mj}e_m\]
+then
+\begin{eqnarray*}
+	M&=&(a_{ij}) \\
+	&=&[T]
+\end{eqnarray*}
+where $M$ (or as we shall denote $[T]$) is the $m\times n$ matrix representing the linear transformation $T$.
+\[\begin{pmatrix}y^1\\y^2\\\vdots\\y^m\end{pmatrix}=M\begin{pmatrix}x^1\\x^2\\\vdots\\x^n\end{pmatrix}\]
+
+\noindent If we have two mappings $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$ and $S:\mathbb{R}^m\rightarrow\mathbb{R}^p$ where $[S]_{p\times m}$ represents the
+$p\times m$ matrix representing the linear transformation $S$, then $S\circ T$ is a linear mapping from $\mathbb{R}^n$ to $\mathbb{R}^p$.
+\[S\circ T:\mathbb{R}^n\rightarrow\mathbb{R}^p\] and \[[S\circ T]=[S][T]\]
+
+\section{Functions and continuity}
+A function $f:\mathbb{R}^n\rightarrow\mathbb{R}^m$ is called a \emph{vector field} if $m>1$, and a \emph{scalar field} if $m=1$. \\
+
+If $f:\mathbb{R}^n\rightarrow\mathbb{R}^m$ then we have \[f=(f^1,f^2,\ldots,f^m)\] where \[f^i:\mathbb{R}^n\rightarrow\mathbb{R}\] so we can write
+\begin{eqnarray*}
+	f(x)&=&f^1(x)e_1+\ldots+f^m(x)e_m \\
+		&=&\Bigl(f^1(x),\ldots,f^m(x)\Bigr)
+\end{eqnarray*}
+and we call each of these $f^i$'s the components of $f$.
+
+\noindent Now we define a function $\pi^i:\mathbb{R}^m\rightarrow\mathbb{R}$ given by $\pi^i(y)=y^i$, so that
+\[\pi^i(y^1,y^2,\ldots,y^m)=y^i\] and we call this the \emph{projection in the $i^{\text{th}}$ direction} (\emph{or the projection function}). This function is a linear transformation.
+
+\begin{center}
+\begin{tikzcd}[row sep=huge, column sep=large]
+\mathbb{R}^n \arrow{r}{f}  \arrow{rd}[swap]{f^i=\pi^i\circ f} 
+  & \mathbb{R}^m \arrow{d}{\pi^i} \\
+    & \mathbb{R}
+\end{tikzcd}
+\end{center}
+
+Sometimes instead of $\mathbb{R}^n$ we may define $f$ on a subset of $A\subset\mathbb{R}^n$, usually where $A$ is open, i.e., sometimes we have
+$f:A\rightarrow\mathbb{R}^m$.
+
+\subsection{Limits}
+\begin{definition}
+	Let $a\in\mathbb{R}^n, \,b\in\mathbb{R}^m$. We write $\lim\limits_{x\to a} f(x)=b$ to mean
+	\[\forall\epsilon>0, \,\exists\delta>0\text{ such that } 0<|x-a|<\delta\implies|f(x)-b|<\epsilon\]
+\end{definition}
+
+We say $f$ is continuous on a set $A$ us $f$ is continuous at $a$, for all $a\in A$.
+
+\begin{theorem}[Combination theorem]
+	Suppose that \[\lim\limits_{x\to a} f(x)=b\text{ and }\lim\limits_{x\to a} g(x)=c\] then,
+	\begin{enumerate}
+		\item $\lim\limits_{x\to a} \Bigl(f(x)+g(x)\Bigr)=b+c$
+		\item If $\lambda\in\mathbb{R}$, then $\lim\limits_{x\to a} \Bigl(\lambda\cdot f(x)\Bigr)=\lambda\cdot b$
+		\item $\lim\limits_{x\to a} f(x)\cdot g(x)=b\cdot c$
+		\item $\lim\limits_{x\to a} |f(x)|=|b|$
+	\end{enumerate}
+\end{theorem}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
