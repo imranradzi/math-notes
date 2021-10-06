@@ -1,0 +1,126 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{tikz-cd}
+
+\theoremstyle{definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{eg}{Example}
+
+\begin{document}
+
+
+\title{\textbf{Topology and Groups - MATH0074}}
+\author{\textbf{Based on lectures by Dr Lars Louder}\\ Notes taken by Imran Radzi}
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+Notes based on the Autumn 2021 Topology and Groups lectures by Dr Lars Louder.
+
+\begingroup
+\let\cleardoublepage\clearpage
+\tableofcontents
+\endgroup
+\newpage
+\pagenumbering{arabic}
+
+\section{Review of metric topology}
+
+A metric space is a pair $(X, d)$ where $X$ is a set and $d$ is a metric on $X$. Recall the notions of an open and closed ball around a point $x\in X$
+\[B_\epsilon(x)=\{x'\in X:d(x,x')<\epsilon\}\] \[\overline{B_\epsilon(x)}=\{x'\in X:d(x,x')<\epsilon\}\]
+
+\begin{definition}
+	A map $f:X\to Y$ ($X,Y$ metric space) is continuous at $x\in X$, if $\forall\epsilon>0,\,\exists\delta>0$ such that \[f(B_\delta(x))\subseteq B_\epsilon(f(x))\]
+\end{definition}
+We say $f$ is continuous if it is continuous at every point in $X$. \\
+
+If $X$ is a metric space then $U\subseteq X$ is said to be \emph{open} if \[\forall x\in U,\,\exists\epsilon>0\text{ such that } B_\epsilon(x)\subseteq U\]
+
+\section{Topological spaces}
+\begin{definition}[Topological space]
+	A \emph{topological space} is a pair $(X,\mathcal{T})$, where $X$ is a set and $T\subseteq 2^X (=\mathcal{P}(X))$ satisfying the following
+	\begin{enumerate}
+		\item $\phi,\,X\in\mathcal{T}$
+		\item $\mathcal{T}$ is closed under finite intersections and closed under arbitrary unions
+	\end{enumerate}
+\end{definition}
+
+\begin{eg} \hfill
+	\begin{enumerate}
+		\item A metric space $(X,d)$ can be considered as a topological space in its own right with the topology $\mathcal{T}$ (called the metric topology) on $X$ being the collection of 
+			open sets determined by $d$.
+		\item $(X,2^X)$, the topology on $X$ being the collection of all subsets of $X$ is called the discrete topology.
+		\item $(X,\{\emptyset, X\}$, with the topology on $X$ consisting of only $\phi$ and $X$ is called the indiscrete topology.
+		\item $(X,\{U\subseteq X:|X\setminus U|<\infty\textit{ or }U=\emptyset\})$, the cofinite topology on $X$.
+	\end{enumerate}
+\end{eg}
+
+\begin{definition}
+	If $(X,\mathcal{T})$ is a topological space, $x\in X, \,U\in\mathcal{T}$ then we say $U$ is an \emph{open neighbourhood} of $x$ if $x\in U$.
+\end{definition}
+
+\begin{definition}[Hausdorff space]
+	A topological space is \emph{Hausdorff} if given $x,y\in X, \,x\neq y, \,\exists U,V\in\mathcal{T}$ such that \[U\cap V=\emptyset\]
+\end{definition}
+
+\begin{definition}[Continuous map]
+	A map $f:X\to Y$ is \emph{continuous} if $f^{-1}(U)$ is open in $X$, for $U$ open in $Y$, i.e., the preimage of every open set is open.
+\end{definition}
+
+\begin{definition}[Homeomorphism]
+	A continuous map $f:X\rightarrow Y$ is a \emph{homeomorphism} if
+	\begin{enumerate}
+		\item $f$ is a bijection
+		\item $f^{-1}:Y\rightarrow X$ is continuous
+	\end{enumerate}
+\end{definition}
+
+We say that a property of a space is topological if it is preserved under homeomorphism.
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
