@@ -3,3 +3,4 @@
 \contentsline {subsection}{\numberline {1.2}Some linear algebra}{2}{}%
 \contentsline {section}{\numberline {2}Functions and continuity}{3}{}%
 \contentsline {subsection}{\numberline {2.1}Limits}{4}{}%
+\contentsline {section}{\numberline {3}Derivatives}{7}{}%

@@ -14,6 +14,7 @@
 \newtheorem*{lemma}{Lemma}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{eg}{Example}
+\newtheorem*{remark}{Remark}
 
 \begin{document}
 
@@ -141,6 +142,108 @@ Now note that a linear transformation $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$ is
 \begin{lemma}
 	Given $T$ linear $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$, there exists $M>0$ such that \[\forall x\in\mathbb{R}^n, \,|T(x)|\leq M|x|\]
 \end{lemma}
+
+\begin{proof}
+	Given that $x=(x^1,x^2,\ldots,x^n)$, we can rewrite \[x=\sum_{i=1}^n x^i e_i\] and so as $T$ is linear, \[T(x)=\sum_{i=1}^n x^i T(e_i)\]
+	and then, 
+	\begin{eqnarray*}
+		|T(x)|&=&|\sum_{i=1}^n x^i T(e_i)| \\
+			&\leq&\sum_{i=1}^n|x^i||T(e_i)|\leq(\sum_{i=1}^n|x^i|^2)^\frac{1}{2}(\sum_{i=1}^n|T(e_i)|^2)^\frac{1}{2} \\
+			&=&|x|(\sum_{i=1}^n|T(e_i)|^2)^\frac{1}{2}
+	\end{eqnarray*}
+	and so set \[M=|x|(\sum_{i=1}^n|T(e_i)|^2)^\frac{1}{2}\]
+\end{proof}
+
+Using this lemma we can prove $T$ to be continuous at $y\in\mathbb{R}^n$ as follows,
+\[T(x)-T(y)|=|T(x-y)|\leq M|x-y|\] Given $\epsilon>0$, we can simply take $\delta=\frac{\epsilon}{M}>0$.
+
+\begin{remark} \hfill
+	\begin{enumerate}
+		\item Let $f:\mathbb{R}^n\rightarrow\mathbb{R}^m$. Then, \[f\text{ is continuous}\iff f^i\text{ is continuous for }i=1,\ldots,m\]
+			Sufficiency follows noting that $f^i=\pi^i\circ f$ and the fact that $\pi^i$ is continuous. Necessity is a simple exercise to prove.
+		\item Polynomials in $n$-variables are continuous, for example, the function \[1024(x^4)^5(x^2)^3(x^5)^{29}\] is continuous. The same holds for rational functions
+			\[R(x^1,\ldots,x^n)=\frac{P(x^1,\ldots,x^n)}{Q(x^1,\ldots,x^n)}\] where $P,Q$ are polynomials, continuous, where denominator is not equal to 0.
+	\end{enumerate}
+\end{remark}
+
+\section{Derivatives}
+\begin{definition}
+	We define \[D_if(a)=\lim\limits_{h\to0}\frac{f(a^1,a^2,\ldots,a^{i-1},a^i+h,a^{i+1},\ldots,a^n)-f(a)}{h}\]
+\end{definition}
+
+\begin{eg}
+	Let $f:\mathbb{R}^2\rightarrow\mathbb{R}$, so $f(x,y)$ is a function of two variables $x,y$. Then, 
+	\[D_1f(a,b)=\lim\limits_{h\to0}\frac{f(a+h,b)-f(a,b)}{h}=\frac{\partial f}{\partial x}(a,b)\]
+	\[D_2f(a,b)=\frac{\partial f}{\partial y}(a,b)\]
+	and similarly for $\mathbb{R}^3\rightarrow\mathbb{R}$.
+\end{eg}
+
+\begin{definition}
+	Let $f:\mathbb{R}^n\rightarrow\mathbb{R}^m$ (or replace $\mathbb{R}^n$ with $A$ open in $\mathbb{R}^n$), and let $a\in\mathbb{R}$. We say $f$ is \emph{differentiable}
+	at $a$ if we can find a linear transformation $\lambda:\mathbb{R}^n\rightarrow\mathbb{R}^m$ such that 
+	\begin{equation}
+	\lim\limits_{h\to0}\frac{|f(a+h)-f(a)-\lambda(h)|}{|h|}=0
+	\end{equation} We call $\lambda:\mathbb{R}^n\rightarrow\mathbb{R}^m$ the \emph{derivative} of $f$ at $a$, and we denote
+	it by $Df(a)$.
+\end{definition}
+
+\begin{theorem}
+	$\lambda$ as defined above is unique.
+\end{theorem}
+
+\begin{proof}
+	If $f$ is differentiable at $a$ and $\lambda,\mu:\mathbb{R}^n\rightarrow\mathbb{R}^m$ both linear transformations that satisfy $(1)$, then \[\mu=\lambda\]
+\end{proof}
+
+\begin{proof}
+	We need to prove that $\forall x\in\mathbb{R}^n$, that $\mu(x)=\lambda(x)$. We can assume $x\neq0$ since as $\mu,\lambda$ are linear (so they map $0$ to $0$). 
+	\begin{eqnarray*}
+		\frac{|\lambda(h)-\mu(h)|}{|h|}&=&\frac{|\lambda(h)+f(a)-f(a+h)+f(a+h)-f(a)-\mu(h)|}{|h|} \\
+			&=&\frac{|\lambda(h)+f(a)-f(a+h)|}{|h|}+\frac{|f(a+h)-f(a)-\mu(h)|}{|h|}
+	\end{eqnarray*}
+	Now if we take limits as $h\to0$, then \[\lim\limits_{h\to0}\frac{|\lambda(h)-\mu(h)|}{|h|}=0\] If we take $t$ small, and let $tx=h$, then since $h\to0\iff t\to0$ we have
+	\begin{eqnarray*}
+		\lim\limits_{t\to0}\frac{|\lambda(tx)-\mu(tx)|}{|tx|}&=&\lim\limits_{t\to0}\frac{|t\lambda(x)-t\mu(x)|}{|t||x|}\\
+				&=&\lim\limits_{t\to0}\frac{|t||\lambda(x)-\mu(x)|}{|t||x|}\\
+				&=&\lim\limits_{t\to0}\frac{|\lambda(x)-\mu(x)|}{|x|}\\
+				&=&\frac{|\lambda(x)-\mu(x)|}{|x|}
+	\end{eqnarray*}
+	which is equal to 0 as \[\lim\limits_{t\to0}\frac{|\lambda(tx)-\mu(tx)|}{|tx|}=0\] hence \[|\lambda(x)-\mu(x)=0\] i.e., \[\lambda(x)=\mu(x)\]
+\end{proof}
+
+Note that for $h\in\mathbb{R}^m$, that \[\lambda(h)=Df(a)(h)\] so $Df(a)$ is a linear transformation, $Df(a):\mathbb{R}^n\rightarrow\mathbb{R}^m$. \\
+
+We call the matrix representation of $Df(a):\mathbb{R}^n\rightarrow\mathbb{R}^m$ the \emph{Jacobian} of $f$ at $a$ (here we use the standard basis) and we denote it by
+$f'(a)$. So, \[Df(a)(h)=f'(a)\begin{pmatrix}h^1\\h^2\\\vdots\\h^n\end{pmatrix}\] Note that the product of this operation is column $m$-vector ($m\times1$ matrix), an element of
+$\mathbb{R}^m$.
+
+\begin{definition}
+	Let $f:\mathbb{R}^n\rightarrow\mathbb{R}$ (or replace $\mathbb{R}^n$ with any $A$ open in $\mathbb{R}^n$), and let $u\in\mathbb{R}^n$, where $u\neq0$. We define the
+	\emph{directional derivative} of $f$ at $a$ in the $u$-direction by
+	\[D_uf(a)=\lim\limits_{h\to0}\frac{f(a+hu)-f(a)}{h}\] (if it exists), where $h\in\mathbb{R}$. If $u=e_i$, then $D_uf(a)=D_if(a)$.
+\end{definition}
+
+\begin{theorem}
+	If $f:\mathbb{R}^n\rightarrow\mathbb{R}^m$ is differentiable at $a\in\mathbb{R}^n$  hen it is continuous at $a$.
+\end{theorem}
+
+\begin{proof}
+	We want to show that \[\lim\limits_{h\to0}|f(a+h)=f(a)|\] Hence we proceed
+	\begin{eqnarray*}
+		\lim\limits_{h\to0}|f(a+h)-f(a)|&=&\lim\limits_{h\to0}|f(a+h)-f(a)-\lambda(h)|\\
+				&\leq&\lim\limits_{h\to0}|f(a+h)-f(a)-\lambda(h)|+\lim\limits_{h\to0}|\lambda(h)|\\
+				&\leq&\lim\limits_{h\to0}\frac{|f(a+h)-f(a)-\lambda(h)|}{|h|}|h|+\lim\limits_{h\to0}|\lambda(h)|\\
+				&=&0
+	\end{eqnarray*}
+	so \[\lim\limits_{h\to0}|f(a+h)-f(a)|\]
+\end{proof}
+
+\begin{remark}
+	If \[\lim\limits_{h\to0}\frac{|f(a+h)-f(a)-\lambda(h)|}{|h|}\] then letting $h=x-a$, we can write \[\lim\limits_{x\to a}\frac{|f(x)-f(a)-\lambda(x-a)|}{|x-a|}=0\]
+	If we let $\phi(x)=f(x)-f(a)-\lambda(x-a)$, then we have that $\phi:\mathbb{R}^n\rightarrow\mathbb{R}^m$ and we can rewrite
+	\[f(x)=f(a)+\lambda(x-a)+\phi(x)\] or, recalling that $\lambda=Df(a)$, \[f(x)=f(a)+Df(a)(x-a)+\phi(x)\] By definition, we have
+	\[\lim\limits_{x\to a}\frac{\phi(x)}{|x-a|}=0\]
+\end{remark}
 
 \end{document}
 
