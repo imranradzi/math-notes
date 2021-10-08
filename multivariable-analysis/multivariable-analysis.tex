@@ -121,6 +121,27 @@ We say $f$ is continuous on a set $A$ us $f$ is continuous at $a$, for all $a\in
 	\end{enumerate}
 \end{theorem}
 
+\begin{proof} \hfill
+	\begin{enumerate}
+		\item[3.] \begin{eqnarray*}
+				f(x)\cdot g(x)-b\cdot c&=&f(x)\cdot g(x)-b\cdot g(x) + b\cdot g(x)-b\cdot c \\
+					&=&(f(x)-b)\cdot g(x) + b\cdot(g(x)-c)
+			\end{eqnarray*}
+			\begin{eqnarray*}
+				|f(x)\cdot g(x)-b\cdot c|&\leq&|(f(x)-b)\cdot g(x)|+|b\cdot(g(x)-c)| \\
+				&\leq&|f(x)-b|\cdot|g(x)|+|b|\cdot|g(x)-c|
+			\end{eqnarray*}
+			and $|f(x)-b|, |g(x)-c|$ both tend to 0 as $x\to a$, while $|g(x)|$ is bounded close to $a$, so the right hand side tends to 0.
+		\item[4.] By the reverse triangle inequality, \[||f(x)|-|b||\leq|f(x)-b|\]
+	\end{enumerate}
+\end{proof}
+
+Now note that a linear transformation $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$ is continuous everywhere.
+
+\begin{lemma}
+	Given $T$ linear $T:\mathbb{R}^n\rightarrow\mathbb{R}^m$, there exists $M>0$ such that \[\forall x\in\mathbb{R}^n, \,|T(x)|\leq M|x|\]
+\end{lemma}
+
 \end{document}
 
 

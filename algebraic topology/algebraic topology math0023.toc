@@ -1,1 +1,6 @@
 \contentsline {section}{\numberline {1}Simplicial complexes}{1}{}%
+\contentsline {section}{\numberline {2}Homology}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Quotient spaces}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Chain complex}{9}{}%
+\contentsline {subsection}{\numberline {2.3}Simplicial mapping}{9}{}%
+\contentsline {subsection}{\numberline {2.4}Chain mapping}{10}{}%
