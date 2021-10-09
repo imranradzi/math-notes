@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  8 OCT 2021 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  9 OCT 2021 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,39 +530,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-[3] [4] [5] [6]
-Overfull \hbox (5.4359pt too wide) in alignment at lines 200--203
+[3] [4] [5] [6] [7]
+Overfull \hbox (5.4359pt too wide) in alignment at lines 202--205
  [][][] []
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-[8] [9] [10] (./multivariable-analysis.aux) ) 
+[9] [10] (./multivariable-analysis.aux) ) 
 Here is how much of TeX's memory you used:
  15117 strings out of 478599
  312192 string characters out of 5858101
- 581036 words of memory out of 5000000
+ 580036 words of memory out of 5000000
  32748 multiletter control sequences out of 15000+600000
  411988 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,108p,423b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on multivariable-analysis.pdf (11 pages, 167853 bytes).
+<c:/texlive/2021/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on multivariable-analysis.pdf (11 pages, 168033 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
