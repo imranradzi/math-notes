@@ -327,20 +327,20 @@ If $f=(f_n),\,C_*\rightarrow D_*$ is a chain mapping, we now want to show $f$ in
 \end{proof}
 
 By now it is clear if $g:D_*\rightarrow E_*, \,f:C_*\rightarrow D_*$ are chain mappings, then \[H_n(g\circ f)=H_n(g)\circ H_n(f)\] and also if $\text{id}:C_*\rightarrow C_*$ we have
-\[H_n(\text{id}=\text{id}_{H_n}\]
+\[H_n(\text{id})=\text{id}_{H_n}\]
 
 We now formally have \[H_n(X)=H_n(C_*(X))\]
 
 \begin{corollary}
-If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F}\neq0$ (for any field $\mathbb{F}$).
+If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F})\neq0$ (for any field $\mathbb{F}$).
 \end{corollary}
 
 \begin{proof}
 	As $X\neq\emptyset$, we have that $V_X\neq\emptyset$. Let $v\in V_X$ be a vertex and $*$ be the simplicial complex \[*=(\{v\},\{\{v\}\})\] so $*$ consists of one vertex
 	$v$, and one $0$-simplex $\{v\}$. Now define a constant mapping \[c:X\rightarrow *, \,c(x)=v,\,\forall x\in V_X\] We also have a simplicial mapping 
-	\[\iota:*\rightarrow X, \,\iota(v)=v\] so now \[c\circ\iota=id_*\] and so \[H_0(C)\circ H_n(\iota)=H\circ(\text{id}_*)\] but notice that \[H_0(*)=\mathbb{F}\] since we know
-	\[C_0(*)=\mathbb{F}, \,C_r(*)=0,\,r\geq1\] and thus \[H_0(C)\circ H_0(\iota)=\text{id}_\mathbb{F}\] \[r\circ\iota=\text{id}\neq0\] and now note that $r$ is surjective,
-	and $\iota$ is injective. In particular \[H_0(C):H_0(X)\rightarrow\mathbb{F}=H_0(*)\] is surjective, so \[H_0(X)\neq0\]
+	\[\iota:*\rightarrow X, \,\iota(v)=v\] so now \[c\circ\iota=\text{id}_*\] and so \[H_0(c)\circ H_0(\iota)=H_0(\text{id}_*)\] but notice that \[H_0(*)=\mathbb{F}\] since we know
+	\[C_0(*)=\mathbb{F}, \,C_r(*)=0,\,r\geq1\] and thus \[H_0(c)\circ H_0(\iota)=\text{id}_\mathbb{F}\] \[c\circ\iota=\text{id}\neq0\] and now note that $c$ is surjective,
+	and $\iota$ is injective. In particular \[H_0(c):H_0(X)\rightarrow\mathbb{F}=H_0(*)\] is surjective, so \[H_0(X)\neq0\]
 \end{proof}
 
 
