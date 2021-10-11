@@ -14,6 +14,7 @@
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{definition}{Definition}
 \newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{eg}{Example}
 
@@ -252,6 +253,95 @@ Given a simplicial mapping $f:X\rightarrow Y$, we are going to produce linear ma
 	\end{tikzcd}
 	\]	
 \end{definition}
+
+Notice from the diagram that \[\partial_n^D\circ f_n=f_{n-1}\partial_n^C\]
+
+If $g:D_*\rightarrow E_*$ is also a chain mapping, then \[(g\circ f)_n=g_n\circ f_n:C_*\rightarrow E_*\] is also a chain mapping. \[\text{id}:C_*\rightarrow C_*,
+\,\,\,\text{id}_n=\text{id}_{C_n}\] is also a chain mapping. \\
+
+\begin{proposition}
+If $f:X\rightarrow Y$ is a simplicial mapping, define \[C_n(f):C_n(X)\rightarrow C_n(Y)\] by action on a basis as follows
+\[C_n(f)[v_0,\ldots,v_n]=[f(v_0),\ldots,f(v_n)]\] then \[C_*(f):C_*(X)\rightarrow C_*(Y)\] is also a chain mapping.
+\end{proposition}
+
+\begin{proof}
+\begin{eqnarray*}
+	\partial d_n^DC_n(f)[v_0,\ldots,v_n]&=&\partial_n^D([f(v_0),\ldots,f(v_n)]) \\
+		&=&\sum_{r=0}^n (-1)^r[f(v_0),\ldots,\hat{f(v_0)},\ldots,f(v_n)] \\
+		&=&C_{n-1}(f)\sum_{r=0}^n (-1)^r[v_0,\ldots,\hat{v_r},\ldots,v_n] \\
+		&=&C_{n-1}(f)\partial_n^C[v_0,\ldots,v_n]
+\end{eqnarray*}
+\end{proof}
+
+We will often write $f_n[v_0,\ldots,v_n$ rather than $C_n(f)[v_0,\ldots,v_n]$. \\
+
+\begin{proposition}
+If $f:X\rightarrow Y,\,g:Y\rightarrow Z$ are simplicial maps, then
+\[C_n(g\circ f)=C_n(g)\circ C_n(f)\]
+which sometimes we will write as \[(g\circ f)_n=g_n\circ f_n\] instead.
+\end{proposition}
+
+\begin{proof}
+\begin{eqnarray*}
+	(g\circ f)[v_0,\ldots,v_n]&=&[(g\circ f)(v_0),\ldots,(g\circ f)(v_n)] \\
+				&=&g_n[f(v_0),\ldots,f(v_n)] \\
+				&=&g_n\circ f_n[v_0,\ldots,v_n]
+\end{eqnarray*}
+\end{proof}
+
+\begin{proposition}
+Let \[\text{id}:X\rightarrow X\] then $C_*(\text{id}):C_*(X)\rightarrow C_*(X)$ is a chain mapping.
+\end{proposition}
+
+If $C_*=(C_n,\partial_n)$ is a chain complex, define \[H_n(C_*)=\ker\partial_n/\text{im}(\partial_{n+1})\]
+It is usual to write \[Z_n(C)=\ker(\partial_n)\,\,\,(\text{cycles})\] \[B_n(C)=\text{im}(\partial_{n+1})\,\,\,(\text{boundaries})\]
+thus by this notation, \[H_n(C)=Z_n(C)/B_n(C)\]
+
+If $f=(f_n),\,C_*\rightarrow D_*$ is a chain mapping, we now want to show $f$ induces a mapping
+\[H_n(F):H_n(C_*)\rightarrow H_n(D_*)\]
+
+\begin{proposition}
+	If $f:C_*\rightarrow D_*$ is a chain mapping, then \[f_n(Z_n(C_*))\subset Z_n(D_*)\]
+\end{proposition}
+
+\begin{proof}
+	Recall that \[f_{n-1}\partial_n^C(z)=\partial_n^D f_n(z)\] If \[z\in Z_n(C_*),\,\partial_n^C(z)=0\] then we have \[f_{n-1}\partial_n^C(z)=0\] and so
+	\[\partial_n^D f_n(z)=0\] and thus \[f_n(z)\in Z_n(D_*)\]
+\end{proof}
+
+\begin{proposition}
+	If $f:C_*\rightarrow D_*$ is a chain mapping, then \[f_n(B_n(C_*))\subset B_n(D_*)\]
+\end{proposition}
+
+\begin{proof}
+	Note that \[f_n\partial_{n+1}^C(x)=\partial_{n+1}^D f_{n+1}(x)\] If $\beta\in B_n(C_*)$, we can write $\beta=\partial_{n+1}^C(x)$ for some $x$ and then
+	\[f_n(\beta)=\partial_{n+1}^D(k)\] where $k=f_{n+1}(x)$ so \[f_n(\beta)\in B_n(D_*)\]
+\end{proof}
+
+\begin{corollary}
+	If $f:C_*\rightarrow D_*$ is a chain mapping, then $f$ induces a (linear) mapping \[H_n(f):H_n(C_*)\rightarrow H_n(D_*)\]
+\end{corollary}
+
+\begin{proof}
+	An element of $H_n(C_*)$ has form \[[z]=z+B_n(C_*), \,z\in Z_n(C_*)\] Now define \[H_n(f)[z]=f_n(z)+B_n(D_*)\in H_n(D_*)\] and now note that \[f_n(z)\in Z_n(D_*)\]
+\end{proof}
+
+By now it is clear if $g:D_*\rightarrow E_*, \,f:C_*\rightarrow D_*$ are chain mappings, then \[H_n(g\circ f)=H_n(g)\circ H_n(f)\] and also if $\text{id}:C_*\rightarrow C_*$ we have
+\[H_n(\text{id}=\text{id}_{H_n}\]
+
+We now formally have \[H_n(X)=H_n(C_*(X))\]
+
+\begin{corollary}
+If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F}\neq0$ (for any field $\mathbb{F}$).
+\end{corollary}
+
+\begin{proof}
+	As $X\neq\emptyset$, we have that $V_X\neq\emptyset$. Let $v\in V_X$ be a vertex and $*$ be the simplicial complex \[*=(\{v\},\{\{v\}\})\] so $*$ consists of one vertex
+	$v$, and one $0$-simplex $\{v\}$. Now define a constant mapping \[c:X\rightarrow *, \,c(x)=v,\,\forall x\in V_X\] We also have a simplicial mapping 
+	\[\iota:*\rightarrow X, \,\iota(v)=v\] so now \[c\circ\iota=id_*\] and so \[H_0(C)\circ H_n(\iota)=H\circ(\text{id}_*)\] but notice that \[H_0(*)=\mathbb{F}\] since we know
+	\[C_0(*)=\mathbb{F}, \,C_r(*)=0,\,r\geq1\] and thus \[H_0(C)\circ H_0(\iota)=\text{id}_\mathbb{F}\] \[r\circ\iota=\text{id}\neq0\] and now note that $r$ is surjective,
+	and $\iota$ is injective. In particular \[H_0(C):H_0(X)\rightarrow\mathbb{F}=H_0(*)\] is surjective, so \[H_0(X)\neq0\]
+\end{proof}
 
 
 
