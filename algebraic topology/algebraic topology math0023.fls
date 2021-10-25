@@ -598,6 +598,10 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
 INPUT algebraic topology math0023.aux
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

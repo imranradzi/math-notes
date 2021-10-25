@@ -343,25 +343,572 @@ If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F})\neq0$ (
 	and $\iota$ is injective. In particular \[H_0(c):H_0(X)\rightarrow\mathbb{F}=H_0(*)\] is surjective, so \[H_0(X)\neq0\]
 \end{proof}
 
+\noindent So we now know if $H_0(X)\neq0$ if $X\neq\emptyset$.
 
+\vspace{12pt}
 
+Now let $X$ be a simplicial complex. If $v,w\in V_X$, then by a path from $v$ to $w$, we mean
+a sequence of $1$-simplices \[[v_0,v_1],[v_1,v_2],\ldots,[v_{n-1},v_{n-1}],[v_{n-1},v_n]]\]
+such that $v_0=v$ and $v_n=w$.
 
+\begin{proposition}
+	If $X$ is non-empty and connected, then \[H_0(X;\mathbb{F}\cong\mathbb{F})\]
+\end{proposition}
 
+\begin{proof}
+	\[C_1(X)\xrightarrow{\partial_1} C_0(X)\]
+	If $v,w\in V_X$, then $[w]-[v]\in\text{im}(\partial_1)$. To see this, choose a path
+	\[v=v_0<v_1<\ldots<v_{n-1}<v_n=w\] i.e., $[v_{i+1},v_i]$ is a $1$-simplex for
+	$0\leq i\leq n-1$. \[\partial_1[v_i,v_{i+1}]=[v_{i+1}]-[v_i]\in\text{im}(\partial_1)\]
+	so then, \[[w]-[v]=\sum_{i=0}^{n-1}[v_{i+1},v_i]\in\text{im}(\partial_1)\]
+	Now $\{[v]:v\in V_X\}$ is a basis for $C_0$. Choose a specific $v\in V_X$. By elementary
+	basis change, \[\{[v]\}\cup\{[w]-[v]:w\in V_x,w\neq v\}\] is a basis for $C_0$.
+	However $[w]-[v]\in\text{im}(\partial_1)$ ($w\neq v$). So $C_0(X)/\text{im}(\partial_1)$ has
+	dimension $\leq 1$, and then $\dim H_0(X)\leq 1$ if $X$ is connected. But $X\neq0$, hence
+	$\dim H_0(X)=1$, hence \[H_0(X)\cong \mathbb{F}\] when $X$ is connected.
+\end{proof}
 
+\begin{proposition}
+	In general, $\dim H_0(X)$ is equal to the number of connected components in $X$
+\end{proposition}
 
+If $X$ is a simplicial complex, then define a relation $\sim$ on $V_X$ by $v\sim w$ if and
+only if there exists a path from $v$ to $w$.
 
+\vspace{12pt}
 
+$\sim$ defines an equivalence relation, where the number of connected components is equal
+to the number of equivalence classes.
 
+If $X$ consists of a single point,
+\[H_k(\text{pt.})=\begin{cases}\mathbb{F}&k=0\\0&k\neq0\end{cases}\]
 
+\subsection{Cone}
+\begin{definition}
+	Let $X$ be a simplciial complex. A \emph{cone} on $X$, $C(X)$, is defined as follows,
+	choose $*$ (cone point) such that $*\not\in V_X$
+	\[V_{C(X)}=\{*\}\cup V_X\] \[\mathcal{S}_{C(X)}=
+	\mathcal{S}_X\cup\{\{*\}\cup\{\sigma\cup\{*\}:\sigma\in S_X\}\}\]
+	i.e., join everything in $X$ to the cone point.
+\end{definition}
 
+\begin{theorem}
+	If $X$ is a simplicial complex, then,
+	\[H_k(C(X);\mathbb{F})=\begin{cases}\mathbb{F}&k=0\\0&k\neq0\end{cases}\]
+	i.e., $C(X)$ behaves just like a point (homologically).
+\end{theorem}
 
+\begin{proof}
+	First note that $C(X)$ is connected. Take $v,w\in V_{C(X)}, \,v\neq w$. Either one of them is 
+	the cone point, or none of them are the cone point. \\
 
+	$(1)$ Without loss of generality,
+	suppose $w$ is the cone point. $(w=*)$. By definition, $[v,w]=[v,*]$ is a $1$-simplex of
+	$C(X)$. So we've joined $v$ to $w$. \\
 
+	$(2)$ If neither are the cone point, then, $[v,*]$ and $[w,*]$ are both $1$-simplices, so again,
+	we've joined $v$ to $w$. So \[H_0(C(X);\mathbb{F})\cong \mathbb{F}\]
 
+	Now we must show \[H_k(C(X))=0, \,k\geq0\] We define, for each $k>0$, a linear map
+	\[\mathcal{H}_k:C_k(C(X))\rightarrow C{k+1}(C(X))\] (called a contracting homotopy)
+	$\mathcal{H}_k$ is defined on a basis by \[\mathcal{H}_k[v_o,\ldots,v_k]=[*,v_0,\ldots,v_k]\]
+	Then,
+	\begin{eqnarray*}
+		\partial_{k+1}\mathcal{H}_k[v_0,\ldots,v_k]&=&\partial_{k+1}[*,v_0,\ldots,v_k] \\
+					&=&[v_0,\ldots,v_k]+\sum_{r=0}^k(-1)^{r+1}[*,v_0,\ldots,\hat{v_r},\ldots,v_k]
+	\end{eqnarray*}
+	\[\partial_{k+1}\mathcal{H}_k
+	([v_0,\ldots,v_k]+\sum_{r=0}^k(-1)^r[*,v_0,\ldots,\hat{v_r},\ldots,v_k])
+	=[v_0,\ldots,v_k]\] However,
+	\[\mathcal{H}_{k-1}[v_0,\ldots,\hat{v_r},\ldots,v_k]=[*,v_0,\ldots,\hat{v_r},\ldots,v_k]\]
+	and
+	\[(\partial_{k+1}\mathcal{H}_k+\mathcal{H}_{k-1}\partial_{k-1})[v_0,\ldots,v_k]=
+	[v_0,\ldots,v_k]\] i.e.,
+	\[\partial_{k+1}\mathcal{H}_k + \mathcal{H}_{k-1}\partial_{k-1}=\text{id}\]
+	(we call the above a homotopy relation)
+	\[H_k(C(X))=Z_k(C(X))/B_k(C(X))\] and if $z\in Z_k(C(X)),\,\partial_k(z)=0$, so 
+	if $z\in Z_k(C(X)), \,z=\partial_{k+1}\mathcal{H}_k(z)$ so $z\in\text{im}(\partial_{k+1})$,
+	i.e., $Z_k(C(X))\subset B_k(C(X)) (\subset Z_k(X))$ so if $C(X)$ is a cone and $k>0$,
+	\[Z_k(C(X))=B_k(C(X))\] and $H_k(C(X);\mathbb{F}=0)$
+\end{proof}
 
+\begin{corollary}
+	\[H_k(\Delta^n;\mathbb{F})=\begin{cases}\mathbb{F}&k=0\\0&k\neq0\end{cases}\]
+	where $\Delta^n=\text{$n$-simplex}$
+\end{corollary}
 
+\begin{proof}
+	$\Delta^n$ is a cone. $\Delta^n=(C(\Delta^{n-1}))$
+\end{proof}
 
+Let $X$ be a simplicial complex, $n\geq0$. Then the $n$-skeleton $X^{(n)}$ of $X$ is defined by 
+\[V_{X^{(n)}}=V_X\] \[\mathcal{S}_{X^{(n)}}=\{\sigma\in\mathcal{S}_X:|\sigma|\leq n+1\}\]
+i.e., $\dim(\sigma)\leq n$. \\
 
+The standard model $S^n$ of the $n$-sphere
+\[V_{S^n}=\{0,\ldots,n+1\}\] \[\mathcal{S}_{S^n}=
+\{\sigma\subset\{0,\ldots,n+1\}|\sigma\neq0, |\sigma|\leq n+1\}\]
+i.e., $S^n=\text{$n$-skeleton of } \Delta^{n+1}$
+
+\begin{theorem}
+	\[H_k(X^{(n)})\equiv H_k(X),\text{ for }0\leq k\leq n-1\] (and there exists a natural surjection
+	$H_n(X^{(n)})\rightarrow H_n(X)$) (note this is not an isomorphism)
+\end{theorem}
+
+\begin{proof}
+	From definition, $C_k(X^{(n)})\equiv C_k(X), \,0\leq k\leq n$
+	\[ \begin{tikzcd}
+		C_*(X^{(n)})\,\,
+		0 \arrow{r} & C_n \arrow{r}{\partial_n}  & C_{n-1} \arrow{r}{\partial_{n-1}} &
+		\ldots \arrow{r}{\partial_1} & 
+		C_0 \arrow{r} & 0  \\
+		C_*(X)\,\,
+		 C_{n+1} \arrow{r}{\partial_{n+1}} &
+		C_n \arrow{r}{\partial_n} & C_{n-1} \arrow{r}{\partial_{n-1}} &
+		\ldots \arrow{r}{\partial_1} & C_0 \arrow{r} & 0  
+		\end{tikzcd}
+	\]
+
+	\[H_k(X^{(n)})\equiv H_k(X)\text{ for }k\leq n-1\]
+	\begin{eqnarray*}
+		H_n(X^{(n)})&=&\ker(\partial_n:C_n(X)\rightarrow C_{n-1}(X)) \\
+					&=&Z_n(X)
+	\end{eqnarray*}
+	 but $B_n(X^{(n)})=0$. In general $B_n(X)\neq 0$.
+\end{proof}
+
+As $S^n=(\Delta^{n+1})^{(n)}$, ($n\neq0, N\geq 1$) we see that 
+\[H_k(S^{(n)};\mathbb{F})=\begin{cases}\mathbb{F} & k=0 \\ 0 & 1\leq k\leq n-1\end{cases}\]
+
+We now still need to compute $H_n(S^n)$.
+
+\begin{definition}
+	Let $U\xrightarrow{f} V\xrightarrow{g} W$ be linear maps. We say a sequence is \emph{exact} at $V_r$ when \[\ker f_r=\text{im} f_{r+1}\] We say the sequence is \emph{exact} when it is 
+	\emph{exact} at each possible $V_r$.
+\end{definition}
+
+\noindent\underline{4 term exact sequence}
+\[0\rightarrow U \xrightarrow{f} V\rightarrow 0\]
+is exact if and only if $f$ is an isomorphism.
+
+\begin{proof}
+	The sequence is exact at $V$, so \[\text{im}(f)=\ker(V\rightarrow 0)=V\]
+	so $f$ is surjective. The sequence is exact at $U$, so
+	\[\ker(f)=\text{im}(0\rightarrow U)=0\] so $f$ is injective.
+\end{proof}
+
+\noindent\underline{Short exact sequence}
+\[0\rightarrow U\xrightarrow{f} V\xrightarrow{g} W\rightarrow 0\]
+
+Exactness here means
+\begin{enumerate}
+	\item $g$ is surjective, $\text{im}(g)=\ker(W\rightarrow 0)$
+	\item $f$ is injective, $\ker(f)=\text{im}(0\rightarrow V)=0$
+	\item $\ker(g)=\text{im}(f)$
+\end{enumerate}
+
+\begin{eg}
+\underline{Kernel-rank theorem} \\
+Suppose we have the exact sequence
+\[0\rightarrow U\xrightarrow{f} V\xrightarrow{g}\rightarrow W\rightarrow 0\]
+if $U,V,W$ are finite dimensional, then \[\dim(V)=\dim(U)+\dim(W)\] by the kernel-rank theorem.
+To see this, note that \[\text{im}(g)=W\] by exactness.
+\[\ker(g)+\dim(W)=\dim(V)\] \[\ker(g)=\text{im}(f)\cong U\] (since
+$f$ is injective) and so 
+\[\dim(\ker(g))=\dim(U)\] so \[\dim(U)+\dim(W)=\dim(V)\]
+\[H_k(X)=Z_k(X)/B_k(X)\]
+\[0\rightarrow B_k(X)\xhookrightarrow{} Z_k(X)\rightarrow H_k(X)\rightarrow 0\]
+is a short exact sequence, $z\mapsto[z], \,z+B_k(X)$, so 
+\[\dim H_k(X)=\dim Z_k(X) - \dim B_k(X)\]
+\end{eg}
+
+\noindent\underline{Exact sequences of chain complexes}
+Let $A_*,B_*,C_*$ be chain complexes and '
+\[f:A_*\rightarrow B_*, \,g:B_*\rightarrow C_*\]
+Consider the following sequence of chain maps
+\[0\rightarrow A_*\xrightarrow{f} B_*\xrightarrow{g} C_*\rightarrow 0\]
+so for each $n$ we have a sequence of linear maps
+\[0\rightarrow A_n\xrightarrow{f_n} B_n\xrightarrow{g_n} C_n\rightarrow 0\]
+We say that this is exact when for each $n$, this sequence is exact.
+
+\section{Mayer-Vietoris Theorem}
+\subsection{Algebraic Mayer-Vietoris Theorem}
+Suppose 
+\[0\rightarrow A_*\xrightarrow{i} B_*\xrightarrow{p} C_*\rightarrow 0\]
+is an exact sequence of chain complexes, then there exists a long exact
+sequence of the following type
+\[\rightarrow H_{n+1}(A)\xrightarrow{i_*} H_{n+1}(B)\xrightarrow{p_*} H_{n+1}(C)
+\xrightarrow{\delta} H_n(A)\xrightarrow{i_*}H_n(B)\ldots\]
+\[\rightarrow H_1(A)\xrightarrow{i_*}H_1(B)\xrightarrow{p_*}\xrightarrow{\delta}
+H_0(A)\xrightarrow{i_*}H_0(B)\xrightarrow{p_*}H_0(C)\rightarrow 0\]
+where in our case, $A_n=B_n=C_n=0$ for $n<0$.
+
+This requires 
+\[A_*=(A_n,\partial_n), \,A_n=0,n<0\]
+\[B_*=(B_n,\partial_n), \,B_n=0,n<0\]
+\[C_*=(C_n,\partial_n), \,C_n=0,n<0\]
+The connecting homomorphisms have the following \emph{naturality property}: \\
+Suppose we have the following exact sequences of chain complexes,
+\[0\rightarrow A_*\xrightarrow{i} B_*\xrightarrow{p} C_*\rightarrow 0\]
+\[0\rightarrow A'_*\xrightarrow{i} B'_*\xrightarrow{p} C'_*\rightarrow 0\]
+and suppose the following commutes,
+\[
+\begin{tikzcd}
+	0 \arrow{r} & A_* \arrow{r}{i} \arrow[swap]{d}{\alpha} & B_* \arrow{r}{p}
+	\arrow{d}[swap]{\beta} & C_* \arrow{r} \arrow[swap]{d}{\gamma} & 0 \\
+	0 \arrow{r} & A'_* \arrow{r} & B'_* \arrow{r} & C'_* \arrow{r} & 0
+\end{tikzcd}
+\]
+
+Compute the two long exact sequences,
+\[
+\begin{tikzcd}
+	H_{n+1}(B) \arrow{r}{p_*} \arrow{d}{\beta_*} & H_{n+1}(C) \arrow{r}{\delta}
+	\arrow{d}{\gamma_*} & H_n(A) \arrow{r}{i_*}
+	\arrow{d}{\alpha_*} & H_n(B) \arrow{r}{p_*} \arrow{d}{\beta_*} & 
+	H_n(0) \arrow{d}{\gamma_*} \\
+	H_{n+1}(B') \arrow{r}{q_*} & H_{n+1}(C') \arrow{r}{\delta'} &
+	H_n(A') \arrow{r}{j_*} & H_n(B') \arrow{r}{q_*} & H_n(0)
+\end{tikzcd}
+\]
+this diagram commutes. \\
+
+The Algebraic Mayer-Vietoris Theorem implies the \emph{Geometric}
+Mayer-Vietoris Theorem.
+
+\subsection{Subcomplexes}
+Let $X=(V_X, \mathcal{S}_X), \,Y=(V_Y, \mathcal{S}_Y)$ be simplicial complexes.
+Then we say that $Y$ is a \emph{subcomplex} of $X$ if,
+\begin{enumerate}
+	\item $V_Y\subset V_X$
+	\item $\mathcal{S}_Y \subset \mathcal{S}_X$
+\end{enumerate}
+
+\begin{proposition} \hfill
+	\begin{enumerate}
+		\item Let $X_1, \,X_2$ be subcomplexes of $Z$. Then 
+				$(V_{X_1}\cup V_{X_2}, \mathcal{S}_{X_1}\cup \mathcal{S}_{X_2})$
+				is also a subcomplex of $Z$.
+		\item $(V_{X_1}\cap V_{X_2}, \mathcal{S}_{X_1}\cap\mathcal{S}_{X_2})$
+				is also a subcomplex of $Z$. This is the interesction
+				$X_1\cap X_2$, $Z=X_1\cup X_2$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}
+	Let $\Delta, \,\Delta'$ be chain complexes. $\Delta=(\Delta_n,\partial_n)$,
+	$\Delta'=(\Delta'_n,\partial'_n)$. Then the \emph{direct sum}:
+	\[\Delta\oplus\Delta'=\Bigl(\Delta\oplus\Delta',\begin{pmatrix}
+		\partial_n & 0 \\ 0 & \partial'_n
+	\end{pmatrix}\Bigr)\]
+	\[
+		\begin{pmatrix}
+			\partial_n & 0 \\ 0 & \partial'_n
+		\end{pmatrix}
+		\begin{pmatrix}
+			\partial_{n+1} & 0 \\ 0 & \partial_{n'+1}
+		\end{pmatrix}
+		=
+		\begin{pmatrix}
+			\partial_n\partial_{n+1} & 0 \\ 0 & \partial'_n\partial'_{n+1}
+		\end{pmatrix}
+		=
+		\begin{pmatrix}
+			0 & 0 \\ 0 & 0
+		\end{pmatrix}
+	\]
+\end{definition}
+
+\subsection{The Geometric Mayer-Vietoris Theorem: Chain Version}
+Suppose $X$ is a simplicial complex decomposed as a union $X=X_+\cup X_-$,
+where $X_+, \,X_-$ are subcomplexes. Then there exists an exact sequence
+of chain complexes like this,
+\[0\rightarrow C_*(X_+\cap X_-)\xrightarrow{i} C_*(X_+\oplus X_-)
+\xrightarrow{p} C_*(X)\rightarrow 0\]
+If we apply the algebraic Mayer-Vietoris Theorem, we get the homological version,
+namely the long exact sequence,
+\[H_{n+1}(X_+)\oplus H_{n+1}(X_-)\rightarrow H_{n+1}(X)\xrightarrow{\delta}
+H_n(X+\cap X_-)\] \[\rightarrow H_n(X_+)\oplus H_n(X_-)\rightarrow H_n(X)
+\xrightarrow{\delta} H_{n-1}(X_+\cap X_-)\]
+and finishes
+\[\xrightarrow{\delta} H_1(X_+\cap X_-)\rightarrow H_1(X_+)\oplus H_1(X_-)
+\rightarrow H_1(X)\xrightarrow{\delta} H_0(X_+\cap X_-)\] 
+\[\rightarrow H_0(X_+)\oplus H_0(X_-)\rightarrow H_0(X)\rightarrow 0 \]
+Let $S^n=\text{standard model of $n$-sphere}$,
+\[S^n=(\Delta^{n+1})^{(n)}\] We've shown for $n\geq1$,
+\[H_r(S^n;\mathbb{F})=\begin{cases}
+	\mathbb{F} & r=0 \\ 0 & 0<r<n \\ ? & r=n \\ 0 & n < r
+\end{cases}\]
+
+We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
+
+\begin{proposition}
+	For $n\geq 2$, $S^n$ can be written as $S^n=X_+\cup X_-$ where
+	$X_+\cap X_-=S^{n-1}$ and $X_+, \,X_-$ are \emph{cones}.
+	\[\Delta^{n+1}=(\{0,1,\ldots,n+1\},\{\text{all non-empty subsets of
+	$\{0,1,\ldots,n+1\}$}\})\]
+	\[S^n=(\{0,1,\ldots,n+1\},\{\text{all \emph{proper} non-empty subsets of
+	$\{0,1,\ldots,n+1\}$}\})\]
+	In particular every non-empty subset of $\{0,1,\ldots,n\}$ is a simplex
+	of $S^n$ so,
+	\begin{enumerate}
+		\item $\Delta^n\subset S^n$. As $S^{n-1}\subset \Delta^m$, then,
+		\item $S^{n-1}\subset S^m$ (note that $n+1\not\in V_{S^{n-1}})$ and,
+		\item Taking $n+1$ to be one point $C(S^{n-1})\subset S^n$. 
+				()$C(S^{n-1})$ is sometimes called the \emph{Witches hat})
+		\item
+		\[S^n=\Delta^n\cup C(S^{n-1})\] \[S^{n-1}=\Delta^n\cup C(S^{n-1})\]
+	\end{enumerate}
+
+		So we can write,
+		\[S^n=X_+\cup X_-,\text{ where }\]
+		\[X_+=C(S^{n-1})\]
+		\[X_-=\Delta^n\]
+		\[X_+\cap X_- = S^{n-1}\]
+\end{proposition}
+
+\begin{corollary}
+	$H_n(S^n;\mathbb{F})\cong\mathbb{F}$ for all $n\geq 2$.
+\end{corollary}
+
+\begin{proof}
+	By induction on $n$. We know this is true for $n=2$. Suppose we've
+	proven the hypothesis for $n-1$ and consider the exact sequence,
+	\[
+	\begin{tikzcd}
+		H_n(X_+)\oplus H_n(X_-)\arrow{r} & H_n(S^n)\arrow{r} & H_{n-1}(S^{n-1})
+		\arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-) \\
+		0\oplus 0\arrow{r} & H_n(S^n)\arrow{r}{\cong} & H_{n-1}(S^{n-1})
+		\arrow{r} & 0\oplus 0
+	\end{tikzcd}
+	\]
+	which is isomorphic by the very short exact sequence.
+\end{proof}
+
+Let $W$ be a vector space over $\mathbb{F}$ and suppose we have two
+vector subspaces of $W$, say $U$ and $V$.
+
+\begin{definition}{External sum (coproduct)}
+	\[U\oplus V=\Bigl\{\begin{pmatrix}u \\ v\end{pmatrix}: u\in U, v\in V
+		\Bigr\}\]
+	$U\oplus V$ is a vector space. We define sums, scalar multiplication
+	and zero as follows,
+	\[\begin{pmatrix}
+		(u_1\\v_1)
+	\end{pmatrix}+\begin{pmatrix}
+		u_2\\v_2
+	\end{pmatrix}=
+	\begin{pmatrix}
+		u_1+u_2\\v_1+v_2
+	\end{pmatrix}\]
+	\[\lambda\begin{pmatrix}
+		u\\v
+	\end{pmatrix}=\begin{pmatrix}
+		\lambda u\\ \lambda v
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+		0\\0
+	\end{pmatrix} = 0
+	\]
+\end{definition}
+If $U$ and $V$ have finite dimensions, then 
+\[\dim(U\oplus V)=\dim(U)+\dim(V)\] where $U, \,V$ are subspaces of $W$.
+
+\begin{definition}{Internal sum}
+	\[U+V=\{u+v:u\in U, v\in V\}\]
+\end{definition}
+Note that $U+V$ is a vector subspace of $W$. \\
+
+What is the relationship between $U+V$ and $U\oplus V$? There is an exact
+sequence \[U\oplus V\xrightarrow{\mu}U+V\]
+\[\mu\begin{pmatrix}
+	u\\v
+\end{pmatrix}=u+v\] $\mu$ is linear and surjective by the definition of
+$U+V$.
+
+\begin{proposition}
+	\[\mu\begin{pmatrix}
+		u\\v
+	\end{pmatrix}=0\iff u+v=0\iff v=-u, \,u\in U, \,v\in V\text{ so }v\in
+	U\cap V\]
+\end{proposition}
+
+We get an exact sequence,
+\[0\rightarrow U\cap V\xrightarrow{i} U\oplus V\xrightarrow{\mu} U+V
+\rightarrow 0\]
+\[i(x)=\begin{pmatrix}
+	u\\-u
+\end{pmatrix}\]
+As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
+
+\begin{theorem}(Chain version of the Geometric Mayer-Vietoris Theorem)
+	Let $X=X_+\cup X_-$ be the union of subcomplexes. For each $n$,
+	there exists an exact sequence,
+	\[0\rightarrow C_n(X_+\cap X_-)\xrightarrow{i} C_n(X_+)\oplus C_n(X_-)
+	\xrightarrow{\mu} C_n(X)\rightarrow 0\]
+	\[\mu\begin{pmatrix}
+		x\\y
+	\end{pmatrix}=x+y, \,i(u)=\begin{pmatrix}
+		u\\-u
+	\end{pmatrix}\]
+\end{theorem}
+
+\begin{proof}
+	$C_n(X)$ has basis
+	$\{[v_0,v_1,\ldots,v_n]:[v_0,\ldots,v_n]\in\mathcal{S}_X\}$
+	\[\mathcal{S}_X=\mathcal{S}_{X_+}\cup \mathcal{S}_{X_-}\]
+	\[C_n(X_+)\oplus C_n(X_-)\rightarrow C_n(X)\rightarrow 0\]
+	\[\begin{pmatrix}
+		e \\ f
+	\end{pmatrix}\mapsto e+f\]
+	The map is surjective because a basis element of $C_n(X)$ is either in 
+	$C_n(X_+)$ or $C_n(X_-)$. As a basis for the kernel, we have
+	\[\begin{pmatrix}
+		[v_0,\ldots,v_n] \\ -[v_0,\ldots,v_n]
+	\end{pmatrix}\] where $\{v_0,\ldots,v_n\}\subset
+	\mathcal{S}_{X_+}\cap \mathcal{S}_{X_-}= \mathcal{S}_{X+\cap X_-}$
+	so we have an exact sequence,
+	\[0\rightarrow C_n(X_+\cap X_-)\xrightarrow{i} C_n(X_+)\oplus C_n(X_-)
+	\xrightarrow{\mu} C_n(X)\rightarrow 0\]
+	This is an exact sequence of chain complexes because boundary formula is 
+	the same in every case.
+\end{proof}
+
+\begin{corollary}{of the geometric Mayer-Vietoris Theorem}
+	Let $X$ be a finite simplicial complex. Then,
+	\[\dim H_0(X;\mathbb{F})=\{\text{number of connected components of $X$}\}\]
+\end{corollary}
+
+\begin{proof}
+	Let $n$ be the number of connected components. This is true for $n=1$.
+	Suppose this is true for $n-1$, and $X$ has $n$ connected components
+	$X_1,X_2,\ldots, X_n$. Put \[X_-=X_1\cup X_2\cup\ldots\cup X_{n-1}\]
+	\[X_+=X_n\] \[X_+\cup X_-=X, \,X_+\cap X_-=\emptyset
+	\text{( by definition)}\]
+	Look at the following
+	\[H_0(X_+\cap X_-)\rightarrow H_0(X_+)\oplus H_0(X_-)\rightarrow H_0(X)
+	\rightarrow 0\] (note that $H_0(X_+\cap X_-)=0)$). So 
+	\[\dim H_0(X)=\dim H_0(X_+)+\dim H_0(X_-) = 1 + n-1 = n\]
+\end{proof}
+
+\begin{eg}
+	\[S^0=0\text{-sphere}=2\text{ distinct points }\{-1,+1\}\]
+	So $H_0(S^0;\mathbb{F})\cong \mathbb{F}\oplus \mathbb{F}$
+	\[H_n(S^0;\mathbb{F})=0, \,n\neq0\text{ (no higher simplices)}\]
+	On the other hand, the standard model of $S^1$ is,
+	\[V_{S^1}=\{0,1,2\}\]
+	\[\mathcal{S}_{S^1}=\{\{0\},\{1\},\{2\},\{0,1\},\{0,2\},\{1,2\}\}\]
+\end{eg}
+
+\begin{proposition}
+	\[H_n(S^1;\mathbb{F})=\begin{cases}
+		\mathbb{F} & n=0 \\ \mathbb{F} & n=1 \\ 0 & n\geq 2
+	\end{cases}\]
+\end{proposition}
+
+\begin{proof}
+	Decompose $S^1=X_1\cup X_+$, where
+	$X_-$ is equal to
+	\begin{center}
+		\begin{tikzpicture}
+			\draw (-2,0) node[left] {$0$}  -- (2,0) node[right] {$1$} ;
+		\end{tikzpicture}
+		\end{center}
+	and $X_+$ is equal to
+	\begin{center}
+		\begin{tikzpicture}
+			 \draw [line width=1pt] (0,0) node[left] {$0$} -- (60:3) node[above] {$1$}  
+			-- (3,0) node[right] {$2$}  ;
+		\end{tikzpicture}
+		\end{center}
+	i.e., \[X_-=C(0),\text{ $X_+=$ cone on $S^0=\{\{0\},\{1\}\}$}\]
+	$X_+\cap X_-=S^0$. Use the Mayer-Vietoris Theorem, so,
+	\[H_1(X_+)\oplus H_1(X_+)\rightarrow H_1(S^1)\rightarrow H_0(S^0)
+	\rightarrow H_0(X_+)\oplus H_0(X_0)\rightarrow H_0(S^1)\]
+	\[0\rightarrow H_1(S)\rightarrow \mathbb{F}\oplus\mathbb{F}
+	\rightarrow \mathbb{F}\oplus\mathbb{F}\rightarrow \mathbb{F}\]
+	$\dim(H_1(S^1))=1$ follows from Whitehead's lemma.
+\end{proof}
+
+\begin{lemma}
+	Let \[0\rightarrow V_n\xrightarrow{f_n} V_{n-1}\xrightarrow{f_{n-1}}
+	\ldots\rightarrow
+	V_1\xrightarrow{f_1} V_0\rightarrow 0\] be an exact sequence of finite
+	dimensional vector spaces. Then,
+	\[\sum_{n\geq0}\dim(V_{2n})=\sum_{n\geq0}\dim(V_{2n+1})\]
+\end{lemma}
+
+\begin{proof}
+	Let $P(n)$ denote the induction hypothesis on $n$.
+	\[0\rightarrow V_1\rightarrow V_0\rightarrow 0\]
+	then $P(1)$ holds. The sequence is exact which implies $V_1\cong V_0$.
+	Now suppose we have an exact sequence,
+	\[0\rightarrow V_2\xrightarrow{f_2}V_1\xrightarrow{f_1}V_0\rightarrow 0\]
+	then by the kernel-rank theorem, this implies that
+	\[\dim(V_0)+\dim(V_2)=\dim(V_1)\] and so $P(2)$ is true. Now we prove
+	that $P(2n)\implies P(2n+1)$. Suppose that $P(2n)$ is true, and take
+	the following exact sequence,
+	\[0\rightarrow V_{2n+1}\xrightarrow{f_{2n+1}}V_{2n}\xrightarrow{f_{2n}}
+	V_{2n-1}\rightarrow\ldots\rightarrow V_0\rightarrow 0\] Split the sequenceand define $f=\text{im}(f_{2n})=\ker(f_{2n-1})$. Now we have two exact sequences,
+	\[0\rightarrow V_{2n+1}\rightarrow V_{2n}\rightarrow f\rightarrow 0\]
+	and \[0\rightarrow f\rightarrow V_{2n-1}\rightarrow\ldots\rightarrow V_0
+	\rightarrow 0\] By $P(2n)$, \[\dim(f)+\sum_{r=0}^{n-1}\dim(V_{2r})=
+	\sum_{r=0}^{n-1}\dim(V_{2r+1})\] and $\dim(f)=\dim(V_{2n})-\dim(V_{2n+1})$
+	Substitute this into the previous expression and we get,
+	\[\sum_{r=0}^n\dim(V_{2r})-\dim(V_{2n+1})=\sum_{r=0}^{n-1}\dim(V_{2r+1})\]
+	This proves that $P(2n)\implies P(2n+1)$. To prove that
+	$P(2n+1)\implies P(2n+2)$, take
+	\[0\rightarrow V_{2n+2}\rightarrow V_{2n+1}\rightarrow
+	V_{2n}\rightarrow\ldots\] Split the exact sequence as before and
+	proceed as before. (Set $f=\text{im}(f_{2n+1})=\ker(f_{2n})$)
+\end{proof}
+
+\begin{lemma}{Five lemma}
+	Suppose we have a commutative diagram of abelian groups and homomorphisms,
+	\[
+	\begin{tikzcd}
+		A_0\arrow{r}{\alpha_0} \arrow{d}{f_0} & A_1 \arrow{r}{\alpha_1}
+		\arrow{d}{f_1} & A_2 \arrow{r}{\alpha_2} \arrow{d}{f_2} &
+		A_3 \arrow{r}{\alpha_3} \arrow{d}{f_3} & A_4 \arrow{d}{f_4} \\
+		B_0 \arrow{r}{\beta_0} & B_1 \arrow{r}{\beta_1} & B_2 \arrow{r}{\beta_2}
+		& B_3 \arrow{r}{\beta_3} & B_4
+	\end{tikzcd}
+	\]
+	in which both rows are exact, and $f_0, \,f_1, \,f_3, f_4$ are
+	isomorphisms. Then $f_2$ is also an isomorphism.
+\end{lemma}
+
+\begin{proof}
+	We first show that $f_2$ is injective. Suppose $x\in A_2$ such
+	that $f_2(x)=0$. We want to show that $x=0$.
+	\[\beta_2 f_2(x)=0\implies f_3\alpha_2(x)=0\]
+	but $f_3$ is an isomorphism, which implies that $\alpha_2(x)=0$.
+	But then $x\in\ker(\alpha_2)=\text{im}(\alpha_2)$, so $x=\alpha_1(y)$
+	for some $y\in A_1$. \[f_2\alpha_1(y)=0\implies \beta_1 f_1(y)=0\]
+	so $f_1(y)\in\ker(\beta_1)=\text{im}(\beta_0)$.
+	Thus there exists $w\in\beta_0$
+	such that $\alpha_0(w)=f_1(y)$. But $f_0$ is surjective so write
+	\[w=f_0(z), \,\alpha_0 f_0(z)=f(y)\implies f_1\alpha_0(z)=f_1(y)\]
+	but now $f_1$ is an isomorphism so $y=\alpha_0(z), \,x=\alpha_1(y)=
+	\alpha_1\alpha_0(z)$. By exactness, $\alpha_1\alpha_0=0$, so $\alpha=0$
+
+	\vspace{12pt}
+
+	Now we show that $f_2$ is surjective. Take $b\in\beta_2$. We want to find
+	$a\in A_2$ such that $f_2(a)=b$. Now, $\beta_2(b)\in B_3$. $f_2$ is an 
+	isomorphism so choose $x\in A_3$ so that \[f_3(x)=\beta_2(b)
+	\implies \beta_3 f_3(x)=\beta_3\beta_2(b)\] However by exactness,
+	$\beta_3\beta_2=0$, so $\beta_3f_3(x)=0\implies f_4\alpha_3(x)=0$.
+	Now $f_4$ is an isomorphism thus $\alpha_3(x)=0$, $x\in\ker(\alpha_3)
+	=\ker(\alpha_2)$. Now there exists $y\in A_2$ such that $\alpha_2(y)=x$.
+	Consider $b-f_2(y)$. Then \[\beta_2(b-f_2(y))=\beta_2(b)-\beta_2f_2(y)
+	=\beta_2(b)-f_3\alpha_2(y)=\beta_2(b)-f_3(x)=0\] Thus
+	$b-f_2(y)\in\ker(\beta_2)=\ker(\beta_1)$ so there exists $w\in\beta_1$
+	such that $\beta_1(w)=b-f_2(y)$. $f_1$ is an isomorphism implies that
+	there exists $z\in A_1$ such that $f_1(z)=w$. So \[\beta_1f_1(z)=b-f_2(y)\]
+	\[f_2\alpha_1(z)=b-f_2(y)\implies b=f_2(y+\alpha_1(z))\]
+	Let $a=y+\alpha_1(z)$ which implies $b=f_2(a)$. Thus $f_2$ is surjective.
+\end{proof}
 
 
 
