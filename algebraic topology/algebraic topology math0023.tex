@@ -792,7 +792,8 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	the same in every case.
 \end{proof}
 
-\begin{corollary}{of the geometric Mayer-Vietoris Theorem}
+\begin{corollary}
+	{(of the geometric Mayer-Vietoris Theorem)}
 	Let $X$ be a finite simplicial complex. Then,
 	\[\dim H_0(X;\mathbb{F})=\{\text{number of connected components of $X$}\}\]
 \end{corollary}
@@ -835,14 +836,14 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	and $X_+$ is equal to
 	\begin{center}
 		\begin{tikzpicture}
-			 \draw [line width=1pt] (0,0) node[left] {$0$} -- (60:3) node[above] {$1$}  
-			-- (3,0) node[right] {$2$}  ;
+			 \draw [line width=1pt] (0,0) node[left] {$0$} -- (60:3) node[above] {$2$}  
+			-- (3,0) node[right] {$1$}  ;
 		\end{tikzpicture}
 		\end{center}
 	i.e., \[X_-=C(0),\text{ $X_+=$ cone on $S^0=\{\{0\},\{1\}\}$}\]
 	$X_+\cap X_-=S^0$. Use the Mayer-Vietoris Theorem, so,
-	\[H_1(X_+)\oplus H_1(X_+)\rightarrow H_1(S^1)\rightarrow H_0(S^0)
-	\rightarrow H_0(X_+)\oplus H_0(X_0)\rightarrow H_0(S^1)\]
+	\[H_1(X_+)\oplus H_1(X_-)\rightarrow H_1(S^1)\rightarrow H_0(S^0)
+	\rightarrow H_0(X_+)\oplus H_0(X_-)\rightarrow H_0(S^1)\]
 	\[0\rightarrow H_1(S)\rightarrow \mathbb{F}\oplus\mathbb{F}
 	\rightarrow \mathbb{F}\oplus\mathbb{F}\rightarrow \mathbb{F}\]
 	$\dim(H_1(S^1))=1$ follows from Whitehead's lemma.
@@ -867,11 +868,11 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	that $P(2n)\implies P(2n+1)$. Suppose that $P(2n)$ is true, and take
 	the following exact sequence,
 	\[0\rightarrow V_{2n+1}\xrightarrow{f_{2n+1}}V_{2n}\xrightarrow{f_{2n}}
-	V_{2n-1}\rightarrow\ldots\rightarrow V_0\rightarrow 0\] Split the sequenceand define $f=\text{im}(f_{2n})=\ker(f_{2n-1})$. Now we have two exact sequences,
+	V_{2n-1}\rightarrow\ldots\rightarrow V_0\rightarrow 0\] Split the sequence and define $f=\text{im}(f_{2n})=\ker(f_{2n-1})$. Now we have two exact sequences,
 	\[0\rightarrow V_{2n+1}\rightarrow V_{2n}\rightarrow f\rightarrow 0\]
 	and \[0\rightarrow f\rightarrow V_{2n-1}\rightarrow\ldots\rightarrow V_0
 	\rightarrow 0\] By $P(2n)$, \[\dim(f)+\sum_{r=0}^{n-1}\dim(V_{2r})=
-	\sum_{r=0}^{n-1}\dim(V_{2r+1})\] and $\dim(f)=\dim(V_{2n})-\dim(V_{2n+1})$
+	\sum_{r=0}^{n-1}\dim(V_{2r+1})\] and $\dim(f)=\dim(V_{2n})-\dim(V_{2n+1})$.
 	Substitute this into the previous expression and we get,
 	\[\sum_{r=0}^n\dim(V_{2r})-\dim(V_{2n+1})=\sum_{r=0}^{n-1}\dim(V_{2r+1})\]
 	This proves that $P(2n)\implies P(2n+1)$. To prove that
@@ -881,7 +882,7 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	proceed as before. (Set $f=\text{im}(f_{2n+1})=\ker(f_{2n})$)
 \end{proof}
 
-\begin{lemma}{Five lemma}
+\begin{lemma}{(Five lemma)}
 	Suppose we have a commutative diagram of abelian groups and homomorphisms,
 	\[
 	\begin{tikzcd}
