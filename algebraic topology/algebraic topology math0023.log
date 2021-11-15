@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  25 OCT 2021 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  15 NOV 2021 19:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -393,20 +393,20 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 ) (./algebraic topology math0023.aux)
 \openout1 = `"algebraic topology math0023.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count296
@@ -428,11 +428,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./algebraic topology math0023.toc)
@@ -442,93 +442,88 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 78.
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 79.
  (c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd) [1] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
 
  []
 
 [5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 [12] [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 402--404
+Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--408
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
+Underfull \hbox (badness 10000) in paragraph at lines 451--453
 
  []
 
 [19] [20] [21] [22]
-Overfull \hbox (3.28815pt too wide) detected at line 573
+Overfull \hbox (3.28815pt too wide) detected at line 586
 []
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 573--575
-
- []
-
-
-Overfull \hbox (11.80594pt too wide) in paragraph at lines 576--578
+[23]
+Overfull \hbox (11.80594pt too wide) in paragraph at lines 590--592
 []\OT1/cmr/m/n/14.4 The Al-ge-braic Mayer-Vietoris The-o-rem im-plies the \OT1/cmr/m/it/14.4 Ge-o-met-ric \OT1/cmr/m/n/14.4 Mayer-
  []
 
-[23]
-Overfull \hbox (15.87775pt too wide) in paragraph at lines 622--622
+
+Overfull \hbox (15.87775pt too wide) in paragraph at lines 639--639
 []\OT1/cmr/bx/n/17.28 The Ge-o-met-ric Mayer-Vietoris The-o-rem: Chain
  []
 
 [24]
-Overfull \hbox (28.43794pt too wide) detected at line 651
+Overfull \hbox (28.43794pt too wide) detected at line 668
 \OML/cmm/m/it/14.4 S[] \OT1/cmr/m/n/14.4 = (\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ; [] ; n \OT1/cmr/m/n/14.4 + 1\OMS/cmsy/m/n/14.4 g\OML/cmm/m/it/14.4 ; \OMS/cmsy/m/n/14.4 f[]g\OT1/cmr/m/n/14.4 )
  []
 
 [25]
-Overfull \hbox (94.28094pt too wide) detected at line 684
+Overfull \hbox (94.28094pt too wide) detected at line 702
 []
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 720--721
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
 [27] [28] [29]
-Overfull \hbox (1.2134pt too wide) detected at line 827
+Overfull \hbox (1.2134pt too wide) detected at line 845
 \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^H \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^H \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 )
  []
 
 [30] [31] [32] [33] (./algebraic topology math0023.aux) ) 
 Here is how much of TeX's memory you used:
- 16247 strings out of 478599
- 336537 string characters out of 5858101
- 614412 words of memory out of 5000000
- 33852 multiletter control sequences out of 15000+600000
+ 16249 strings out of 478599
+ 336552 string characters out of 5858101
+ 613412 words of memory out of 5000000
+ 33854 multiletter control sequences out of 15000+600000
  413378 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,15n,108p,493b,1045s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,15n,108p,493b,1050s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "algebraic topology math0023.pdf" (34 pages, 233772 bytes).
+Output written on "algebraic topology math0023.pdf" (34 pages, 234158 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

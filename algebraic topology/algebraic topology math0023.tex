@@ -17,6 +17,7 @@
 \newtheorem*{corollary}{Corollary}
 \newtheorem*{proposition}{Proposition}
 \newtheorem*{eg}{Example}
+\newtheorem*{remark}{Remark}
 
 \begin{document}
 
@@ -242,6 +243,11 @@ Given a simplicial mapping $f:X\rightarrow Y$, we are going to produce linear ma
 	\item $H_k(\text{id}_X)=\text{id}_{H_k(X)}$
 \end{enumerate}
 
+\begin{remark}
+	(Look up on functors for a more general treatment
+	of the above concept.)
+\end{remark}
+
 \subsection{Chain mapping}
 \begin{definition}
 	Let \[C_*=(C_r,\partial_r^C)\]\[D_*=(D_r,\partial_r^D)\] be chain complexes. A \emph{chain mapping} $f_*:C_*\rightarrow D_*$ is a collection of linear maps \[f*=(f_r)_{r\geq0}\] where
@@ -266,7 +272,7 @@ If $f:X\rightarrow Y$ is a simplicial mapping, define \[C_n(f):C_n(X)\rightarrow
 
 \begin{proof}
 \begin{eqnarray*}
-	\partial d_n^DC_n(f)[v_0,\ldots,v_n]&=&\partial_n^D([f(v_0),\ldots,f(v_n)]) \\
+	\partial_n^DC_n(f)[v_0,\ldots,v_n]&=&\partial_n^D([f(v_0),\ldots,f(v_n)]) \\
 		&=&\sum_{r=0}^n (-1)^r[f(v_0),\ldots,\hat{f(v_0)},\ldots,f(v_n)] \\
 		&=&C_{n-1}(f)\sum_{r=0}^n (-1)^r[v_0,\ldots,\hat{v_r},\ldots,v_n] \\
 		&=&C_{n-1}(f)\partial_n^C[v_0,\ldots,v_n]
@@ -348,11 +354,11 @@ If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F})\neq0$ (
 \vspace{12pt}
 
 Now let $X$ be a simplicial complex. If $v,w\in V_X$, then by a path from $v$ to $w$, we mean
-a sequence of $1$-simplices \[[v_0,v_1],[v_1,v_2],\ldots,[v_{n-1},v_{n-1}],[v_{n-1},v_n]]\]
+a sequence of $1$-simplices \[[v_0,v_1],[v_1,v_2],\ldots,[v_{n-1},v_{n-1}],[v_{n-1},v_n]\]
 such that $v_0=v$ and $v_n=w$.
 
 \begin{proposition}
-	If $X$ is non-empty and connected, then \[H_0(X;\mathbb{F}\cong\mathbb{F})\]
+	If $X$ is non-empty and connected, then \[H_0(X;\mathbb{F})\cong\mathbb{F}\]
 \end{proposition}
 
 \begin{proof}
@@ -385,7 +391,7 @@ If $X$ consists of a single point,
 
 \subsection{Cone}
 \begin{definition}
-	Let $X$ be a simplciial complex. A \emph{cone} on $X$, $C(X)$, is defined as follows,
+	Let $X$ be a simplicial complex. A \emph{cone} on $X$, $C(X)$, is defined as follows,
 	choose $*$ (cone point) such that $*\not\in V_X$
 	\[V_{C(X)}=\{*\}\cup V_X\] \[\mathcal{S}_{C(X)}=
 	\mathcal{S}_X\cup\{\{*\}\cup\{\sigma\cup\{*\}:\sigma\in S_X\}\}\]
@@ -410,7 +416,7 @@ If $X$ consists of a single point,
 	we've joined $v$ to $w$. So \[H_0(C(X);\mathbb{F})\cong \mathbb{F}\]
 
 	Now we must show \[H_k(C(X))=0, \,k\geq0\] We define, for each $k>0$, a linear map
-	\[\mathcal{H}_k:C_k(C(X))\rightarrow C{k+1}(C(X))\] (called a contracting homotopy)
+	\[\mathcal{H}_k:C_k(C(X))\rightarrow C_{k+1}(C(X))\] (called a contracting homotopy)
 	$\mathcal{H}_k$ is defined on a basis by \[\mathcal{H}_k[v_o,\ldots,v_k]=[*,v_0,\ldots,v_k]\]
 	Then,
 	\begin{eqnarray*}
@@ -422,14 +428,14 @@ If $X$ consists of a single point,
 	=[v_0,\ldots,v_k]\] However,
 	\[\mathcal{H}_{k-1}[v_0,\ldots,\hat{v_r},\ldots,v_k]=[*,v_0,\ldots,\hat{v_r},\ldots,v_k]\]
 	and
-	\[(\partial_{k+1}\mathcal{H}_k+\mathcal{H}_{k-1}\partial_{k-1})[v_0,\ldots,v_k]=
+	\[(\partial_{k+1}\mathcal{H}_k+\mathcal{H}_{k-1}\partial_{k})[v_0,\ldots,v_k]=
 	[v_0,\ldots,v_k]\] i.e.,
-	\[\partial_{k+1}\mathcal{H}_k + \mathcal{H}_{k-1}\partial_{k-1}=\text{id}\]
+	\[\partial_{k+1}\mathcal{H}_k + \mathcal{H}_{k-1}\partial_{k}=\text{id}\]
 	(we call the above a homotopy relation)
 	\[H_k(C(X))=Z_k(C(X))/B_k(C(X))\] and if $z\in Z_k(C(X)),\,\partial_k(z)=0$, so 
 	if $z\in Z_k(C(X)), \,z=\partial_{k+1}\mathcal{H}_k(z)$ so $z\in\text{im}(\partial_{k+1})$,
 	i.e., $Z_k(C(X))\subset B_k(C(X)) (\subset Z_k(X))$ so if $C(X)$ is a cone and $k>0$,
-	\[Z_k(C(X))=B_k(C(X))\] and $H_k(C(X);\mathbb{F}=0)$
+	\[Z_k(C(X))=B_k(C(X))\] and $H_k(C(X);\mathbb{F})=0$
 \end{proof}
 
 \begin{corollary}
@@ -471,19 +477,25 @@ i.e., $S^n=\text{$n$-skeleton of } \Delta^{n+1}$
 
 	\[H_k(X^{(n)})\equiv H_k(X)\text{ for }k\leq n-1\]
 	\begin{eqnarray*}
-		H_n(X^{(n)})&=&\ker(\partial_n:C_n(X)\rightarrow C_{n-1}(X)) \\
+		H_n(X^{(n)})&\equiv&\ker(\partial_n:C_n(X)\rightarrow C_{n-1}(X)) \\
 					&=&Z_n(X)
 	\end{eqnarray*}
 	 but $B_n(X^{(n)})=0$. In general $B_n(X)\neq 0$.
 \end{proof}
 
-As $S^n=(\Delta^{n+1})^{(n)}$, ($n\neq0, N\geq 1$) we see that 
+As $S^n=(\Delta^{n+1})^{(n)}$, ($n\neq0, n\geq 1$) we see that 
 \[H_k(S^{(n)};\mathbb{F})=\begin{cases}\mathbb{F} & k=0 \\ 0 & 1\leq k\leq n-1\end{cases}\]
 
 We now still need to compute $H_n(S^n)$.
 
 \begin{definition}
-	Let $U\xrightarrow{f} V\xrightarrow{g} W$ be linear maps. We say a sequence is \emph{exact} at $V_r$ when \[\ker f_r=\text{im} f_{r+1}\] We say the sequence is \emph{exact} when it is 
+	Let $U\xrightarrow{f} V\xrightarrow{g} W$ be linear maps. We say sequence is \emph{exact} at $V$ when
+	\[\ker(g)=\text{im}(f)\] In general if 
+	\[V_{n+1}\xrightarrow{f_{n+1}} V_n\rightarrow\ldots
+	\rightarrow V_{r+1}\xrightarrow{f_{r+1}} V_r
+	\xrightarrow{f_r} V_{r-1}\rightarrow\ldots
+	\rightarrow V_1\xrightarrow{f_1}V_0\] is a sequence 
+	of linear maps, we say a sequence is \emph{exact} at $V_r$ when \[\ker f_r=\text{im} f_{r+1}\] We say the sequence is \emph{exact} when it is 
 	\emph{exact} at each possible $V_r$.
 \end{definition}
 
@@ -510,12 +522,12 @@ Exactness here means
 \begin{eg}
 \underline{Kernel-rank theorem} \\
 Suppose we have the exact sequence
-\[0\rightarrow U\xrightarrow{f} V\xrightarrow{g}\rightarrow W\rightarrow 0\]
+\[0\rightarrow U\xrightarrow{f} V\xrightarrow{g} W\rightarrow 0\]
 if $U,V,W$ are finite dimensional, then \[\dim(V)=\dim(U)+\dim(W)\] by the kernel-rank theorem.
 To see this, note that \[\text{im}(g)=W\] by exactness.
-\[\ker(g)+\dim(W)=\dim(V)\] \[\ker(g)=\text{im}(f)\cong U\] (since
+\[\dim\ker(g)+\dim\text{im}(g)=\dim(V)\implies\dim\ker(g)+\dim(W)=\dim(V)\] \[\ker(g)=\text{im}(f)\cong U\] (since
 $f$ is injective) and so 
-\[\dim(\ker(g))=\dim(U)\] so \[\dim(U)+\dim(W)=\dim(V)\]
+\[\dim\ker(g)=\dim(U)\] so \[\dim(U)+\dim(W)=\dim(V)\]
 \[H_k(X)=Z_k(X)/B_k(X)\]
 \[0\rightarrow B_k(X)\xhookrightarrow{} Z_k(X)\rightarrow H_k(X)\rightarrow 0\]
 is a short exact sequence, $z\mapsto[z], \,z+B_k(X)$, so 
@@ -533,13 +545,14 @@ We say that this is exact when for each $n$, this sequence is exact.
 
 \section{Mayer-Vietoris Theorem}
 \subsection{Algebraic Mayer-Vietoris Theorem}
-Suppose 
+\begin{theorem}[Algebraic Mayer-Vietoris Theorem]
+	Suppose 
 \[0\rightarrow A_*\xrightarrow{i} B_*\xrightarrow{p} C_*\rightarrow 0\]
 is an exact sequence of chain complexes, then there exists a long exact
 sequence of the following type
 \[\rightarrow H_{n+1}(A)\xrightarrow{i_*} H_{n+1}(B)\xrightarrow{p_*} H_{n+1}(C)
 \xrightarrow{\delta} H_n(A)\xrightarrow{i_*}H_n(B)\ldots\]
-\[\rightarrow H_1(A)\xrightarrow{i_*}H_1(B)\xrightarrow{p_*}\xrightarrow{\delta}
+\[\rightarrow H_1(A)\xrightarrow{i_*}H_1(B)\xrightarrow{p_*}H_1(C)\xrightarrow{\delta}
 H_0(A)\xrightarrow{i_*}H_0(B)\xrightarrow{p_*}H_0(C)\rightarrow 0\]
 where in our case, $A_n=B_n=C_n=0$ for $n<0$.
 
@@ -560,7 +573,7 @@ and suppose the following commutes,
 \end{tikzcd}
 \]
 
-Compute the two long exact sequences,
+Compare the two long exact sequences,
 \[
 \begin{tikzcd}
 	H_{n+1}(B) \arrow{r}{p_*} \arrow{d}{\beta_*} & H_{n+1}(C) \arrow{r}{\delta}
@@ -571,7 +584,8 @@ Compute the two long exact sequences,
 	H_n(A') \arrow{r}{j_*} & H_n(B') \arrow{r}{q_*} & H_n(0)
 \end{tikzcd}
 \]
-this diagram commutes. \\
+this diagram commutes. 
+\end{theorem}
 
 The Algebraic Mayer-Vietoris Theorem implies the \emph{Geometric}
 Mayer-Vietoris Theorem.
@@ -588,11 +602,14 @@ Then we say that $Y$ is a \emph{subcomplex} of $X$ if,
 	\begin{enumerate}
 		\item Let $X_1, \,X_2$ be subcomplexes of $Z$. Then 
 				$(V_{X_1}\cup V_{X_2}, \mathcal{S}_{X_1}\cup \mathcal{S}_{X_2})$
-				is also a subcomplex of $Z$.
+				is also a subcomplex of $Z$. This is called the
+				union $X_1\cup X_2$.
 		\item $(V_{X_1}\cap V_{X_2}, \mathcal{S}_{X_1}\cap\mathcal{S}_{X_2})$
-				is also a subcomplex of $Z$. This is the interesction
-				$X_1\cap X_2$, $Z=X_1\cup X_2$.
+				is also a subcomplex of $Z$. This is 
+				called the intersection $X_1\cap X_2$.
 	\end{enumerate}
+	We are
+	interested in the case $Z=X_1\cup X_2$.
 \end{proposition}
 
 \begin{definition}
@@ -652,12 +669,12 @@ We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
 	In particular every non-empty subset of $\{0,1,\ldots,n\}$ is a simplex
 	of $S^n$ so,
 	\begin{enumerate}
-		\item $\Delta^n\subset S^n$. As $S^{n-1}\subset \Delta^m$, then,
-		\item $S^{n-1}\subset S^m$ (note that $n+1\not\in V_{S^{n-1}})$ and,
-		\item Taking $n+1$ to be one point $C(S^{n-1})\subset S^n$. 
-				()$C(S^{n-1})$ is sometimes called the \emph{Witches hat})
+		\item $\Delta^n\subset S^n$. But as $S^{n-1}\subset \Delta^n$, then,
+		\item $S^{n-1}\subset S^n$ (note that $n+1\not\in V_{S^{n-1}})$ and,
+		\item Taking $n+1$ to be the cone point $C(S^{n-1})\subset S^n$. 
+				($C(S^{n-1})$ is sometimes called the \emph{Witches hat})
 		\item
-		\[S^n=\Delta^n\cup C(S^{n-1})\] \[S^{n-1}=\Delta^n\cup C(S^{n-1})\]
+		\[S^n=\Delta^n\cup C(S^{n-1})\] \[S^{n-1}=\Delta^n\cap C(S^{n-1})\]
 	\end{enumerate}
 
 		So we can write,
@@ -676,7 +693,8 @@ We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
 	proven the hypothesis for $n-1$ and consider the exact sequence,
 	\[
 	\begin{tikzcd}
-		H_n(X_+)\oplus H_n(X_-)\arrow{r} & H_n(S^n)\arrow{r} & H_{n-1}(S^{n-1})
+		H_n(X_+)\oplus H_n(X_-)\arrow{r} & H_n(S^n)\arrow{r}
+		{\delta} & H_{n-1}(S^{n-1})
 		\arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-) \\
 		0\oplus 0\arrow{r} & H_n(S^n)\arrow{r}{\cong} & H_{n-1}(S^{n-1})
 		\arrow{r} & 0\oplus 0
@@ -694,7 +712,7 @@ vector subspaces of $W$, say $U$ and $V$.
 	$U\oplus V$ is a vector space. We define sums, scalar multiplication
 	and zero as follows,
 	\[\begin{pmatrix}
-		(u_1\\v_1)
+		u_1\\v_1
 	\end{pmatrix}+\begin{pmatrix}
 		u_2\\v_2
 	\end{pmatrix}=
@@ -720,7 +738,7 @@ If $U$ and $V$ have finite dimensions, then
 Note that $U+V$ is a vector subspace of $W$. \\
 
 What is the relationship between $U+V$ and $U\oplus V$? There is an exact
-sequence \[U\oplus V\xrightarrow{\mu}U+V\]
+sequence \[\rightarrow U\oplus V\xrightarrow{\mu}U+V\]
 \[\mu\begin{pmatrix}
 	u\\v
 \end{pmatrix}=u+v\] $\mu$ is linear and surjective by the definition of
@@ -736,7 +754,7 @@ $U+V$.
 We get an exact sequence,
 \[0\rightarrow U\cap V\xrightarrow{i} U\oplus V\xrightarrow{\mu} U+V
 \rightarrow 0\]
-\[i(x)=\begin{pmatrix}
+\[i(u)=\begin{pmatrix}
 	u\\-u
 \end{pmatrix}\]
 As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
