@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{caption}
+\usepackage{adjustbox}
 
 \theoremstyle{definition}
 \newtheorem*{theorem}{Theorem}
@@ -488,6 +489,7 @@ As $S^n=(\Delta^{n+1})^{(n)}$, ($n\neq0, n\geq 1$) we see that
 
 We now still need to compute $H_n(S^n)$.
 
+\subsection{Exact sequences}
 \begin{definition}
 	Let $U\xrightarrow{f} V\xrightarrow{g} W$ be linear maps. We say sequence is \emph{exact} at $V$ when
 	\[\ker(g)=\text{im}(f)\] In general if 
@@ -706,6 +708,7 @@ We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
 Let $W$ be a vector space over $\mathbb{F}$ and suppose we have two
 vector subspaces of $W$, say $U$ and $V$.
 
+\subsection{External and internal sum}
 \begin{definition}{External sum (coproduct)}
 	\[U\oplus V=\Bigl\{\begin{pmatrix}u \\ v\end{pmatrix}: u\in U, v\in V
 		\Bigr\}\]
@@ -929,6 +932,111 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	Let $a=y+\alpha_1(z)$ which implies $b=f_2(a)$. Thus $f_2$ is surjective.
 \end{proof}
 
+\section{Subdivision}
+We will now show that homology is invariant under 'subdivision'. We first have to illustrate
+what 'subdivision' means. \\
 
+Take for example $\Delta^2$ (the triangle), and add a point at its barycenter,
+adding edges from the barycenter to each three of the vertices of $\Delta^2$.
+We end up with an additional point (vertex), two additional regions and three additional
+edges. This is an example of an easy subdivision.
+
+\begin{definition}
+	Let $X=(V_X,\mathcal{S}_X)$ be a finite simplicial complex, and let $\tau\in\mathcal{S}_X$.
+	$\hat{\tau}$ will denote the subcomplex of $X$ determined by $\tau$.
+	\[V_{\hat{\tau}}=\tau, \,\,\,\mathcal{S}_{\hat{\tau}}=\{p\in\mathcal{S}_X, \,p\subset\tau\}\]
+	We say that $\sigma\in\mathcal{S}_X$ is \emph{principal} (or maximal) when $\sigma$ is not
+	contained properly in any other simplex.
+\end{definition}
+
+\begin{proposition}
+	If $\sigma_1,\ldots,\sigma_N$ are the principal simplices of $X$ then 
+	\[X=\hat{\sigma_1}\cup\hat{\sigma_2}\cup\ldots\cup\hat{\sigma_N}\]
+\end{proposition}
+
+\subsection{Subdivision at a principal simplex}
+Let $\sigma$ be a principal simplex of $X$ and let $\sigma_1,\ldots\sigma_N$ be the remaining
+principal simplices such that \[X=\hat{\sigma}\cup\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\]
+Put $X_+=\hat{\sigma}$, $X_-=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}$. Then 
+$X=X_+\cup X_-$ and $X_+\cap X_-\subset\partial\hat{\sigma}$ (boundary of $\hat{\sigma}$)
+
+\begin{definition}
+	\[Sd(X,\sigma)=C(\partial\sigma)\cup\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\] i.e.,
+	\[Sd(X\sigma)=X_+'\cup X_-'\] where $X_+'$ is the cone on the boundary of $\sigma$ and
+	\[X_-'=X_-=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\] and \[X_+'\cap X_-'=X_+\cap X_-\]
+\end{definition}
+
+Taking our $\Delta^2$ example earlier, letting $\sigma=\Delta^2$, $Sd(\Delta^2,\sigma)$ is 
+exactly the resulting simplex we get by performing our subdivision earlier.
+
+\subsection{Squash mapping}
+Let $\sigma$ be an $n$-simplex and consider $C(\partial\sigma)$. We construct simplicial mappings
+$C(\partial\sigma)\rightarrow\sigma$ as follows,
+\[Sq|_{\partial\sigma}=\text{id}_{\partial\sigma}\] \[Sq(*)=\text{some (arbitrarily chosen)
+vertex in }\partial\sigma\] where $*$ is our cone point.
+
+\begin{proposition}
+	$Sq:H_k(C(\partial\sigma))\rightarrow H_k(\sigma)$ is an isomorphism for all $k$.
+\end{proposition}
+
+\begin{proof}
+	$C(\partial\sigma)$ and $\sigma$ are both cones, so $H_k(C(\partial\sigma))=H_k(\sigma)=0$ if 
+	$k>0$. For $k=0$, any vertex $V$ in $C(\partial\sigma)$ gives a basis $[v]$ for 
+	$H_0(C(\partial\sigma))$ (any two vertices differ by a boundary). Likewise, any vertex $w$
+	in $\sigma$ gives basis element $[w]$ in $H_0(\sigma)$ and $Sq([v])=[w]$, so now 
+	\[Sq:H_0(C(\partial\sigma))\xrightarrow{\cong}H_0(\sigma)\]
+\end{proof}
+
+\begin{theorem}
+	Let $K$ be a finite complex. Let $\sigma$ be a principal complex, and let 
+	$\sigma_1,\ldots,\sigma_N$ be the remaining principal simplices and define an extended
+	squash map $Sq:Sd(X,\sigma)\rightarrow X$ by 
+	\[Sq:C(\delta\sigma)\rightarrow\sigma\text{ is a squash mapping}\]
+	\[Sq:\sigma_i\rightarrow\sigma_i\text{ identity }i=1,\ldots,N\]
+	Then $Sq:H_k(Sd(X,\sigma))\rightarrow H_k(X)$ is an isomorphism for all $k$.
+\end{theorem}
+
+\begin{proof}
+	Put \[X_+=\hat{\sigma}, \,X_+'=C(\partial\sigma)\]
+	\[X_-'=X_-=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\] so $X_+'\cap X_-'=X_+\cap X_-$ and
+	$Sq:X_-'\rightarrow X_-$ is the identity. Consider the Mayer-Vietoris sequences \\
+	\vspace{12pt}
+	\adjustbox{scale=0.8,center}{%
+		\begin{tikzcd}
+			H_n(X_+'\cap X_-')\arrow{r}\arrow{d}{\text{id}} & H_n(X_+')\oplus H_n(X_-') \arrow{r}\arrow{d}{M} &
+			H_n(Sd(X,\sigma) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
+			H_{n-1}(X_+')\oplus H_{n-1}(X_-') \arrow{d}{M} \\
+			H_n(X_+\cap X_-) \arrow{r} & H_n(X_+)\oplus H_n(X_-) \arrow{r} & H_n(X) \arrow{r}
+			& H_{n-1}(X_+\cap X_-) \arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-)
+		\end{tikzcd}
+	} \\
+	\vspace{12pt}
+	where $M=\begin{pmatrix}Sq&0\\0&\text{id}\end{pmatrix}$. $\text{id}$ is clearly an
+	isomorphism, as well as $M$, since $Sq:H_n(X_+')\rightarrow H_n(X_+)$ is an isomorphism.
+	By the five lemma, $Sq$ is an	isomorphism.
+\end{proof}
+
+We have now shown that if $Sd(X,\sigma)$ is the subdivision of $X$ at a principal simplex,
+then $H_*(Sd(X,\sigma))\cong H_*(X)$. Now we have to show that this also holds for
+non-principal simplices.
+
+\subsection{Subdivision at a non-principal simplex}
+We first describe an example of a non-principal simplex. Take $\Delta^2$. Then take $\{0,1\}$.
+This is contained within $\{0,1,2\}$, hence this is a non-principal simplex. We wish to 
+perform subdivisions at simplices such as these.
+\begin{definition}[Join]
+	Let $K=(V_K,\mathcal{S}_K)$ and $L=(V_L,\mathcal{S}_L)$ be simplicial complexes such that
+	$V_K\cap V_L=\emptyset$. Define 
+	\[K*L=(V_K\cup V_L, \,\mathcal{S}_K\cup\mathcal{S}_L\cup\{p\cup\tau, p\in\mathcal{S}_K,\tau\in\mathcal{S}_L\}\]
+	A special case is where $K=\text{point}$, so then $K*L=C(L)$.
+\end{definition}
+
+\begin{proposition}
+	\[\Delta^{m+n+1}\cong\Delta^m*\Delta^n\]
+\end{proposition}
+
+\begin{proof}
+	Vertex set of $\Delta^{m+n+1}$ is \[\{0,\ldots,m+n+1\}=\{0,\ldots,m\}\cup\{m+1,\ldots,m+n+1\}\]
+\end{proof}
 
 \end{document}

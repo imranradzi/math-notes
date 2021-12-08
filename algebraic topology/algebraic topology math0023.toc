@@ -5,7 +5,13 @@
 \contentsline {subsection}{\numberline {2.3}Simplicial mapping}{9}{}%
 \contentsline {subsection}{\numberline {2.4}Chain mapping}{10}{}%
 \contentsline {subsection}{\numberline {2.5}Cone}{17}{}%
+\contentsline {subsection}{\numberline {2.6}Exact sequences}{20}{}%
 \contentsline {section}{\numberline {3}Mayer-Vietoris Theorem}{23}{}%
 \contentsline {subsection}{\numberline {3.1}Algebraic Mayer-Vietoris Theorem}{23}{}%
 \contentsline {subsection}{\numberline {3.2}Subcomplexes}{24}{}%
 \contentsline {subsection}{\numberline {3.3}The Geometric Mayer-Vietoris Theorem: Chain Version}{25}{}%
+\contentsline {subsection}{\numberline {3.4}External and internal sum}{27}{}%
+\contentsline {section}{\numberline {4}Subdivision}{33}{}%
+\contentsline {subsection}{\numberline {4.1}Subdivision at a principal simplex}{34}{}%
+\contentsline {subsection}{\numberline {4.2}Squash mapping}{34}{}%
+\contentsline {subsection}{\numberline {4.3}Subdivision at a non-principal simplex}{36}{}%
