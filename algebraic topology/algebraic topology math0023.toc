@@ -15,3 +15,4 @@
 \contentsline {subsection}{\numberline {4.1}Subdivision at a principal simplex}{34}{}%
 \contentsline {subsection}{\numberline {4.2}Squash mapping}{34}{}%
 \contentsline {subsection}{\numberline {4.3}Subdivision at a non-principal simplex}{36}{}%
+\contentsline {subsection}{\numberline {4.4}Star and Link}{37}{}%

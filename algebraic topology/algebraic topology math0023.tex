@@ -1036,7 +1036,44 @@ perform subdivisions at simplices such as these.
 \end{proposition}
 
 \begin{proof}
-	Vertex set of $\Delta^{m+n+1}$ is \[\{0,\ldots,m+n+1\}=\{0,\ldots,m\}\cup\{m+1,\ldots,m+n+1\}\]
+	Vertex set of $\Delta^{m+n+1}$ is \[\{0,\ldots,m+n+1\}=\{0,\ldots,m\}\cup\{m+1,\ldots,m+n+1\}\] There is a 1-1 correspondence between the last set and \[0,\ldots,n\] so if we take 
+	as our model of $\Delta^n$ the vertex set $\{m+1,\ldots,m+n+1\}$ and simplices to be all the
+	non-empty subsets, we get $\Delta^{m+n+1}=\Delta^m*\Delta^n$ (the dimension goes up by 1).
 \end{proof}
+
+Note also that $S^m*S^n\cong S^{m+n+1}$. If $k$ is a single point $pt$, then
+$C(L)=\{pt\}*L$. \\
+
+Join is associative. If $K,L,M$ are simplicial complexes with no vertices in common, then
+\[(K*L)*M\equiv K*(L*M)\]
+
+\begin{corollary}
+	If $K,L$ are disjoint complexes, then $C(K)*L\cong C(K*L)$
+\end{corollary}
+So the join of a cone to anything is a cone.
+
+\subsection{Star and Link}
+\begin{definition}[Star neighbourhood]
+	Let $\tau$ be a simplex of $X$, and let $\sigma_1,\ldots,\sigma_N$ be the principal
+	simplices which contain $\tau$. Then 
+	\[St(\tau,X)=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}=\text{\emph{star neighbourhood} of $\tau$ 
+	in $X$}\]
+\end{definition}
+
+\begin{definition}[Link]
+	Let $X$ be a simplicial complex and $\rho,\tau$ be simplices of $X$ such that 
+	$rho\cap\tau=\emptyset$. We say that $\rho$ is joinable to $\tau$ in $X$ (i.e.,
+	$\rho\cup\tau=p*\tau$). The \emph{link} of $\tau$ in $X$, $Lk(\tau,X)$ consists of all
+	these simplices of $\rho$ of $X$ such that $\rho\cap\tau=\emptyset$ and $\rho\cap\tau$ is
+	a simplex, i.e., $\rho$ is joinable to $\tau$.
+\end{definition}
+
+\begin{eg}
+	star and link example
+\end{eg}
+
+\begin{proposition}
+	If $\tau$ is a simplex of $X$, then $St(\tau,X)=\hat{\tau}*Lk(\tau,X)$
+\end{proposition}
 
 \end{document}
