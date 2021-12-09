@@ -1076,4 +1076,100 @@ So the join of a cone to anything is a cone.
 	If $\tau$ is a simplex of $X$, then $St(\tau,X)=\hat{\tau}*Lk(\tau,X)$
 \end{proposition}
 
+\begin{proof}
+	The case where $\tau$ is principal is empty here. So suppose $\tau$ is not principal.
+	Let $\sigma$ be a principal simplex with $\tau\subset\sigma$. Write
+	\[\tau=\{v_0,\ldots,v_m\} \,\,\,m<n\] \[\sigma=\{v_0,\ldots,v_m,v_{m+1},\ldots,v_n\}\]
+	Put $\rho=\{v_{m+1},\ldots,v_n\}$ so then \[\sigma=\tau*\rho\] Do this for every principal
+	simplex which contains $\tau$. Each $\sigma_1=\tau*\rho_i$ for some $\rho_i$, so 
+	\[\bigcup\sigma_i=\tau*(\cup\rho_i)=\tau*Lk(\tau,X)\]
+\end{proof}
+
+\begin{definition}[Subdivision at a non-principal simplex]
+	Let $X$ be a finite simplicial complex, and $\tau$ a non-principal simplex.
+	Let $\sigma_1,\ldots,\sigma_m$ be the principal simplices which contain $\tau$.
+	Let $\sigma_{m+1},\ldots,\sigma_N$ be the remaining principal simplices.
+	Put \[X_+=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_m}=St(\tau,X)\]
+	\[X_-=\hat{\sigma_{m+1}}\cup\ldots\cup\hat{\sigma_N}\]
+	\[X=X_++X_- \,\,\,(X_+\cap X_-\cap\tau\subset \partial\sigma)\]
+	and put 
+	\[X_+'=C(\partial\tau)*Lk(\tau,X)\]
+	\[X_-'=X_-\] Define \[Sd(X,\tau)=X_+'\cup X_-'\] \[Sd=(C(\partial\tau)*Lk)\cup X_-'\]
+	We have $Sq:C(\partial\tau)\rightarrow\tau$. Extend by identity to 
+	$Sq:C(\partial\tau)*Lk\rightarrow\tau*Lk$ by identity on $Lk$. Extend again by identity
+	on $X_-'=X_-$, $Sq:Sd(X,\tau)\rightarrow X$
+\end{definition}
+
+\begin{proposition}
+	$Sq:Sd(X,\tau)\rightarrow X$ induces an isomorphism on homology.
+\end{proposition}
+
+\begin{proof} \[\]
+	\adjustbox{scale=0.8,center}{%
+		\begin{tikzcd}
+			H_n(X_+'\cap X_-')\arrow{r}\arrow{d}{\text{id}} & H_n(X_+')\oplus H_n(X_-') \arrow{r}\arrow{d}{M} &
+			H_n(Sd(X,\tau) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
+			H_{n-1}(X_+')\oplus H_{n-1}(X_-') \arrow{d}{M} \\
+			H_n(X_+\cap X_-) \arrow{r} & H_n(X_+)\oplus H_n(X_-) \arrow{r} & H_n(X) \arrow{r}
+			& H_{n-1}(X_+\cap X_-) \arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-)
+		\end{tikzcd}
+	} \\
+	\vspace{12pt}
+	where $M=\begin{pmatrix}Sq&0\\0&\text{id}\end{pmatrix}$. Apply the five lemma to show 
+	$Sq$ induces an isomorphism.
+\end{proof}
+So now we've proved the following,
+
+\begin{theorem}
+	Homology is invariant under subdivision.
+\end{theorem}
+
+\begin{eg}
+	subdivision isomorphism example
+\end{eg}
+
+We now have a functor $H_n$ which takes simplicial complexes to vector spaces, and 
+simplicial maps to linear maps, e.g.,
+if 
+\[\begin{tikzcd}
+	X\ar[r,"f"]\ar[rr,out=-30,in=210,swap,"g\circ f"] & Y\ar[r,"g"] & Z
+	\end{tikzcd}\]
+then
+\[\begin{tikzcd}
+	H_n(X)\ar[r,"H_n(f)"]\ar[rr,out=-30,in=210,swap,"H_n(g\circ f)"] & H_n(Y)\ar[r,"H_n(g)"] & 
+	H_n(Z)
+	\end{tikzcd}\]
+
+\noindent\underline{Properties of functors:}
+\begin{enumerate}
+	\item $H_n(g\circ f)=H_n(g)\circ H_n(f)$
+	\item $H_n(\text{id})=\text{id}_{H_n}$ i.e., \[\text{id}:X\rightarrow X, \,
+	H_n(\text{id}):H_n(X)\rightarrow H_n(X)\]
+\end{enumerate}
+
+As a consequence, if $f:X\rightarrow Y$ is an isomorphism, then
+$H_n(f):H_n(X)\rightarrow H_n(Y)$ is an isomorphism.
+
+\begin{proof}
+	If $g=f^{-1}:Y\rightarrow X$, $g\circ f=\text{id}_X, \,f\circ g=\text{id}_Y$ then
+	\[H_n(g)\circ H_n(f)=\text{id}, \,H_n(f)\circ H_n(g)=\text{id}\] so
+	\[H_n(g)=H_n(f)^{-1}\]
+\end{proof}
+
+But we have established a stronger property, that is, $H_n$ is invariant under subdivision,
+i.e., if $Y$ subdivides $X$, then $H_n(Y)\cong H_n(X)$.
+
+\begin{definition}
+	Let $X,Y$ be simplicial complexes. We say that $X,Y$ are \emph{combinatorially equivalent}
+	(written $X\sim Y$) if and only if there exists a finite sequence $(X_r)_{0\leq r\leq N}$ of
+	complexes $X_r$ such that $X_0=X, \,X_N=Y$ and for each $r, \,0\leq r\leq N-1$, either
+	$X_{r+1}$ is a subdivision of $X_r$ or $X_r$ is a subdivision of $X_{r+1}$.
+\end{definition}
+
+\begin{corollary}
+	If $X\sim Y$ then $H_n(X)\cong H_n(Y)$.
+\end{corollary}
+
+Thus we won't worry too much about how we triangulate things.
+
 \end{document}
