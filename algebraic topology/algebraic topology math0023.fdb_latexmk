@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1639080369 "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex" "algebraic topology math0023.pdf" "algebraic topology math0023" 1639080431
-  "algebraic topology math0023.aux" 1639080371 2095 16204e4af9762a624e63d5b07040b303 "pdflatex"
-  "algebraic topology math0023.tex" 1639080430 51244 c39e1987f037f2f679c6f17e436f0516 ""
-  "algebraic topology math0023.toc" 1639080371 1287 b61a411efe2233010c280116207071da "pdflatex"
-  "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex" 1639080430 51244 c39e1987f037f2f679c6f17e436f0516 ""
+["pdflatex"] 1639260112 "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex" "algebraic topology math0023.pdf" "algebraic topology math0023" 1639260114
+  "algebraic topology math0023.aux" 1639260114 2095 16204e4af9762a624e63d5b07040b303 "pdflatex"
+  "algebraic topology math0023.tex" 1639260111 52339 6de4cc7a3f73b41c46b5142e805fc109 ""
+  "algebraic topology math0023.toc" 1639260114 1287 b61a411efe2233010c280116207071da "pdflatex"
+  "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex" 1639260111 52339 6de4cc7a3f73b41c46b5142e805fc109 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1633366790 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1633365093 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1633365093 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -156,7 +156,7 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1633369979 2797775 495a6adcc42a9e296b830b350fe2629e ""
   "c:/texlive/2021/texmf.cnf" 1633369901 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "algebraic topology math0023.log"
   "algebraic topology math0023.aux"
   "algebraic topology math0023.pdf"
   "algebraic topology math0023.toc"
+  "algebraic topology math0023.log"

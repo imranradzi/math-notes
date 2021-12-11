@@ -1062,7 +1062,7 @@ So the join of a cone to anything is a cone.
 
 \begin{definition}[Link]
 	Let $X$ be a simplicial complex and $\rho,\tau$ be simplices of $X$ such that 
-	$rho\cap\tau=\emptyset$. We say that $\rho$ is joinable to $\tau$ in $X$ (i.e.,
+	$\rho\cap\tau=\emptyset$. We say that $\rho$ is joinable to $\tau$ in $X$ (i.e.,
 	$\rho\cup\tau=p*\tau$). The \emph{link} of $\tau$ in $X$, $Lk(\tau,X)$ consists of all
 	these simplices of $\rho$ of $X$ such that $\rho\cap\tau=\emptyset$ and $\rho\cap\tau$ is
 	a simplex, i.e., $\rho$ is joinable to $\tau$.
@@ -1170,6 +1170,33 @@ i.e., if $Y$ subdivides $X$, then $H_n(Y)\cong H_n(X)$.
 	If $X\sim Y$ then $H_n(X)\cong H_n(Y)$.
 \end{corollary}
 
-Thus we won't worry too much about how we triangulate things.
+\noindent So we won't worry too much about how we triangulate things.
+
+\vspace{12pt}
+
+Consider $S^2=\Delta^3\text {with the interior missing}$. This is the minimal model
+of $S^2$. The dodecahedron is also a model of $S^2$ obtained from the minimal model
+by a sequece of subdivisions, hence for any model of $S^2$,
+\[H_k(S^2,\mathbb{F})
+	\begin{cases}
+		\mathbb{F}&k=0\\0&k=1\\\mathbb{F}&k=2\\0&k>2
+	\end{cases}\] 
+
+We note that the usual definition of $S^2$ is given by 
+\[S^2=\{\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\in\mathbb{R}^3\,:\,
+x_1^2+x_2^2+x_3^2=1\}\] Now we define $S^1(n)$ to be the model of the circle $S^1$ with
+$n$-subdivision points ($n\geq3$), so \[S^1(n)\sim S^1(m)\,\,\,\forall m,n\geq3\]
+
+so for example, $S^1(3)$ is the triangle, $S^1(4)$ is the square, $S^1(5)$ the pentagon, and so on.
+
+\begin{eg}
+	some examples of orientation
+\end{eg}
+
+\begin{definition}[Orientability]
+	We say that a surface $\Sigma$ is orientable if and only if it is possible to orient
+	each $2$-simplex in such a way that every $1$-simplex receives the opposite orientations
+	from its containing $2$-simplices.
+\end{definition}
 
 \end{document}
