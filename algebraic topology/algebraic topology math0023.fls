@@ -677,9 +677,9 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT algebraic topology math0023.toc
 OUTPUT algebraic topology math0023.pdf
 INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT algebraic topology math0023.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd

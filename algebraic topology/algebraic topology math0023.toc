@@ -16,3 +16,4 @@
 \contentsline {subsection}{\numberline {4.2}Squash mapping}{34}{}%
 \contentsline {subsection}{\numberline {4.3}Subdivision at a non-principal simplex}{36}{}%
 \contentsline {subsection}{\numberline {4.4}Star and Link}{37}{}%
+\contentsline {section}{\numberline {5}Orientation Theorem}{40}{}%
