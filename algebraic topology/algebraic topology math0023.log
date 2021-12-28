@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  25 DEC 2021 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  28 DEC 2021 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -572,11 +572,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 1044--1046
  []
 
 [36] [37] [38] [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1208
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1209
 
  []
 
-[41] [42] (./algebraic topology math0023.aux) ) 
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1267
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1271
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1319
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1356
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1369
+
+ []
+
+[46] (./algebraic topology math0023.aux) ) 
 Here is how much of TeX's memory you used:
  17571 strings out of 478599
  361309 string characters out of 5858101
@@ -586,10 +611,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  102i,16n,108p,493b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "algebraic topology math0023.pdf" (44 pages, 267992 bytes).
+Output written on "algebraic topology math0023.pdf" (48 pages, 277974 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 236 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

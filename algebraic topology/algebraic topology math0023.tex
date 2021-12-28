@@ -1200,7 +1200,8 @@ so for example, $S^1(3)$ is the triangle, $S^1(4)$ is the square, $S^1(5)$ the p
 	orientability of $T^2$
 \end{eg}
 
-\begin{definition}[Euler Characteristic]
+\subsection{{Euler characteristic}}
+\begin{definition}
 	Let $X=(V_X,\mathcal{S}_X)$ be a finite simplicial complex. Let $c_n$ be the number of
 	$n$-simplices of $X$, \[c_n(X)=c_n=\text{no. of $n$-simplices of $X$}\] we define
 	\[\chi_\text{geom}(X)=\sum_{n}(-1)^n c_n(X)\]
@@ -1256,5 +1257,124 @@ is the same as well, so from now on, we will usually just write $\chi(X)$.
 \begin{eg}
 	examples of orientable surfaces, 2-sphere, 2-torus, etc.
 \end{eg}
+
+\begin{theorem}[Classification Theorem for Surfaces]
+	placeholder
+\end{theorem}
+
+Recall that if $\sigma$ is a simplex of $X$, then $Lk(\sigma, X)$ is equal to the complex where simplices $\tau$ satisfy $\sigma\cap\tau=\emptyset$, where $\sigma\cup\tau$ is a simplex
+of $X$. \\
+
+A simplicial surface $\Sigma$ is a complex in which \[Lk(v,\Sigma)\cong S^1(N)\] where
+$v$ is a vertex of $\Sigma$ ($N\geq3$). Recall that $S^1(N)$ is the circle with $N$ 
+subdivision points, for example, $S^1(5)$ is 'the' pentagon. \\
+
+Observe that in $S^1(N)$, every vertex belongs to exactly \emph{two} 1-simplices.
+
+\begin{proposition}
+	If $\Sigma$ is a simplicial surface then every 1-simplex lies in exactly two 2-simplices.
+\end{proposition}
+
+\begin{proof}
+	Let $\rho=[v_0, v_1]$ be a 1-simplex. $Lk(v_0,\Sigma)\cong S^1(N)$, $v_1\in Lk(v_0,\Sigma)$
+	and $v_1$ belongs to exactly two 1-simplices, say $\tau_0,\tau_1$, so then
+	\[\tau_0*\{v_0\},\,\tau_1*\{v_0\}\] are the two 2-simplices which contain $\rho$.
+\end{proof}
+
+
+\subsection{Copath}
+\begin{definition}
+	Let $X$ be a simplicial complex of dimension 2. Let $\sigma,\sigma'$ be 2-simplices in 
+	$X$. A \emph{copath} from $\sigma$ to $\sigma'$ is a collection of 2-simplices
+	\[\{\sigma_0,\sigma_1,\ldots,\sigma_N\}\] such that $\sigma_0=\sigma,\,\sigma_N=\sigma'$
+	and $\sigma_r\cap\sigma_{r+1}$ is a 1-simplex for $0\leq r\leq N-1$.
+\end{definition}
+
+\begin{theorem}
+	If $\Sigma$ is a connected simplicial surface and $\sigma,\sigma', \,\sigma\neq\sigma'$ are 2-simplices in $\Sigma$ then there exists a copath $(\sigma_0,\ldots,\sigma_N)$ from 
+	$\sigma$ to $\sigma'$.
+\end{theorem}
+
+\begin{proof}
+	Consider $\sigma\cap\sigma'$. A priori we have 4 cases
+	\begin{enumerate}
+		\item $|\sigma\cap\sigma'|=3$. This is impossible, as this implies $\sigma=\sigma'$
+		\item $|\sigma\cap\sigma'|=2$. Put $\rho=\sigma\cap\sigma'$ which is a 1-simplex, where
+					$\rho$ lies in exactly two 2-simplices which are $\sigma,\sigma'$ and now 
+					$(\sigma,\sigma')$ is a copath from $\sigma$ to $\sigma'$
+		\item $|\sigma\cap\sigma'|=1$. $\sigma\cap\sigma'=\{v\}$ for some vertex $v$. Look at 
+					$Lk(v,\Sigma)$. Write \[\sigma=\{v,u,u_0\}\]\[\sigma'=\{v,w,w_0\}\] We know 
+				$v,w\in Lk(v,\Sigma)\cong S^1(N)$ which is connected. So choose a path in 
+				$Lk(v,\Sigma)$ from $u$ to $w$ \[\xi=(\xi_0,\ldots,\xi_N)\]\[\xi_0=u,\ldots,\xi_N=w\]
+				Then $[\xi_i,\xi_{i+1}]$ is a 1-simplex in $Lk(v,\Sigma)$. Define 
+				$\sigma_i=\{v,\xi_i,\xi_{i+1}\}$ which is a 2-simplex, and then we have 
+				that $\sigma_0,\ldots,\sigma_N$ is a copath from $\sigma$ to $\sigma'$.
+		\item $\sigma\cap\sigma'=\emptyset$. Let $N$ be a shortest path from a vertex $v$ of 
+				$\sigma$ to a vertex $v'$ of $\sigma'$. We proceed by induction on $N$. The induction
+				base case here is when $N=1$. $(v,v')$ sits inside two 2-simplices. Choose one of 
+				them and call it $\tau$. $\sigma\cap\tau=\{v\}$ so there exists a copath from 
+				$\sigma$ to $\tau$. Similarly, $\sigma'\cap\tau=\{v'\}$ so there exists a copath 
+				from $\tau$ to $\sigma'$. Compare the two copaths to get a copath from $\sigma$ 
+				to $\sigma'$. \\
+
+				Now for our induction step (assume hypothesis proved for $N-1$), let 
+				$v\in\sigma, \,v'\in\sigma'$. Let $(w_0,\ldots,w_M)$ be a shortest path from 
+				$v$ to $v'$. Let $\tau$ be any 2-simplex such that $w_{m-1}\in\tau$. By 
+				our induction hypothesis, there exists a copath from $\sigma$ to $\tau$. By 
+				the induction base, there exists a copath from $\tau$ to $\sigma'$. Compose the 
+				two copaths to get a copath from $\sigma$ to $\sigma'$.
+	\end{enumerate}
+\end{proof}
+
+\begin{theorem}[Orientation Theorem]
+	Let $\Sigma$ be a connected simplicial surface, and let $\mathbb{F}$ be a field.
+	\begin{enumerate}
+		\item If $1+1\neq0$ in $\mathbb{F}$ and $\Sigma$ is orientable then
+		\[H_2(\Sigma;\mathbb{F})\cong\mathbb{F}\]
+		\item If $1+1\neq0$ in $\mathbb{F}$ and $\Sigma$ is non-orientable then 
+		\[H_2(\Sigma;\mathbb{F})=0\]
+		\item If $1+1=0$ then \[H_2(\Sigma;\mathbb{F})\cong\mathbb{F}\] regardless if $\Sigma$
+		is orientable or not.
+	\end{enumerate}
+\end{theorem}
+
+\begin{definition}[Intersection number]
+	\[\langle[v_0,v_1,v_2],[v_0,v_1]\rangle=+1\]
+	\[\partial[v_0,v_1,v_2]=[v_1,v_2]-[v_0,v_2]+[v_0,v_1]\]
+	\[\langle[v_0,v_1,v_2],[v_0,v_2]\rangle=-1\]
+	\[\langle[v_0,v_1,v_2],[v_1,v_2]\rangle=+1\]
+
+	\noindent More generally,
+	\[\langle[v_{\sigma(0)},v_{\sigma(1)},v_{\sigma(2)}],[v_0,v_1]\rangle=sgn(\sigma)\]
+	\[\langle[v_{\sigma(0)},v_{\sigma(1)},v_{\sigma(2)}],[v_0,v_2]\rangle=-sgn(\sigma)\]
+	\[\langle[v_{\sigma(0)},v_{\sigma(1)},v_{\sigma(2)}],[v_1,v_2]\rangle=sgn(\sigma)\]
+\end{definition}
+
+\begin{proof}[(of Orientation Theorem)]
+	For each 1-simplex $\rho$ of $\Sigma$, fix once and for all a specific orientation 
+	$\hat{\rho}$ of $\rho$. \\
+
+	Let $\Sigma_1,\ldots,\Sigma_N$ be a list of the 2-simplices of $\Sigma_1,\ldots,\Sigma_N$
+	be a list of the 2-simplices of $\Sigma$ and $\hat{\Sigma_i}$ fixed orientation of
+	$\Sigma_i$. To change the orientations on 2-simplices, we need a function 
+	\[\eta:\{1,\ldots,N\}\rightarrow\{\pm1\}\]
+	$\eta(i)\hat{\sigma_i}$ is the oriented 2-simplex which is 
+	\[\begin{cases}
+		\hat{\sigma_i}&\eta(i)=1 \\ \text{opposite orientation of }\hat{\sigma_i}&\eta(i)=-1
+	\end{cases}\]
+
+We shall consider elements of $C_2(\Sigma;\mathbb{F})$ of the form 
+\[[\eta]=\sum_{i=1}^N\eta(i)\hat{\sigma_i}\in C_2(\Sigma;\mathbb{F})\] We want to calculate 
+$\partial[\eta]$. \\
+
+Fix a 1-simplex $\rho$ and let $\sigma_s,\sigma_t$ be the adjacent 2-simplices which contain 
+$\rho$. The coefficient of $\hat{\rho}$ in $\partial[\eta]$ is simply
+\end{proof}
+
+
+
+
+
+
 
 \end{document}
