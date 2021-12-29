@@ -10,6 +10,7 @@
 \usepackage{tikz-cd}
 \usepackage{caption}
 \usepackage{adjustbox}
+\usepackage{multicol}  
 
 \theoremstyle{definition}
 \newtheorem*{theorem}{Theorem}
@@ -1369,12 +1370,123 @@ $\partial[\eta]$. \\
 
 Fix a 1-simplex $\rho$ and let $\sigma_s,\sigma_t$ be the adjacent 2-simplices which contain 
 $\rho$. The coefficient of $\hat{\rho}$ in $\partial[\eta]$ is simply
+\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{rho}]=\begin{cases}
+	2\\0\\-2
+\end{cases}\]
+To ensure that $\partial[\eta]=0$ we require $\eta$ to satisfy 
+\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{rho}]=0\]
+i.e.,
+\[\langle\eta(s)\hat{\sigma_s,p}\rangle+\langle\eta(t)\hat{\sigma_t,\hat{rho}}\rangle=0\,\,\,(*)\]
+whenever $\sigma_s,\sigma_t$ are adjacent, and now we know
+$\Sigma$ is orientable if and only if there exists a function \[\eta:\{1,\ldots,N\}
+\rightarrow\{\pm1\}\] such that we have $(*)$ whenever $\sigma_s,\sigma_t$ are adjacent. \\
+
+So when $\Sigma$ is orientable and $\eta:\{1,\ldots,N\}\rightarrow\{\pm1\}$ is an orientation,
+then $[\eta]\in Z_2(\Sigma)$ and so defines a non-zero element of $H_2(\Sigma;\mathbb{F})$. \\
+
+Now we show that when $\Sigma$ is orientable, \[H_2(\Sigma;\mathbb{F})\cong\mathbb{F}\] and
+$[\eta]$ is a \emph{generator}. \\
+
+Let us consider the elements 
+\[\sum_{s=1}^N a_s\hat{\sigma}_s\in C_2(\Sigma;\mathbb{F})\] where $a_s\in\mathbb{F}$.
+Suppose that $\rho$ is a 1-simplex and $\sigma_s,\sigma_t$ are adjacent 2-simplices which contain $\rho$. \\
+
+We calculate $\partial(\sum a_s\sigma_s)$. The coefficients of $\hat{rho}$ is simply 
+$a_s\langle\hat{\sigma_t},\hat{\rho}\rangle + a_t\langle\hat{\sigma_t},\hat{\rho}\rangle$.
+If we want $\partial(\Sigma a_s\sigma_s)=0$ then 
+\[a_s\langle\hat{\sigma_t},\hat{\rho}\rangle + a_t\langle\hat{\sigma_t},\hat{\rho}\rangle=0\]
+for adjacent $s,t$. \[\pm a_s\pm a_t=0\] so $a_t=\pm a_s$ if $\sigma_s,\sigma_t$ are adjacent.
+So going along a copath, coefficients $a_s$ are constant up to sign. \\
+
+Fix a "base 2-simplex" $\sigma_0$ and suppose \[\partial(\sum a_s\hat{\sigma_s})=0\] Then 
+going along a copath from $\sigma_0$ to $\sigma_s$, we find that $a_s=\pm a_0$. Define 
+$\eta:\{1,\ldots,N\}\rightarrow\{\pm1\}$ by 
+\[\eta(s)=\begin{cases}
+	+1& a_s=a_0 \\ -1& a_s=-a_0
+\end{cases}\]
+then $\alpha=a_0[\eta]$ if $\partial\alpha=0$ which shows that $\dim H_2(\Sigma;\mathbb{F})\leq1$. \\
+
+If $\Sigma $ is orientable, there exists global orientation $\eta:\{1,\ldots,N\}\rightarrow
+\{\pm 1\}$ and $[\eta]$ generates $H_2(\Sigma;\mathbb{F})$ \\
+
+If $\Sigma$ is non-orientable, $\partial[\eta]\neq0$ for any such $\eta$ and if 
+$\alpha\in Z_2(\Sigma;\mathbb{F})$, $\alpha=\sum a_s\hat{\sigma_s}$, \[\alpha=a_o0[\eta]
+\,\,\,\partial(\alpha)=a_0\partial[\eta]\]
+
+\[\partial(\alpha)=0\implies a_0\partial[\eta]=0\] but $\partial[\eta]\neq0$ and $\alpha=0$,
+so $a_0=0$, so then \[H_2(\Sigma;\mathbb{F})\] However if $1+1=0$, then 
+\[\partial(\sum_{s=1}^N \hat{\sigma_s})=0\] as $\pm 2=0$ and $H_2(\Sigma;\mathbb{F})\cong
+\mathbb{F}$.
 \end{proof}
 
+For surfaces, $H_0$ tells us whether the surface is connected or not. $H_2$ tells us
+whether the surface is orientable or not. $H_1$ in a sense tells us how 'big' the surface is.
 
+\newpage
 
+\setlength{\columnsep}{-2.5cm}
+    \begin{multicols}{2}
+			\begin{center}
+				\begin{tikzpicture}
+					\shade[ball color = white!40, opacity = 0.0] (0,0) circle (2cm);
+					\draw (0,0) circle (2cm);
+					\draw (-2,0) arc (180:360:2 and 0.6);
+					\draw[dashed] (2,0) arc (0:180:2 and 0.6);
+				\end{tikzpicture}
+			\end{center}
 
+			\[\Sigma_0^+, S^2, \text{  genus}=0\] \vspace{12pt}
+			\[H_k=\begin{cases}\mathbb{F}&k=0\\0&k=1\\\mathbb{F}&k=2\end{cases}\]
 
+        \vfill\null\columnbreak  % This whole line is needed to insert a column break
 
+				\begin{center}
+					\scalebox{1.75}{
+					\begin{tikzpicture}[yscale=cos(70)]
+						\draw[double distance=5mm] (0:1) arc (0:180:1);
+						\draw[double distance=5mm] (180:1) arc (180:360:1);
+					\end{tikzpicture}
+					}
+				\end{center}
+		
+				\[\Sigma_1^+, T^2, \text{  genus}=1\]
+				\[H_k=
+				\begin{cases}\mathbb{F}&k=0\\\mathbb{F}\oplus\mathbb{F}&k=1\\\mathbb{F}&k=2
+				\end{cases}\]
+    \end{multicols}
 
+In general for $\Sigma_g^+=\text{$n$-fold torus}$, we have 
+\[H_k\begin{cases}
+	\mathbb{F}&k=0\\
+	H_1=\mathbb{F}\oplus\ldots\oplus\mathbb{F}\,\,(2g\text{ times})&k=1\\
+	\mathbb{F}&k=2
+\end{cases}\]
+
+We also have
+\[\Sigma_0^-=\mathbb{R}P(2), \,\Sigma_g^-=\mathbb{R}P(2)\#\ldots\#\mathbb{R}P(2) \text{
+	   ($g+1$ times)
+}\]
+
+\noindent If $1+1\neq0$, then 
+\[H_k=\begin{cases}
+	\mathbb{F}&k=0\\
+	\mathbb{F}^g&k=1\\
+	0&k=2
+\end{cases}
+\]
+
+\noindent but if $1+1=0$,
+\[H_k=\begin{cases}
+	\mathbb{F}&k=0\\
+	\mathbb{F}^{g+1}&k=1\\
+	\mathbb{F}&k=2
+\end{cases}
+\]
+
+\noindent As $H_*(-;\mathbb{F})$ is invariant under combinatorial equivalence ($\sim$),
+we have 
+
+\[\Sigma_g^+\sim\Sigma_h^+\implies g=h\]
+\[\Sigma_g^-\sim\Sigma_h^-\implies g=h\]
+\[\Sigma_g^+\not\sim\Sigma_h^-\text{ for any $g,h$}\]
 \end{document}
