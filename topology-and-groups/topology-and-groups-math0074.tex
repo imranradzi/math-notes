@@ -1,0 +1,247 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{bbold}
+\usepackage{mathtools}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{multicol}  
+
+\theoremstyle{definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{eg}{Example}
+\newtheorem*{remark}{Remark}
+
+
+\begin{document}
+
+\title{\textbf{Topology and Groups - MATH0074}}
+\author{\textbf{Based on lectures by Dr. Lars Louder}\\ Notes taken by Imran Radzi}
+\date{}
+\maketitle
+
+\pagenumbering{roman}
+(Revision) notes based on the Autumn 2021 Topology and Groups lectures by Dr. Lars Louder.
+\begingroup
+\let\cleardoublepage\clearpage
+\tableofcontents
+\endgroup
+\newpage
+\pagenumbering{arabic}
+
+\section{Point-set Topology}
+
+\subsection{Preliminaries}
+\begin{definition}[Topological space]
+  A topological space is a pair $(X,\mathcal{T})$ such that
+  \begin{enumerate}
+    \item $X$ is a set 
+    \item $\mathcal{T}\subset \mathcal{P}(X)$ is a collection of subsets of $X$
+    \item $\emptyset\in\mathcal{T}, \,X\in\mathcal{T}$
+    \item $\mathcal{T}$ is closed under finite intersections and arbitrary unions
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Open neighbourhood]
+  If $x\in X, \,U$ open in $X$, and $x\in U$, then $U$ is an \emph{open neighbourhood} of $x$.
+\end{definition}
+
+\begin{definition}[Hausdorff spaces]
+  A topological space $(X,\mathcal{T})$ is \emph{Hausdorff} if $\forall \,x,y\in X$, there 
+  exists $U,V$ open neighbourhoods of $x,y$ respectively such that $U\cap V=\emptyset$.
+\end{definition}
+
+\begin{definition}[Homeomorphisms]
+  A map $f:X\rightarrow Y$ is a \emph{homeomorphism} if 
+  \begin{enumerate}
+    \item $f$ is bijective
+    \item $f$ is continuous
+    \item $f^{-1}$ is continuous
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Continuous maps]
+  A map $f:X\rightarrow Y$ is continuous if $\forall \,U\text{ (open)}\subset Y$,
+  $f^{-1}(U)$ is open in $X$.
+\end{definition}
+
+\begin{definition}
+  If $\mathcal{T}$ and $\mathcal{T}'$ are topologies on $X$ such that $\mathcal{T}\subsetneq\mathcal{T}'$ then $\mathcal{T}'$ is \emph{finer} than $\mathcal{T}$, and 
+  $\mathcal{T}$ is \emph{coarser} than $\mathcal{T}'$.
+\end{definition}
+
+\begin{proposition}
+  $\text{id}:(X,\mathcal{T}\rightarrow (X,\mathcal{T}')$ is continuous if and only if 
+  $\mathcal{T}$ is finer than $\mathcal{T}'$.
+\end{proposition}
+
+\begin{definition}[Subspace topology]
+  If $X$ is a topological space, $Y\subset X$, the subspace topology on $Y$ is defined by
+  \[U\text{ open in } Y\iff \exists V\text{ open in }X \text{ such that }U=Y\cap V\]
+\end{definition}
+
+\begin{definition}
+  If a map $f:X\rightarrow Y$ is continuous, the \emph{image} of $f$ is the set 
+  \[f(X)=\{f(x)\,|\,x\in X\}\subset Y\] with the subspace topology.
+\end{definition}
+
+\begin{definition}[Product topology]
+  Let $X, Y$ be spaces. The \emph{product topology} on $X\times Y$ is the smallest (coarsest)
+  topology making the projections
+  \[p_X:X\times Y\rightarrow X, \,\,\,p_Y:X\times Y\rightarrow Y\]
+  continuous.
+\end{definition}
+
+\begin{proposition}
+  Product of Hausdorff spaces if Hausdorff.
+\end{proposition}
+
+\subsection{Connectedness}
+\begin{definition}[Connectedness]
+  A space $X$ is \emph{disconnected} if there exists a surjective continuous map 
+  $f:X\rightarrow\{p_1,p_2\}$. A space is \emph{connected} if every continuous function
+  $f:X\rightarrow\{p_1,p_2\}$ is constant.
+\end{definition}
+
+\begin{definition}
+  A pair of sets $U,V\subset X$ is said to disconnect $X$ if they are non-empty, disjoint,
+  $U\cup V=X$ and both are open.
+\end{definition}
+
+\begin{definition}
+  $X$ is disconnected if there exists $U,V$ which disconnect $X$.
+\end{definition}
+
+
+\begin{definition}[Path]
+  A \emph{path} in $X$ is a continuous map $\gamma:[0,1]\rightarrow X$. $\gamma$ is a path 
+  from $\gamma(0)$ to $\gamma(1)$. $a,b\in X$ are said to be connected by a path if there 
+  is a path from $a$ to $b$.
+\end{definition}
+
+\begin{definition}[Path-connectedness]
+  A space $X$ is \emph{path-connected} if for all $x,y$, there exists
+  \[\gamma:[0,1]\rightarrow X\text{ such that }\gamma(0)=x, \,\gamma(1)=y\]
+\end{definition}
+
+\noindent or equivalently,
+
+\begin{definition}
+  We say $X$ is path-connected if there exists a unique equivalence class, where the 
+  equivalence relation $\sim$ is defined $a\sim b$ if and only if there exists a path from 
+  $a$ to $b$.
+\end{definition}
+
+\begin{proposition}
+  Suppose $X$ is connected. Then, if $f:X\rightarrow Y$, then $f(X)\subset Y$ is connected.
+\end{proposition}
+
+\begin{proposition}
+  $[0,1]$ is connected.
+\end{proposition}
+
+\begin{corollary}
+  If $X$ is path-connected, then $X$ is connected.
+\end{corollary}
+
+\begin{definition} $X\subset\mathbb{R}$ is an \emph{interval} if $a\leq b\leq c$, 
+  $a,c\in X\implies b\in X$. 
+\end{definition}
+
+\begin{proposition}
+  A subset of $\mathbb{R}$ is connected if and only if it is an interval.
+\end{proposition}
+
+\begin{definition}[Locally (path) connected]
+  A space $X$ is locally (path ) connected at a point $p$ if for every open neighbourhood $U$ of $p$, 
+  there exists a (path) connected open neighbourhood $V$ of $p$ such that $p\in V\subset U$.
+\end{definition}
+
+\begin{proposition}
+  If $X$ is locally path-connected then the path components of $X$ are open.  
+\end{proposition}
+
+\begin{proposition}
+  If $X$ is connected and locally path-connected, then $X$ is path connected.
+\end{proposition}
+
+
+\subsection{Compactness}
+\begin{definition}[Open cover]
+  An \emph{open cover} of a space $X$ is a collection of open sets $\mathcal{U}$ such that
+  \[X=\bigcup_{U\in\mathcal{U}}U\]
+\end{definition}
+
+\begin{definition}
+  A space $X$ is \emph{compact} if every open cover has a finite subcover.
+\end{definition}
+
+\begin{lemma}
+  Closed subset sof compact spaces are compact.
+\end{lemma}
+
+\begin{theorem}
+  If $X,Y$ are compact, then $X\times Y$ is compact.
+\end{theorem}
+
+\begin{theorem}[Heine-Borel theorem]
+  $X\subset\mathbb{R}^n$ is compact if and only if $X$ is closed and bounded.
+\end{theorem}
+
+\begin{theorem}
+  $[0,1]$ is compact.
+\end{theorem}
+
+\begin{theorem}
+  If $f:X\rightarrow Y$ is continuous, $X$ compact, then $f(X)\subset Y$ is compact with respect to the subspace topology.
+\end{theorem}
+
+\begin{proposition}
+  If $C\subset Y$ is compact, $Y$ Hausdorff, then $C$ is closed.
+\end{proposition}
+
+\begin{proposition}
+  If $f:X\rightarrow Y$ is a continuous bijection, $X$ compact, $Y$ Hausdorff, then $f$ 
+  is a homeomorphism
+\end{proposition}
+
+\subsection{Quotient spaces}
+\begin{definition}[Quotient map]
+  Let $q:X\rightarrow Y$ be a continuous surjection. Then $q$ is a \emph{quotient map}
+  if $q^{-1}(Y)$ is open if and only if $U$ is open. (A bijective quotient map is a 
+  homeomorphism)
+\end{definition}
+
+\begin{definition}[Quotient space]
+  Let $X$ be a space, and $\sim$ an equivalence relation on $X$, and 
+  $q:X\rightarrow X/\sim = Y$ the quotient map. The quotient topology on $Y$ is defined by
+  $U$ open in $Y$ if and only if $q^{-1}(U)$ is open in $X$.
+\end{definition}
+
+\begin{lemma}
+  \[
+  \begin{tikzcd}
+    X \arrow{r}{f} \arrow[swap]{dr}{q} & Z  \\
+     & Y \arrow{u}{h}
+  \end{tikzcd}
+\]
+  Let $f$ be continuous, and suppose $f$ factors through $:X\rightarrow Y$, a quotient 
+  map, i.e., $\exists h:Y\rightarrow Z$ such that $h\circ q = f$. Then $h$ is continuous.
+\end{lemma}
+
+\begin{proposition}
+  Let $f:X\rightarrow Y$ be a continuous surjection with $X$ compact, $Y$ Hausdorff. Then 
+  $f$ is a quotient map. 
+\end{proposition}
+
+
+\end{document}

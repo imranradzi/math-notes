@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  29 DEC 2021 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  30 DEC 2021 23:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex"
-(c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic topology/algebraic topology math0023.tex
+**c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex
+(c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27> (c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -502,23 +502,23 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box112
-) (./algebraic topology math0023.aux)
-\openout1 = `"algebraic topology math0023.aux"'.
+) (./topology-and-groups-math0074.aux)
+\openout1 = `topology-and-groups-math0074.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count309
@@ -547,178 +547,28 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./algebraic topology math0023.toc [1
-
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+) (./topology-and-groups-math0074.toc)
 \tf@toc=\write4
-\openout4 = `"algebraic topology math0023.toc"'.
+\openout4 = `topology-and-groups-math0074.toc'.
 
- [2]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 81.
- (c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd) [1] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
+ [1
 
- []
-
-[5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
-
- []
-
-[12] [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--416
-
- []
-
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
-
- []
-
-[19] [20] [21] [22]
-Overfull \hbox (3.28815pt too wide) detected at line 589
-[]
- []
-
-[23]
-Overfull \hbox (11.80594pt too wide) in paragraph at lines 593--595
-[]\OT1/cmr/m/n/14.4 The Al-ge-braic Mayer-Vietoris The-o-rem im-plies the \OT1/cmr/m/it/14.4 Ge-o-met-ric \OT1/cmr/m/n/14.4 Mayer-
- []
-
-
-Overfull \hbox (15.87775pt too wide) in paragraph at lines 642--642
-[]\OT1/cmr/bx/n/17.28 The Ge-o-met-ric Mayer-Vietoris The-o-rem: Chain
- []
-
-[24]
-Overfull \hbox (28.43794pt too wide) detected at line 671
-\OML/cmm/m/it/14.4 S[] \OT1/cmr/m/n/14.4 = (\OMS/cmsy/m/n/14.4 f\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ; [] ; n \OT1/cmr/m/n/14.4 + 1\OMS/cmsy/m/n/14.4 g\OML/cmm/m/it/14.4 ; \OMS/cmsy/m/n/14.4 f[]g\OT1/cmr/m/n/14.4 )
- []
-
-[25]
-Overfull \hbox (94.28094pt too wide) detected at line 705
-[]
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 742--743
-
- []
-
-[27] [28] [29]
-Overfull \hbox (3.99118pt too wide) detected at line 850
-\OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^H \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ^^H \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 X[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 ! \OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 S[]\OT1/cmr/m/n/14.4 )
- []
-
-[30] [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 937--939
-
- []
-
-[33] [34]
-Overfull \hbox (3.1333pt too wide) in paragraph at lines 1002--1018
- [] 
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
-
- []
-
-[36] [37] [38] [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1210
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1266--1268
-
- []
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 1269--1272
-
- []
-
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1320
-
- []
-
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 1355--1357
-
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1370
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1386
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1389
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1400
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 1406--1408
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1411
-
- []
-
-[48] [49] [50] (./algebraic topology math0023.aux) ) 
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] [2]
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 156.
+ (c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd) [3] [4] (./topology-and-groups-math0074.aux) ) 
 Here is how much of TeX's memory you used:
- 17760 strings out of 478599
- 364933 string characters out of 5858101
- 635299 words of memory out of 5000000
- 35328 multiletter control sequences out of 15000+600000
- 413378 words of font info for 66 fonts, out of 8000000 for 9000
+ 16874 strings out of 478599
+ 342854 string characters out of 5858101
+ 616481 words of memory out of 5000000
+ 34447 multiletter control sequences out of 15000+600000
+ 411855 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,108p,493b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "algebraic topology math0023.pdf" (52 pages, 285319 bytes).
+ 102i,15n,108p,493b,1044s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on topology-and-groups-math0074.pdf (5 pages, 124498 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 78 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
