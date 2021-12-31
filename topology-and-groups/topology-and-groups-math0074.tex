@@ -243,5 +243,46 @@
   $f$ is a quotient map. 
 \end{proposition}
 
+\begin{definition}[Disjoint union]
+  Let $X_1,X_2$ be topological spaces. The \emph{disjoint union} of $X_1$ and $X_2$,
+  $X_1\sqcup X_2$ is the space with the underlying set $X_1\sqcup X_2$, with $U$ open 
+  in $X_1\sqcup X_2$ if and only if $U\cap X_1$ is open in $X_1$, and $U\cap X_2$ is 
+  open in $X_2$.
+\end{definition}
+
+\begin{definition}[Cell complex]
+  A \emph{cell complex} is a space built up inductively, as follows
+  \begin{enumerate}
+    \item ($n=0$) We start with a discrete set $X^{(0)}$ consisting of points, which we call 
+    $0$-cells $\{e_i^0\,|\,i\in I_0\}, \,e_i^0\cong pt$. $X^{(0)}=\bigsqcup_i e_i^0$ is called the $0$-skeleton.
+    \item ($n>0$) We add a (possibly empty) subset of $n$-cells $\{e_i^n\,|\,i\in I_n\}$ 
+    $e_i^n\cong D^n$, the $n$-dimensional disk, and a continuous map 
+    \[\phi_i^n:\partial e_i^n\cong S^{n-1}\rightarrow X^{(n-1)}\] and here the $n$-skeleton 
+    is \[X^{(n)}=X^{(n-1)}\sqcup\bigsqcup e_i^n/\sim\]
+  \end{enumerate}
+  A space $X$ is a cell complex if there exists $X^{(0)}\subset X^{(1)}\subset\ldots$ 
+  as above, with the condition that $U$ is open in $X$ if and only if 
+  $X^{(n)}\cap U$ is open for all $n$. \\
+
+  $X^{(0)}\subseteq X^{(1)}\subseteq\ldots$ is called the \emph{cell decomposition} of $X$.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
