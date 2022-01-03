@@ -31,6 +31,7 @@
 
 \pagenumbering{roman}
 (Revision) notes based on the Autumn 2021 Topology and Groups lectures by Dr. Lars Louder.
+Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
 \begingroup
 \let\cleardoublepage\clearpage
 \tableofcontents
@@ -267,22 +268,81 @@
   $X^{(0)}\subseteq X^{(1)}\subseteq\ldots$ is called the \emph{cell decomposition} of $X$.
 \end{definition}
 
+\begin{definition}[Presentation complex]
+  text
+\end{definition}
 
+\begin{definition}[Cayley graph]
+  text
+\end{definition}
 
+\section{Homotopy}
 
+\subsection{Homotopy}
 
+\begin{definition}
+  Let $(X,A)$ be a pair of spaces, where $A\subseteq X$, $f_0,f_1:X\rightarrow Y$. We say
+  $f_0$ and $f_1$ are \emph{homotopic relative} to $A$ if there exists a function $F$ 
+  $F:X\times I\rightarrow Y$ such that $F(-,0)=f_0, \,F(-,1)=f_1$ and $F(a,t)=f_0(a)=f_1(a)$ 
+  for all $t$. In this case we write $f_0\simeq_A f_1$. \\
 
+  If $A=\emptyset$ then we say $f_0$ and $f_1$ are \emph{homotopic} and write $f_0\simeq f_1$.
+\end{definition}
 
+\begin{lemma}[*]
+  A function defined on the union of two closed sets is continuous if it is continuous when 
+  restricted to each of the closed sets separately.
+\end{lemma}
 
+\begin{proposition}
+  Any two continuous maps $f_0,f_1:X\rightarrow \mathbb{R}^n$ are homotopic via the homotopy
+  \[F(x,t)=tf_1(x)+(1-t)f_0(x)\]
+\end{proposition}
 
+\begin{definition}[Homotopy equivalence]
+  Two spaces $X$ and $Y$ are \emph{homotopy equivalent} if there exists 
+  $f:X\rightarrow Y$, $g:Y\rightarrow X$ such that 
+  $f\circ g\simeq\text{id}_Y$, $g\circ f\simeq\text{id}_X$. In this case, we write 
+  $X\simeq Y$.
+\end{definition}
 
+\begin{proposition}
+  Homotopy equivalence is an equivalence relation on (topological) spaces.
+\end{proposition}
 
+\begin{proposition}
+  $\mathbb{R}^n\simeq pt$
+\end{proposition}
 
+\begin{definition}
+  A space $X$ is \emph{contractible} if $X\simeq pt$, or in other words,
+  $\text{id}:X\rightarrow X$ is homotopic to 
+  a constant map. In this case the map $\text{id}_X$ is said to be \emph{null-homotopic}.
+\end{definition}
 
+\begin{proposition}
+  $\mathbb{R}^n\setminus pt\simeq S^{n-1}$
+\end{proposition}
 
+\begin{proposition}
+  If $X$ is contractible then $X$ is path-connected.
+\end{proposition}
 
+\begin{definition}[Retract]
+  Let $A\subseteq X$ be a subspace. $A$ is a \emph{retract} of $X$ if there exists a continuous map $f:X\rightarrow A$ (retraction) such that $r|_A=\text{id}_A$. $A$ is a \emph{deformation
+  retract} of $X$ if there exists such a function $r$ such that $r$ is homotopic to 
+  $\text{id}_X$ relative to $A$.
+\end{definition}
 
+\begin{proposition}
+  If $A$ is a deformation retract of $X$ then $X\simeq A$.
+\end{proposition}
 
+\subsection{Paths and path homotopy}
+
+\begin{definition}[Path homotopy]
+  A path homotopy
+\end{definition}
 
 
 \end{document}
