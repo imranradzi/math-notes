@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  30 DEC 2021 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  3 JAN 2022 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -661,64 +661,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 1313--1320
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1355--1357
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1358
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1370
+Underfull \hbox (badness 10000) in paragraph at lines 1369--1371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
+Underfull \hbox (badness 10000) in paragraph at lines 1383--1384
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1386
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1388--1390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
+Underfull \hbox (badness 10000) in paragraph at lines 1392--1394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1400
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1401
 
  []
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1406--1408
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1411
+Underfull \hbox (badness 10000) in paragraph at lines 1410--1412
 
  []
 
-[48] [49] [50] (./algebraic-topology-math0023.aux) ) 
+[48] [49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1535
+
+ []
+
+[51] [52]
+Overfull \hbox (8.16502pt too wide) in paragraph at lines 1583--1588
+[]\OT1/cmr/m/n/14.4 (of propo-si-tion) Let $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 e[]; [] ; e[]\OMS/cmsy/m/n/14.4 g$ \OT1/cmr/m/n/14.4 be a ba-sis for $\OML/cmm/m/it/14.4 U$\OT1/cmr/m/n/14.4 , and $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 ^^^[]; [] ; ^^^[]\OMS/cmsy/m/n/14.4 g$
+ []
+
+
+Overfull \hbox (4.32239pt too wide) in paragraph at lines 1583--1588
+\OT1/cmr/m/n/14.4 be ba-sis for $\OML/cmm/m/it/14.4 W$\OT1/cmr/m/n/14.4 . For all $\OML/cmm/m/it/14.4 r$\OT1/cmr/m/n/14.4 , choose $\OML/cmm/m/it/14.4 f[] \OMS/cmsy/m/n/14.4 2 \OML/cmm/m/it/14.4 V;  p\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 f[]\OT1/cmr/m/n/14.4 ) = \OML/cmm/m/it/14.4 ^^^[]$\OT1/cmr/m/n/14.4 . Then, $\OMS/cmsy/m/n/14.4 f\OML/cmm/m/it/14.4 e[]; [] ; e[]\OMS/cmsy/m/n/14.4 g [
+ []
+
+[53] [54] (./algebraic-topology-math0023.aux) ) 
 Here is how much of TeX's memory you used:
- 17758 strings out of 478599
- 364839 string characters out of 5858101
- 635295 words of memory out of 5000000
- 35326 multiletter control sequences out of 15000+600000
+ 17856 strings out of 478599
+ 367405 string characters out of 5858101
+ 636193 words of memory out of 5000000
+ 35424 multiletter control sequences out of 15000+600000
  413378 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,16n,108p,491b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on algebraic-topology-math0023.pdf (52 pages, 285319 bytes).
+Output written on algebraic-topology-math0023.pdf (56 pages, 297777 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 264 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  19 words of extra memory for PDF output out of 10000 (max. 10000000)
 

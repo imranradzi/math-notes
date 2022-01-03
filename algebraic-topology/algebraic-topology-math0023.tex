@@ -1327,6 +1327,7 @@ Observe that in $S^1(N)$, every vertex belongs to exactly \emph{two} 1-simplices
 	\end{enumerate}
 \end{proof}
 
+\subsection{Orientation Theorem}
 \begin{theorem}[Orientation Theorem]
 	Let $\Sigma$ be a connected simplicial surface, and let $\mathbb{F}$ be a field.
 	\begin{enumerate}
@@ -1489,4 +1490,124 @@ we have
 \[\Sigma_g^+\sim\Sigma_h^+\implies g=h\]
 \[\Sigma_g^-\sim\Sigma_h^-\implies g=h\]
 \[\Sigma_g^+\not\sim\Sigma_h^-\text{ for any $g,h$}\]
+
+\section{Some linear algebra}
+\begin{proposition}
+	If $A,B$ are $n\times n$ matrices over $\mathbb{F}$, then 
+	\[Tr(AB)=Tr(BA)\]
+\end{proposition}
+
+\begin{proof}
+	First write $A=(a_{kj}), \,B=(b_{ji})$. Then,
+	\[(AB)_{ki}=\sum_{j=1}^n a_{kj}b_{ji}\]\[(AB)_{kk}=\sum_j a_{kj}b_{jk}\]
+	\begin{eqnarray*}
+		Tr(AB)&=&\sum_{k=1}^n\sum_{j=1}^n a_{kj}b_{jk} \\
+		&=&\sum_{j=1}^n\sum_{k=1}^n a_{kj}b_{jk}
+	\end{eqnarray*}
+	and we know \[a_{kj}b_{jk}=b_{jk}a_{kj}\] as $\mathbb{F}$ is a field, so now 
+	we have 
+	\[=\sum_{j=1}^n\sum_{k=1}^n b_{jk}a_{jk}=Tr(BA)\]
+\end{proof}
+
+\begin{remark}
+	Note that in general $Tr(AB)\neq Tr(A)Tr(B)$. For example, take 
+	\[A=\begin{pmatrix}
+		0&1\\1&0=B
+	\end{pmatrix}\] so that \[AB=\begin{pmatrix}
+		1&0\\0&1
+	\end{pmatrix}\] and \[Tr(A)=Tr(B)=0,\,\,\,Tr(AB)=2\]
+\end{remark}
+
+\begin{corollary}
+	If $A,P$ are $n\times n$ matrices over $\mathbb{F}$ and $P$ is invertible then 
+	\[Tr(PAP^{-1})=Tr(A)\]
+\end{corollary}
+
+\begin{proof}
+	\[Tr((PA)P^{-1})=Tr(P^{-1}PA)=Tr(A)\]
+\end{proof}
+
+\subsection{Trace of a linear map}
+Let $V$ be a finite dimensional vector space over $\mathbb{F}$. Let $X:V\rightarrow V$
+be a linear map. Take a basis $\{e_1,\ldots,e_n\}$ for $V$, and write 
+\[X(e_i)=\sum_{j=1}^n e_j\xi_{ji}\]\[X\sim(\xi_{ji})=\xi\] We would like to define 
+$Tr(X)=Tr(\xi)=\sum_{j=1}^n \xi_{ji}$ \\
+
+However, $\xi$ depends on the choice of basis $\{e_1,\ldots,e_n\}$. Suppose we take 
+another basis $\{f_1,\ldots,f_n\}$ so that $X(f_i)=\sum_{j=1}^n f_i\eta_{ji}$, \[X\sim(\eta)\]
+$\eta,\xi$ are related by $\eta=P\xi P^{-1}$ where $P$ is the change of basis matrix, 
+\[P=M(\text{id})_\xi^\eta,\,\,\,P^{-1}=M(\text{id})_\eta^\xi\] Consequently
+\[Tr(\eta)=Tr(P\xi P^{-1})=Tr(\xi)\] so the trace is independent of the particular basis 
+so we can legitimately define 
+\[Tr(X)=Tr(\xi)\] when $X(e_i)=\sum_{j=1}^n e_j\xi_{ji}$.
+
+\begin{proposition}[Additivity of $Tr$]
+	Let \[0\rightarrow U\rightarrow V\xrightarrow{p}W\rightarrow 0\] be an 
+	exact sequence of finite dimensional vector spaces over $\mathbb{F}$ and suppose 
+	there exists linear maps $T_U,T_V,T_W$ such that the following commutes
+	\[
+	\begin{tikzcd}
+		0\arrow{r} & U \arrow{r}
+		\arrow{d}{T_U} & V \arrow{r}{p} \arrow{d}{T_V} &
+		W \arrow{r}\arrow{d}{T_W} & 0\\
+		0 \arrow{r}& U \arrow{r} & V\arrow{r}{p}
+		& W \arrow{r} & 0
+	\end{tikzcd}
+	\]
+	then 
+	\[Tr(T_V)=Tr(T_U)+Tr(T_W)\]
+\end{proposition}
+
+\begin{lemma}
+	Let $T:V\rightarrow V$ be a linear map over $\mathbb{F}$. Suppose $\dim(V)=n$, and let 
+	$U\subset V$ be a subspace; $T(U)\subset U$, and $\dim(U)=k$. Then $T$ can be 
+	represented by a matrix 
+	\[T\sim\begin{pmatrix}
+		A&B\\0&D
+	\end{pmatrix}\] where $A$ is a $k\times k$ matrix, $B$ is a $k\times (n-k)$ matrix and 
+	$D$ is a $(n-k)\times(n-k)$ matrix.
+\end{lemma}
+
+\begin{proof}(of lemma)
+	Let $\{e_1,\ldots,e_k\}$ be a basis for $U$. Extend to a basis $\{e_1,\ldots,e_k,f_1,\ldots,f_q\}$ for $V$ ($q=n-k$). With respect to this basis, 
+	\[T(e_i)=\sum_{j=1}^k e_j a_{ji}\,\,\,\,\,(T(U)\subset U)\]
+	$T(f_r)$ is a linear combination in $\{e_1,\ldots,e_k,f_1,\ldots,f_q\}$. Write 
+	\[T(f_r)=\sum_{s=1}^k e_s b_{sr} + \sum_{t=1}^q f_t d_{tr}\,\,\,(1\leq r\leq q)\]
+	so the matrix of $T$ has block form, 
+	\[T\sim\begin{pmatrix}
+		A&B\\0&D
+	\end{pmatrix}\] where $A=(a_{ji}), \,B=(b_{sr}), \,D=(d_{tr})$.
+\end{proof}
+Note that $Tr(T) = Tr(A) + Tr(D)$.
+
+\begin{proof}(of proposition)
+	Let $\{e_1,\ldots,e_k\}$ be a basis for $U$, and $\{\phi_1,\ldots,\phi_q\}$ be basis for 
+	$W$. For all $r$, choose $f_r\in V, \,p(f_r)=\phi_r$. Then,
+	$\{e_1,\ldots,e_k\}\cup\{f_1,\ldots,f_q\}$ is a basis for $V$. By the previous lemma, 
+	$T_V$ is represented by a block matrix 
+	\[T_V\sim\begin{pmatrix}
+		A&B\\0&D
+	\end{pmatrix}\] where $A=\text{matrix of $T_U$}$, and factoring out $U$,
+	\[D=\text{matrix $T_W$ with respect to $\{f_1,\ldots,f_q\}$}\] hence 
+	\begin{eqnarray*}
+		Tr(T_V) &=& Tr(A) + Tr(D)\\
+		&=& Tr(T_U) + Tr(T_W)
+	\end{eqnarray*}
+\end{proof}
+
+\section{Lefschetz Fixed Simplex Theorem}
+Let $f:K\rightarrow K$ be a simplicial map where $K$ is a finite simplicial complex. 
+Define \[\lambda(f)=\sum_i (-1)^i Tr(H_i(f))\] If $\lambda(f)\neq0$ then there exists a 
+simplex $\sigma$ of $K$ such that $f(\sigma)=\sigma$. $\lambda(f)$ is called the 
+\emph{Lefschetz number} of $f$ (pick a field $\mathbb{F}$)
+
+\begin{definition}[Geometrical Lefschetz number]
+	\[\lambda_\text{geom}(f)=\sum_i (-1)^i Tr(C_i(f)),\,\,\,
+	C_i(f):C_i(K)\rightarrow C_{i-1}(K)\]
+\end{definition}
+
+\begin{definition}[Homological Lefschetz number]
+	\[\lambda_\text{hom}(f)=\sum_i (-1)^i Tr(H_i(f))\]
+\end{definition}
+
 \end{document}
