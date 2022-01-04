@@ -338,11 +338,65 @@ Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
   If $A$ is a deformation retract of $X$ then $X\simeq A$.
 \end{proposition}
 
-\subsection{Paths and path homotopy}
+\subsection{Paths and path-homotopy}
 
-\begin{definition}[Path homotopy]
-  A path homotopy
+\begin{definition}[Path-homotopy]
+  Two paths $\gamma_0$ and $\gamma_1$ are \emph{path-homotopic} if they are homotopic 
+  relative to $\{0,1\}\subseteq I$. In particular $\gamma_0(0)=\gamma_1(0)$, 
+  $\gamma_0(1)=\gamma_1(1)$. If $F$ is a homotopy from $\gamma_0$ to $\gamma_1$,
+  \[F(-,0)=\gamma_0(0), \,F(-,1)=\gamma_1(1)\] $F$ is a family of paths connecting 
+  $\gamma_0(0)$ and $\gamma_0(1)$
 \end{definition}
 
+\begin{proposition}
+  Path-homotopy is an equivalence relation on the set of paths in (a topological space) $X$.
+\end{proposition}
+
+\begin{definition}[Based loop]
+  A \emph{based loop} at $x_0\in X$ is a path $\gamma:I\rightarrow X$ such that 
+  $\gamma(0)=\gamma(1)=x_0$.
+\end{definition}
+
+\begin{definition}[Fundamental group of a space]
+  The \emph{fundamental group} of $X$ at $x_0$ is the set (group)
+  \[\{[\gamma]\,|\,\gamma\text{ is a loop based at }x_0\}\]
+  which is denoted by $\Pi_1(X,x_0)$.
+\end{definition}
+
+\begin{definition}[$n^{\text{th}}$ homotopy group]
+  The $n^{\text{th}}$ homotopy group of a space $X$ at $x_0$ is the set (group)
+  \[\pi_n(X,x_0)=\{[f:I^n\rightarrow X\,|\,f(\partial I^n)\rightarrow x_0]\}\]
+\end{definition}
+
+\begin{definition}
+  A loop based at $x_0$ is null-homotopic if it is path-homotopic to a constant path.
+\end{definition}
+
+\begin{definition}[Free homotopy]
+  If $\gamma_0$ and $\gamma_1$ are based loops (not necessarily at the same point), then 
+  $\gamma_0$ and $\gamma_1$ are \emph{freely homotopic} if they are homotopic through 
+  based loops, so if $F$ is a free homotopy between $\gamma_0$ and $\gamma_1$, then,
+  \[F(x_0)=\gamma_0, \,F(x,1)=\gamma_1\] \[F(0,t)=F(1,t)\text{ for all }t\]
+\end{definition}
+
+\begin{proposition}
+  Free homotopy is an equivalence relation on the set of based loops in (a topological space)
+  $X$.
+\end{proposition}
+
+\begin{definition}
+  A based loop \emph{bounds a disk} if the induced map \[\bar{\gamma}:[0,1]/
+  {\scriptstyle 0=1}\cong S^1
+  \subseteq D^2\] extends to a continuous function $D^2\rightarrow X$.
+\end{definition}
+
+\begin{lemma}
+  The following are equivalent
+  \begin{enumerate}
+    \item $\gamma$ bounds a disk. 
+    \item $\gamma$ is null-homotopic.
+    \item $\gamma$ is freely homotopic to a constant path.
+  \end{enumerate}
+\end{lemma}
 
 \end{document}

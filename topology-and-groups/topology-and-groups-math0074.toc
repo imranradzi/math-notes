@@ -5,4 +5,4 @@
 \contentsline {subsection}{\numberline {1.4}Quotient spaces}{4}{}%
 \contentsline {section}{\numberline {2}Homotopy}{5}{}%
 \contentsline {subsection}{\numberline {2.1}Homotopy}{5}{}%
-\contentsline {subsection}{\numberline {2.2}Paths and path homotopy}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Paths and path-homotopy}{7}{}%
