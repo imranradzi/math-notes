@@ -1596,18 +1596,142 @@ Note that $Tr(T) = Tr(A) + Tr(D)$.
 \end{proof}
 
 \section{Lefschetz Fixed Simplex Theorem}
-Let $f:K\rightarrow K$ be a simplicial map where $K$ is a finite simplicial complex. 
-Define \[\lambda(f)=\sum_i (-1)^i Tr(H_i(f))\] If $\lambda(f)\neq0$ then there exists a 
+\begin{theorem}[Lefschetz Fixed Simplex Theorem]
+	Let $f:K\rightarrow K$ be a simplicial map where $K$ is a finite simplicial complex. 
+Define \[\lambda(f)=\sum_k (-1)^k Tr(H_k(f))\] If $\lambda(f)\neq0$ then there exists a 
 simplex $\sigma$ of $K$ such that $f(\sigma)=\sigma$. $\lambda(f)$ is called the 
 \emph{Lefschetz number} of $f$ (pick a field $\mathbb{F}$)
+\end{theorem}
 
-\begin{definition}[Geometrical Lefschetz number]
-	\[\lambda_\text{geom}(f)=\sum_i (-1)^i Tr(C_i(f)),\,\,\,
-	C_i(f):C_i(K)\rightarrow C_{i-1}(K)\]
+
+\begin{definition}[Geometrical Lefschetz index]
+	\[\lambda_\text{geom}(f)=\sum_k (-1)^k Tr(C_k(f))\] where
+	$C_k(f):C_k(K;\mathbb{F})\rightarrow C_{k-1}(K;\mathbb{F})$ is the mapping induced by $f$.
 \end{definition}
 
-\begin{definition}[Homological Lefschetz number]
-	\[\lambda_\text{hom}(f)=\sum_i (-1)^i Tr(H_i(f))\]
+\begin{definition}[Homological Lefschetz index]
+	\[\lambda_\text{hom}(f)=\sum_k (-1)^k Tr(H_k(f))\]
 \end{definition}
+
+\begin{proposition}
+	\[\lambda_\text{geom}(f)=\lambda_\text{hom}(f)\]
+\end{proposition}
+
+\begin{proof}
+	\[
+	\begin{tikzcd}
+		0\arrow{r} & Z_k(K) \arrow{r}
+		\arrow{d}{Z_k(f)} & C_k(K) \arrow{r} \arrow{d}{C_k(F)} &
+		B_{k-1}(K) \arrow{r}\arrow{d}{B_{k-1}(f)} & 0\\
+		0 \arrow{r}& Z_k(K) \arrow{r} & C_k(K) \arrow{r}
+		& B_{k-1}(K) \arrow{r} & 0
+	\end{tikzcd}
+	\]
+	\[Z_k(K)=\ker\partial_k,\,B_{k-1}(K)=\text{im}(\partial_k)\]
+	so \[Tr(C_k(f)) = Tr(Z_k(K)) + Tr(B_{k-1}(K))\,\,\,(1)\]
+	and we also have
+	\[
+	\begin{tikzcd}
+		0\arrow{r} & B_k(K) \arrow{r}
+		\arrow{d}{B_k(f)} & Z_k(K) \arrow{r} \arrow{d}{Z_k(F)} &
+		H_{k}(K) \arrow{r}\arrow{d}{H_k(f)} & 0\\
+		0 \arrow{r}& B_k(K) \arrow{r} & Z_k(K) \arrow{r}
+		& H_k(K) \arrow{r} & 0
+	\end{tikzcd}
+	\]
+	where both the rows are exact, so 
+	\[Tr(Z_k(f)) = Tr(H_k(f)) + Tr(B_k(f))\,\,\,(2)\]
+	Substituting $(2)$ into $(1)$, we have 
+	\[Tr \,C_k(f) = Tr \,H_k(f) + Tr \,B_k(f) + Tr (B_{k-1}(f))\] but 
+	\[\sum_k (-1)^k Tr \,B_k(f) + Tr \,B_{k-1}(f) = 0\]
+	so 
+	\[\sum_k (-1)^k Tr \,C_k(f) = \sum (-1)^k Tr \,H_k(f)\] thus 
+	\[\lambda_\text{geom}(f)=\lambda_\text{hom}(f)\]
+\end{proof}
+
+\begin{remark}
+	Note that $\lambda_\text{hom}(f)$ is easier to compute, but $\lambda_\text{geom}(f)$ 
+	carries geometric information.
+\end{remark}
+
+Now consider $C_k(f):C_k(K)\rightarrow C_k(K)$. If $\sigma$ is a $k$-simplex of $K$, either 
+$f(\sigma)$ is a $k$-simplex or $f(\sigma)$ is an $l$-simplex, where $l<k$. \\
+
+In the first case, $C_k(f)(\sigma)$ is a basis element of $C_k$. In the second case, 
+$C_k(f)(\sigma)=0$, so representing $C_k(f)$ as a matrix, in a column there is at most 
+one non-zero entry. \\
+
+List the $k$-simplices of $K$, $\sigma_1,\ldots,\sigma_N$.
+$C_k(f)$ is an $N\times N$ matrix. The $(i,i)$ entry of $C_k(f)$ is non-zero if and 
+only if $f(\sigma)=\pm\sigma$, so if no $k$-simplex if fixed by $f$ then the diagonal of 
+$C_k(f)$ is $0$ and $Tr(C_k(f))=0$. \\
+
+\begin{proof}[of Lefschetz fixed simplex theorem]
+	Formally put, 
+\[f\text{ fixes no $k$-simplex}\implies Tr \,C_k(f)=0\]
+\[\text{ so $f$ fixes no simplex}\implies Tr \,C_k(f)=0\text{ for all $k$}\]
+\[\text{so $f$ fixes no simplex}\implies \sum_k (-1)^k Tr \,C_k(f)=
+(\lambda_\text{geom}(f)=)0\]
+In the contrapositive,
+\[\lambda_\text{geom}(f)\neq0\implies\text{$f$ fixes some simplex (up to sign, it may 
+change local orientation)}\] hence 
+\[\lambda_\text{hom}(f)\neq0\implies\text{$f$ fixes some simplex}\]
+\end{proof}
+
+Recall that 
+\begin{proposition}
+	If $f:K\rightarrow K$ is a simplicial map and $K$ is connected then 
+	\[H_0(f)=\text{id}:H_0(K)\rightarrow H_0(K)\]
+\end{proposition}
+
+\begin{proof}
+	IF $v,w$ are vertices of $K$, then $|v|-|w|\in\Im\partial_1$, so 
+	$[v]=[w]$ in $H_0(K)$. Hence $[f(v)]=[v]$ in $H_0(K)$ for any vertex $v$. But any 
+	vertex $v$ generates $H_0$ ($K$ connected), so 
+	\[H_0(f)=\text{id}:\text{generator}\rightarrow\text{itself}\]
+\end{proof}
+
+\begin{corollary}
+	If $K$ is a connected simplicial complex and $f:K\rightarrow K$ is simplicial, then 
+	\[Tr \,H_0(K)=1\]
+\end{corollary}
+
+\begin{corollary}
+	Let $f:K\rightarrow K$ be a simplicial map, where $K$ is a finite connected simplicial 
+	complex and \[H_k(K;\mathbb{F})\text{ for }k>0\] then $\lambda(f)=1$.
+\end{corollary}
+
+\begin{corollary}
+	If $f:K\rightarrow K$ is a simplicial map, $K$ a finite connected complex such that 
+	$H_k(K;\mathbb{F})=0$ for $k>0$, then there exists a simplex $\sigma$ of $K$ such that 
+	$f(\sigma)=\sigma$ (up to orientation.)
+\end{corollary}
+
+\begin{proof}
+	\[\lambda(f)=1\neq0\]
+\end{proof}
+
+\begin{corollary}
+	If $K$ is a finite simplicial complex and $K\sim CX$ (combinatorially equivalent) where 
+	$CX$ is the cone on $X$, for some $X$, then any simplicial map $f:K\rightarrow K$ fixes
+	a simplex.
+\end{corollary}
+
+\begin{eg}
+	$K\sim \Delta^n$, any simplicial $f:K\rightarrow K$ fixes a simplex. (Brouwer Fixed Simplex)
+\end{eg}
+
+To transform a finite simplicial complex into a metric space, replace the 
+formal $n$-simplex by standard geometric $n$-simplex, 
+\[|\Delta^n|=\{t_0 e_0 + t_1 e_1 + \ldots + t_n e_n\,|\,t_i\geq 0, \sum_{i=0}^n t_i = 1\}\]
+where $e_0, \ldots, e_n$ are the standard basis for $\mathbb{R}^{n+1}$. \\
+
+$f:\Delta^n\rightarrow \Delta^n$ (formal simplicial mapping) gives a continuous mapping
+\[|f|:|\Delta^n|\rightarrow |\Delta^n|\]
+\[|f|(\sum t_i e_i)\rightarrow \sum t_i f(e_i)\] $f$ permutes $e_0, \ldots, e_n$,
+\[|f|(\frac{1}{n}\sum e_i) = \frac{1}{n}\sum e_i\text{ (fixed point)}\]
+so if $g:K\rightarrow K$ is a simplicial map, $K$ a finite complex, we get a continuous
+mapping (!) $|g|:|K|\rightarrow |K|$. If $g$ fixes a simplex, then 
+$|g|$ fixes a point.
 
 \end{document}
