@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1641322606 "c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex" "topology-and-groups-math0074.pdf" "topology-and-groups-math0074" 1641323793
-  "c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex" 1641323790 14118 09f733cf2f9dce667d8b8685ef325968 ""
+["pdflatex"] 1641582522 "c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex" "topology-and-groups-math0074.pdf" "topology-and-groups-math0074" 1641583142
+  "c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex" 1641583139 15175 9613e6a5ffab959191349ad550abdc32 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1633366790 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1633365093 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1633365093 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -145,11 +145,11 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1633369919 4399729 ba2bdf7099c8a2ba97051a2b802eaeb0 ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1633369979 2797775 495a6adcc42a9e296b830b350fe2629e ""
   "c:/texlive/2021/texmf.cnf" 1633369901 713 e69b156964470283e0530f5060668171 ""
-  "topology-and-groups-math0074.aux" 1641322607 912 092c1502e1fa3daa8773ba11c3e6818f "pdflatex"
-  "topology-and-groups-math0074.tex" 1641323790 14118 09f733cf2f9dce667d8b8685ef325968 ""
-  "topology-and-groups-math0074.toc" 1641322607 515 bde4e1b1a37e0729433e07b9ca225aa9 "pdflatex"
+  "topology-and-groups-math0074.aux" 1641582523 1015 36b37c8ec0fab8602f917ae09cd72cc4 "pdflatex"
+  "topology-and-groups-math0074.tex" 1641583139 15175 9613e6a5ffab959191349ad550abdc32 ""
+  "topology-and-groups-math0074.toc" 1641582523 577 cf85e8a17d4f0bca915ed216e6d11710 "pdflatex"
   (generated)
+  "topology-and-groups-math0074.toc"
+  "topology-and-groups-math0074.aux"
   "topology-and-groups-math0074.log"
   "topology-and-groups-math0074.pdf"
-  "topology-and-groups-math0074.aux"
-  "topology-and-groups-math0074.toc"

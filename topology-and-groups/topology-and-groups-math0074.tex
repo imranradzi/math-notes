@@ -235,7 +235,7 @@ Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
      & Y \arrow{u}{h}
   \end{tikzcd}
 \]
-  Let $f$ be continuous, and suppose $f$ factors through $:X\rightarrow Y$, a quotient 
+  Let $f$ be continuous, and suppose $f$ factors through $q:X\rightarrow Y$, a quotient 
   map, i.e., $\exists h:Y\rightarrow Z$ such that $h\circ q = f$. Then $h$ is continuous.
 \end{lemma}
 
@@ -397,6 +397,29 @@ Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
     \item $\gamma$ is null-homotopic.
     \item $\gamma$ is freely homotopic to a constant path.
   \end{enumerate}
+\end{lemma}
+
+\section{Covering spaces}
+\begin{definition}[Covering map]
+  A map $p:X'\rightarrow X$ is a \emph{covering map} if $\forall x\in X$, there exists
+  $U$ and open neighbourhood of $x$, and a discrete set $\Delta$ and a homeomorphism 
+  $h_U:U\times\Delta\rightarrow p^{-1}(U)$ such that \[p\circ h_u=\pi_U:U\times\Delta\rightarrow 
+  U\] and such a neighbourhood $U$ is called a \emph{covering neighbourhood}.
+\end{definition}
+
+\begin{definition}[Lift]
+  Let $f:Y\rightarrow X$ and $g:Z\rightarrow X$ be two maps,
+  \[
+    \begin{tikzcd}
+      &Z\arrow{d}{g} \\ Y\arrow{ur}{\tilde{f}} \arrow{r}{f}&X
+    \end{tikzcd}\]
+  a lift of $f$ is a map $\tilde{f}:Y\rightarrow Z$ such that \[g\circ\tilde{f}=f\]
+\end{definition}
+
+\begin{lemma}[Path/Homotopy lifting lemma]
+  Let $p:X'\rightarrow X$ be a covering map and $f:I^n\rightarrow X$ a continuous map.
+  Then for any $x'\in p^{-1}(f(U))$, there exists a unique lift $\tilde{f}$ of $f$ to 
+  $X'$, where $\tilde{f}(0)=x'$. Similarly, a homotopy can be lifted to a homotopy.
 \end{lemma}
 
 \end{document}
