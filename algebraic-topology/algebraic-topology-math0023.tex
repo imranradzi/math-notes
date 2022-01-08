@@ -1751,6 +1751,7 @@ $|g|$ fixes a point.
 	$g_m(x)$ has a fixed point.
 \end{proof}
 
+\section{Posets and products}
 \begin{theorem}[Künneth theorem (will not be proven here)]
 	\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\oplus H_{n-r}(Y;\mathbb{F})\]
 \end{theorem}
@@ -1807,8 +1808,146 @@ Then, we define \[X\times Y=N(\mathcal{X}\times\mathcal{Y})\]
 \[X=(V_X, \mathcal{S}_X)\] together with a partial ordering on $V_X$ such that for all 
 $\sigma\in\mathcal{S}_X$, $\sigma$ is totally ordered, so any simplicial complex can be
 regarded as an ordered simplicial complex,
-\[X=N(\mathcal{X}\text{ for some }\mathcal{X})\]
+\[X=N(\mathcal{X})\text{ for some }\mathcal{X}\]
 If $X,Y$ are ordered simplicial complexes, then so is $X\times Y$.
+
+\begin{eg}
+	\[\Delta^n=N(\{0,\ldots,n\})\] under the standard ordering.
+\end{eg}
+
+\begin{definition}
+	\[\Delta^m\times\Delta^n=N(\{o,\ldots,m\}\times\{0,\ldots,n\})\]
+\end{definition}
+
+$\Delta^m\times\Delta^n$ has dimension $m+n$ and has $\frac{(m+n)!}{m!n!}$ principal simplices.
+
+\begin{eg}[$\Delta^1\times\Delta^1$]
+	placeholder
+\end{eg}
+
+Every finite simplicial complex $K$ can be represented as an \emph{ordered simplicial complex},
+as shown before.
+
+\subsection{Product structure on $X\times Y$}
+Let $X,Y$ be finite simplicial complexes. Represent them as ordered simplicial complexes.
+If $\sigma\in\mathcal{S}_X, \,\,\,\tau\in\mathcal{S}_Y$, we make the isomorphisms 
+\[\sigma\cong\Delta^m, \,\,\,\tau\cong\Delta^n\]
+Write \[X=\bigcup_{\sigma\in\mathcal{S}_X}\sigma,\,\,\,Y=\bigcup_{\tau\in\mathcal{S}_Y} \tau\]
+and 
+\[X\times Y=\bigcup_{\sigma\in\mathcal{S}_X, \,\tau\in\mathcal{S}_Y}\sigma\times\tau\]
+and each $\sigma\times\tau$ is triangulated as explained before. \\
+
+It can be shown up to combinatorial equivalence that this is independent of orderings chosen 
+on $X,Y$. \\
+
+Now we wish to prove 
+\[\chi(X\times Y)=\chi(X)\chi(Y)\]
+Recall the Künneth theorem ,
+\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\oplus H_{n-r}(Y;\mathbb{F})\]
+
+In the special case where $Y=\Delta^m$, 
+\[H_{n-k}(Y)=\begin{cases}
+	\mathbb{F}&n-k=0\\0\text{ otherwise}
+\end{cases}\]
+so as a special case, we do have 
+\[H_*(X\times\Delta^m)\cong H_*(X)\]
+which we will prove.
+
+Fix $\Delta^m$. For any simplicial complex $X$, we have simplicial maps 
+\[i:X\rightarrow X\times\Delta^m,\,\,\,i(v)=(v,0)\]
+\[\pi:X\times\Delta^m\rightarrow X, \,\,\,\pi(x,y)=x\]
+Both maps induce isomorphisms on $H_*$, so we will just prove this for $i$.
+Let $P(n,k)$ denote the statement,
+\[\text{If $X$ is finite complex of $\dim(X)\leq n$ having at most $k$ simplices 
+of dimension $n$,}\]
+\[\text{then $i:H_*(X;\mathbb{F})\rightarrow H_*(X\times\Delta^m;\mathbb{F}$) is
+an isomorphism}\]
+
+We first show that $P(n,0)$ is true for all $n$, i.e.,
+\[i:\Delta^n\rightarrow\Delta^n\times\Delta^m\text{ induces isomorphisms}\]
+\[i_*:H_*(\Delta^n)\rightarrow H_*(\Delta^n\times\Delta^m)\]
+Let $(A,\leq)$ be a poset. We say that $A$ has a \emph{maximum} when there exists 
+$a\in A$ such that for all $b\in A$, $b\leq a$.
+
+\begin{proposition}
+	If $(A,\leq)$ has a maximum then $N(A,\leq)$ is a cone.
+\end{proposition}
+
+\begin{proof}
+	Let $a$ be a maximum element. Define $A'=A-\{a\}$. $(A',\leq)$ is still a poset, and 
+	$N(A,\leq)$ is a cone on $N(A',\leq)$ with cone point $a$.
+\end{proof}
+
+Now note that $\Delta^m\times\Delta^n$ has maximum $(m,n)$, so $\Delta^m\times\Delta^n$ is a 
+cone.
+
+\begin{corollary}
+	\[i_*:H_*(\Delta^n)\xrightarrow{\cong}H_*(\Delta^n\times\Delta^m)\]
+	and $P(n,0)$ is true for all $n$.
+\end{corollary}
+
+\begin{proposition}
+	$P(0,k)$ is true for all $k$.
+\end{proposition}
+
+\begin{proof}
+	Here $X$ is a $0$-dimensional complex with $k$-points. Note that for $k=0$, this isnt
+	true, so $P(0,0)$ is true. We proceed by induction. \\
+
+	Suppose that the statement is proven for $k-1$. Then
+	\[X=X_0\sqcup\{x_k\}\,\,\,X_0=\{x_1,\ldots,x_{k-1}\}\]
+	By hypothesis 
+	\[H_*(X_0\times\Delta^m)\cong\bigoplus_{r=1}^{k-1}H_*(\{x_r\}\times\Delta^m)=
+	\begin{cases}
+		\mathbb{F}^{k-1}&*=0\\0&*\neq0
+	\end{cases}\]
+
+	\[X\cap X_0=\emptyset, \,\,\,H_*(X\cap X_0)=0\text{ for all }*\]
+	Using the Mayer-Vietories sequence,
+	\[H_*((X_0\sqcup\{x_k\})\times\Delta^m)\cong H_*(X_0\times\Delta^m)\oplus H_*(\{x_k\}\times
+	\Delta^m)\]
+	We know \[H_*((X_0\sqcup\{x_k\})\times\Delta^m)\cong H_*(X)\] and 
+	\[H_*(X_0\times\Delta^m)\oplus H_*(\{x_k\}\times
+	\Delta^m)\cong H_*(X_0)\oplus H_*(\{x_k)\] so $P(0,k)$ for all $k$.
+\end{proof}
+
+Now let $P(n)=\wedge_{k\geq0} P(n,k)$. So now we know $P(0)$ is true. Also,
+$P(n,0)\equiv P(n-1)$ ($P(n,0)$; no $n$-simplices). \\
+
+$P(n,1)$ is true for all $n$. It is enough to prove 
+\[P(n,k-1)\wedge P(n-1)\implies P(n,k)\]
+
+\begin{proof}
+	Take $X$ to be a finite complex of dimension less than or equal to $n$ with exactly 
+	$k$ simplices of dimension $n$. \\
+
+	Let $X_0$ be the complex obtained by removing an $n$-simplex $\sigma\cong\Delta^n$, 
+	\[X=X_0\cup\sigma\] $X_0\cap\sigma$ has dimension $\leq n-1$.
+
+	\vspace{12pt}
+	
+	\begin{tikzcd}
+		H_p(X_0\cap\sigma)\arrow{r}\arrow{d}{i_*} & H_p(X_0)\oplus H_p(\sigma)\arrow{r}\arrow{d}{\mathcal{I}} & H_p(X)\arrow{r}\arrow{d}{i_*} & a\\
+		H_p(X_0\cap\sigma\times\Delta^n)\arrow{r} & H_p(X\times\Delta^m)\oplus H_p(\sigma\times\Delta^m)\arrow{r} & H_p(X\times\Delta^m)\arrow{r} & a
+	\end{tikzcd}
+
+\vspace{12pt}
+
+	\begin{tikzcd}
+		\arrow{r} & H_{p-1}(X_0\cap\sigma)\arrow{r}\arrow{d}{i_*} & H_{p-1}(X_0)\oplus H_{p-1}(\sigma) \arrow{d}{\mathcal{I}}& \\
+		\arrow{r} & H_{p-1}(X_0\cap\sigma\times\Delta^m)\arrow{r} & H_{p-1}(X_0\times\Delta^m)\oplus H_{p-1}(\sigma\times\Delta^m) & 
+	\end{tikzcd}
+	where \[\mathcal{I}=\begin{pmatrix}
+		i_* & 0 \\ 0 & i_*
+	\end{pmatrix}\]
+	
+\vspace{12pt}
+
+	Both rows are exact. The outer arrows are isomorphisms. Hence
+	$i_*:H_p(X)\xrightarrow{\cong} H_p(X\times\Delta^m)$ is isomorphic for all $p$, so 
+	\[P(n,k-1)\wedge P(n-1)\implies P(n,k)\]
+\end{proof}
+
 
 \end{document}
 

@@ -23,3 +23,5 @@
 \contentsline {section}{\numberline {6}Some linear algebra}{50}{}%
 \contentsline {subsection}{\numberline {6.1}Trace of a linear map}{51}{}%
 \contentsline {section}{\numberline {7}Lefschetz Fixed Simplex Theorem}{54}{}%
+\contentsline {section}{\numberline {8}Posets and products}{58}{}%
+\contentsline {subsection}{\numberline {8.1}Product structure on $X\times Y$}{61}{}%
