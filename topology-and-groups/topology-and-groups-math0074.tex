@@ -31,7 +31,8 @@
 
 \pagenumbering{roman}
 (Revision) notes based on the Autumn 2021 Topology and Groups lectures by Dr. Lars Louder.
-Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
+Some parts marked with (*) (+) are taken from Hatcher's Algebraic Topology and 
+the site on Topology and Groups by Prof. Jonny Evans.
 \begingroup
 \let\cleardoublepage\clearpage
 \tableofcontents
@@ -416,10 +417,78 @@ Some parts marked with (*) are taken from Hatcher's Algebraic Topology.
   a lift of $f$ is a map $\tilde{f}:Y\rightarrow Z$ such that \[g\circ\tilde{f}=f\]
 \end{definition}
 
+\subsection{Path/Homotopy lifting lemma}
 \begin{lemma}[Path/Homotopy lifting lemma]
   Let $p:X'\rightarrow X$ be a covering map and $f:I^n\rightarrow X$ a continuous map.
   Then for any $x'\in p^{-1}(f(U))$, there exists a unique lift $\tilde{f}$ of $f$ to 
-  $X'$, where $\tilde{f}(0)=x'$. Similarly, a homotopy can be lifted to a homotopy.
+  $X'$, where $\tilde{f}(0)=x'$. 
 \end{lemma}
+
+\begin{definition}
+  A covering space $p:X'\rightarrow X$ is \emph{trivial} if $X$ is a covering neighbourhood.
+\end{definition}
+
+\begin{lemma}
+  Suppose $p:X'\rightarrow X$ is a trivial covering map, and $f:Y\rightarrow X$ is continuous, 
+  $Y$ connected, the for any $y_0\in Y$ and $x'\in p^{-1}(f(y_0))$, there exists a unique 
+  lift $\tilde{f}:Y\rightarrow X'$ such that $\tilde{f}(y_0)=x'$.
+\end{lemma}
+
+\begin{lemma}
+  Let $X$ be a compact metric space. Then a continuous function $f:X\rightarrow\mathbb{R}$  attains a maximum and minimum value on $X$.
+\end{lemma}
+
+\begin{lemma}[Lebesgue's number lemma]
+  Let $X$ be a compact metric space, $\mathcal{U}$ an open cover of $X$, then there 
+  exists $\epsilon>0$ such that for all $x\in X$, there exists $U\in\mathcal{U}$ such that 
+  $B_\epsilon(x)\subseteq U$. \\
+  Such an $\epsilon$ is called the Lebesgue number for $\mathcal{U}$.
+\end{lemma}
+
+\begin{lemma}[(+)]
+  Let $p:X'\rightarrow X$ be a covering space, and $f:Y\rightarrow X$ a continuous map, $Y$ 
+  connected. Then two lifts $\tilde{f_1},\tilde{f_2}:Y\rightarrow X'$ are equal for all 
+  $y\in Y$ if and only if they are equal for some $y\in Y$.
+\end{lemma}
+
+\begin{corollary}
+  If $[\gamma]\in\pi_1(X,x_0)$ and there exists a covering space $X'$ of $X$ so that 
+  $\gamma$ lifts to a non-closed path then $[\gamma]\neq1\in\pi_1(X,x_0)$.
+\end{corollary}
+
+\begin{corollary}
+  \[\pi_1(S^1)\neq1\]
+\end{corollary}
+
+\begin{corollary}
+  $\text{id}_{S^1}:S^1\rightarrow S^1$ is \emph{not} null-homotopic. In particular $S^1$
+  is not contractible.
+\end{corollary}
+
+\subsection{Winding numbers}
+\begin{definition}
+  Let $\gamma$ be a closed path in $S^1$. The \emph{winding number} of $\gamma$, 
+  $\omega(\gamma)$ is the integer $\tilde{\gamma(1)}-\tilde{\gamma(0)}$ where $\tilde{\gamma}$
+  is any lift of $\gamma$ to $\mathbb{R}$.
+\end{definition}
+
+\begin{proposition}
+  $\omega(\gamma)$ is well-defined, and only depends on the free homotopy classes of $\gamma$.
+\end{proposition}
+
+\begin{proposition}
+  If $\gamma\simeq\gamma'$ (freely homotopic) then $\omega(\gamma)=\omega(\gamma')$.
+\end{proposition}
+
+\subsection{Covering transformations}
+
+\begin{definition}[Covering transformation]
+  Let$p:X'\rightarrow X$ be a covering map. A \emph{covering transformation} is a homeomorphism $h:X'\rightarrow X'$ such that $p\circ h=p$
+\end{definition}
+
+\begin{theorem}
+  If $X'$ is the universal cover of space $X$, then 
+  \[\pi_1(X,x_0)=\{h:X'\rightarrow X'\,|\,p\circ h =p\}\]
+\end{theorem}
 
 \end{document}

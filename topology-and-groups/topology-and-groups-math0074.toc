@@ -7,3 +7,6 @@
 \contentsline {subsection}{\numberline {2.1}Homotopy}{5}{}%
 \contentsline {subsection}{\numberline {2.2}Paths and path-homotopy}{7}{}%
 \contentsline {section}{\numberline {3}Covering spaces}{8}{}%
+\contentsline {subsection}{\numberline {3.1}Path/Homotopy lifting lemma}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Winding numbers}{9}{}%
+\contentsline {subsection}{\numberline {3.3}Covering transformations}{10}{}%
