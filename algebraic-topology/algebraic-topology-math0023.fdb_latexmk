@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1641330279 "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology/algebraic-topology-math0023.tex" "algebraic-topology-math0023.pdf" "algebraic-topology-math0023" 1641330314
-  "algebraic-topology-math0023.aux" 1641330281 2875 72f2620e7d1b287921d4643ebba51875 "pdflatex"
-  "algebraic-topology-math0023.tex" 1641330312 74983 4bc481a9d16f807c00af7a7aedb07c5b ""
-  "algebraic-topology-math0023.toc" 1641330281 1780 54ad43b96364f44ddbaedb2f5b3a48fa "pdflatex"
-  "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology/algebraic-topology-math0023.tex" 1641330312 74983 4bc481a9d16f807c00af7a7aedb07c5b ""
+["pdflatex"] 1641600322 "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology/algebraic-topology-math0023.tex" "algebraic-topology-math0023.pdf" "algebraic-topology-math0023" 1641600378
+  "algebraic-topology-math0023.aux" 1641600324 2875 49e785769dc386d64dc87e6c6e72626d "pdflatex"
+  "algebraic-topology-math0023.tex" 1641600376 78439 e6aece6c3c60cd0deb2cff4559e45110 ""
+  "algebraic-topology-math0023.toc" 1641600324 1780 54ad43b96364f44ddbaedb2f5b3a48fa "pdflatex"
+  "c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology/algebraic-topology-math0023.tex" 1641600376 78439 e6aece6c3c60cd0deb2cff4559e45110 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1633366790 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1633365093 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1633365093 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -38,6 +38,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1633365093 32716 08e384dc442464e7285e891af9f45947 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1633365093 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1633365093 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1633365093 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb" 1633365348 25452 d4e98a3bf6b13d4b7dcffd6302990a65 ""
   "c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1633368099 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1633368439 992 855ff26741653ab54814101ca36e153c ""
@@ -157,7 +158,7 @@
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1633369979 2797775 495a6adcc42a9e296b830b350fe2629e ""
   "c:/texlive/2021/texmf.cnf" 1633369901 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "algebraic-topology-math0023.pdf"
   "algebraic-topology-math0023.log"
   "algebraic-topology-math0023.aux"
+  "algebraic-topology-math0023.pdf"
   "algebraic-topology-math0023.toc"

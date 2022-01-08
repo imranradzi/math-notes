@@ -1734,4 +1734,81 @@ so if $g:K\rightarrow K$ is a simplicial map, $K$ a finite complex, we get a con
 mapping (!) $|g|:|K|\rightarrow |K|$. If $g$ fixes a simplex, then 
 $|g|$ fixes a point.
 
+\begin{theorem}[Brouwer Fixed Point Theorem]
+	Let $X=|K|$ where $K$ is some finite simplicial complex. Suppose any simplicial map 
+	$g(m):K(m)\rightarrow K(m)$ has a fixed simplex $K(m)$ (subdivision of $K$), then any 
+	continuous $f:X\rightarrow X$ has a fixed point.
+\end{theorem}
+
+\begin{proof}
+	Suppose $f:X\rightarrow X$ does not have a fixed point. $X$ compact, so there exists 
+	$\epsilon>0$ such that $\epsilon||f(x)-x||$ for all $x$. Suppose 
+	$g(m):K(m)\rightarrow K(m)$, then 
+	\[||f(x)-x||\leq||f(x)-g_m(x)||+||g_m(x)-x||\] so 
+	\[\forall\eta\,\,\,\exists m \,||f(x)-g_m(x)||<\eta\,\,\,\forall x\]
+	Choose $m$ so that $||f(x)-g_m(x)||<\frac{\epsilon}{2}$ so then 
+	\[\frac{\epsilon}{2}\leq||g_m(x)-x||\,\,\,\forall x\] which is a contradiction, thus 
+	$g_m(x)$ has a fixed point.
+\end{proof}
+
+\begin{theorem}[Künneth theorem (will not be proven here)]
+	\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\oplus H_{n-r}(Y;\mathbb{F})\]
+\end{theorem}
+
+however we will prove the following, 
+\[\chi(X\times Y)=\chi(X)\chi(Y)\]
+where $X,Y$ are finite simplicial complexes. To see applications of this, consider 
+$S^2\times S^2$ and $S^4$, both of which are simply connected compact 4-manifolds. 
+However, $S^2\times S^2\not\cong S^4$ since \[\chi(S^2\times S^2)=\chi(S^2)\chi(S^2)=4\]
+and \[\chi(S^4)=2\]
+
+\begin{definition}[Posets (Partially ordered sets)]
+	A \emph{poset} $(X,\leq)$ consists of a set $X$ and a relation $\leq$ in $X\times X$
+	\begin{enumerate}
+		\item $x\leq x \,\,\,\forall x$
+		\item $x\leq y\wedge y\leq 2\implies x\leq z$
+	\end{enumerate}
+	In a total ordering we also have $\forall x,y\in X$ either $x\leq y$ or $y\leq x$.
+\end{definition}
+
+Now let $(X,\leq)$ be a finite poset. Construct a simplicial complex $N(X,\leq)$ the 
+\emph{nerve}
+ of $(X,\leq)$. The vertex set of $N(X,\leq)$ is $X$ and simplex set of $N(X,\leq)$ is 
+ the set of totally ordered non-empty subsets. \\
+
+ If $(X,\leq)$, $(Y,\leq')$ are finite posets then the product poset is 
+ $(X\times Y,\preccurlyeq)$ where 
+ \[(x,y)\preccurlyeq(x',y')\iff (x\leq x')\wedge(y\leq' y')\] Notice that if 
+ $(X,\leq)$, $(Y,\leq')$ are totally ordered then $(X\times Y,\preccurlyeq)$ isnt, 
+ except trivially. \\
+
+ From now on we will always use the symbol '$\leq$'.
+
+\begin{eg}
+	posets and triangulation
+\end{eg}
+
+\begin{proposition}
+	If $X$ is a finite simplicial, we can write \[X=N(\mathcal{X},\leq)\] for some $\mathcal{X}$.
+\end{proposition}
+
+\begin{proof}
+	Take an arbitrary ordering on the vertices of $X$, $\{v_0,\ldots,v_n\}$. $X$ embeds
+	in $\Delta^N$, \[v_i\mapsto i,\,\,\,\mathcal{X}=\text{im}(v_i\mapsto i)\]
+	\[\Delta^N=\text{nerve on totally ordered set }0\leq1\leq\ldots N\] so each simplex 
+	$\sigma$ of $X$ is totally ordered.
+\end{proof}
+
+\noindent So now to define $X\times Y$, we write
+\[X=N(\mathcal{X}), \,\,\,Y=N(\mathcal{Y})\] where $\mathcal{X}, \,\mathcal{Y}$ are posets.
+Then, we define \[X\times Y=N(\mathcal{X}\times\mathcal{Y})\]
+
+\noindent By an \emph{ordered} simplex complex, we mean a simplicial complex 
+\[X=(V_X, \mathcal{S}_X)\] together with a partial ordering on $V_X$ such that for all 
+$\sigma\in\mathcal{S}_X$, $\sigma$ is totally ordered, so any simplicial complex can be
+regarded as an ordered simplicial complex,
+\[X=N(\mathcal{X}\text{ for some }\mathcal{X})\]
+If $X,Y$ are ordered simplicial complexes, then so is $X\times Y$.
+
 \end{document}
+
