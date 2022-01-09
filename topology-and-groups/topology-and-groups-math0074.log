@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  8 JAN 2022 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  9 JAN 2022 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,17 +561,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--268
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--289
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
 [5]
-Overfull \hbox (10.05885pt too wide) in paragraph at lines 311--312
+Overfull \hbox (10.05885pt too wide) in paragraph at lines 321--322
 []\OT1/cmr/bx/n/14.4 Proposition. []\OT1/cmr/m/n/14.4 Ho-mo-topy equiv-a-lence is an equiv-a-lence re-la-tion on (topo-
  []
 
 [6]
-Overfull \hbox (3.19485pt too wide) in paragraph at lines 373--374
+Overfull \hbox (3.19485pt too wide) in paragraph at lines 398--399
 []\OT1/cmr/bx/n/14.4 Definition. []\OT1/cmr/m/n/14.4 A loop based at $\OML/cmm/m/it/14.4 x[]$ \OT1/cmr/m/n/14.4 is null-homotopic if it is path-homotopic
  []
 
@@ -579,13 +579,13 @@ Overfull \hbox (3.19485pt too wide) in paragraph at lines 373--374
 Here is how much of TeX's memory you used:
  16912 strings out of 478599
  343761 string characters out of 5858101
- 616483 words of memory out of 5000000
+ 618483 words of memory out of 5000000
  34485 multiletter control sequences out of 15000+600000
  411855 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,108p,493b,1044s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on topology-and-groups-math0074.pdf (11 pages, 159246 bytes).
+Output written on topology-and-groups-math0074.pdf (11 pages, 160311 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
