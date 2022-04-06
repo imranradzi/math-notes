@@ -185,8 +185,8 @@ $\partial_2$ is $\begin{pmatrix}1\\-1\\0\\1\\0\\0\end{pmatrix}$ Proceeding, we w
 Notice that $\partial_1\partial_2=0$, which further confirms the lemma from before. Now reducing both the matrices to row reduced echelon form, we obtain
 \[\begin{pmatrix}1&0&0&1\\0&1&0&-1\\0&0&1&1\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}\] thus $\dim\ker\partial_2=1,\,\dim\text{im }\partial_2=3$
 \[\begin{pmatrix}1&0&0&-1&-1&0\\0&1&0&1&0&-1\\0&0&1&0&1&1\\0&0&0&0&0&0\end{pmatrix}\] thus $\dim\ker\partial_1=3,\,\dim\text{im }\partial_1=3$
-\[0\xrightarrow[\partial_3]{} C_2\xrightarrow{\partial_2}C_1\xrightarrow{\partial_1} C_0\rightarrow0\]
-so now \[H_2(S^3)=\ker(\partial_2)/\text{im}(\partial_3)=\ker(\partial_2)\cong\mathbb{F}\] as $\text{im}(\partial_3)=0$, so in total, \[H_2(S^2;\mathbb{F})\cong\mathbb{F}\] Next,
+\[0\xrightarrow{\partial_3} C_2\xrightarrow{\partial_2}C_1\xrightarrow{\partial_1} C_0\rightarrow0\]
+so now \[H_2(S^2)=\ker(\partial_2)/\text{im}(\partial_3)=\ker(\partial_2)\cong\mathbb{F}\] as $\text{im}(\partial_3)=0$, so in total, \[H_2(S^2;\mathbb{F})\cong\mathbb{F}\] Next,
 \[H_1(S^2)=\ker(\partial_1)/\text{im}(\partial_2)\] Now note that \[\dim H_1(S^2)=\dim\ker(\partial_1)-\dim\text{im}(\partial_2)=3-3=0\] thus \[H_1(S^2;\mathbb{F})=0\] Next,
 \[H_0(S^2)=\ker(\partial_0)/\text{im}(\partial_1)=C_0/\text{im}(\partial_1)\] and \[\dim H_0(S^2)=\dim C_0-\dim\text{im}(\partial_1)=4-3=1\] thus \[H_0(S^2;\mathbb{F})\cong\mathbb{F}\]
 \end{eg}
@@ -200,7 +200,7 @@ We've shown
 			   \end{cases}
 \]
 
-We will soon see that this theorem generalises if \[S^n=\Delta^{n+1}\] then \[H_k(S^n)=\begin{cases}\mathbb{F}&k=0,n\\0&\text{otherwise}\end{cases}\]
+We will soon see that this theorem generalises if \[S^n=\partial(\Delta^{n+1})\] then \[H_k(S^n)=\begin{cases}\mathbb{F}&k=0,n\\0&\text{otherwise}\end{cases}\]
 
 \subsection{Chain complex}
 \begin{definition}[Chain complex]
@@ -262,9 +262,9 @@ Given a simplicial mapping $f:X\rightarrow Y$, we are going to produce linear ma
 	\]	
 \end{definition}
 
-Notice from the diagram that \[\partial_n^D\circ f_n=f_{n-1}\partial_n^C\]
+i.e., \[\partial_n^D\circ f_n=f_{n-1}\circ\partial_n^C\]
 
-If $g:D_*\rightarrow E_*$ is also a chain mapping, then \[(g\circ f)_n=g_n\circ f_n:C_*\rightarrow E_*\] is also a chain mapping. \[\text{id}:C_*\rightarrow C_*,
+\noindent If $g:D_*\rightarrow E_*$ is also a chain mapping, then \[(g\circ f)_n=g_n\circ f_n:C_*\rightarrow E_*\] is also a chain mapping. \[\text{id}:C_*\rightarrow C_*,
 \,\,\,\text{id}_n=\text{id}_{C_n}\] is also a chain mapping. \\
 
 \begin{proposition}
@@ -281,7 +281,7 @@ If $f:X\rightarrow Y$ is a simplicial mapping, define \[C_n(f):C_n(X)\rightarrow
 \end{eqnarray*}
 \end{proof}
 
-We will often write $f_n[v_0,\ldots,v_n$ rather than $C_n(f)[v_0,\ldots,v_n]$. \\
+We will often write $f_n[v_0,\ldots,v_n]$ rather than $C_n(f)[v_0,\ldots,v_n]$. \\
 
 \begin{proposition}
 If $f:X\rightarrow Y,\,g:Y\rightarrow Z$ are simplicial maps, then
@@ -306,7 +306,7 @@ It is usual to write \[Z_n(C)=\ker(\partial_n)\,\,\,(\text{cycles})\] \[B_n(C)=\
 thus by this notation, \[H_n(C)=Z_n(C)/B_n(C)\]
 
 If $f=(f_n),\,C_*\rightarrow D_*$ is a chain mapping, we now want to show $f$ induces a mapping
-\[H_n(F):H_n(C_*)\rightarrow H_n(D_*)\]
+\[H_n(f):H_n(C_*)\rightarrow H_n(D_*)\]
 
 \begin{proposition}
 	If $f:C_*\rightarrow D_*$ is a chain mapping, then \[f_n(Z_n(C_*))\subset Z_n(D_*)\]

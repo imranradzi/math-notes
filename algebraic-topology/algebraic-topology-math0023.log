@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  8 JAN 2022 17:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  6 APR 2022 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -805,7 +805,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  102i,16n,108p,491b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on algebraic-topology-math0023.pdf (66 pages, 333548 bytes).
+Output written on algebraic-topology-math0023.pdf (66 pages, 333291 bytes).
 PDF statistics:
  300 PDF objects out of 1000 (max. 8388607)
  198 compressed objects within 2 object streams
