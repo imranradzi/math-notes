@@ -83,7 +83,7 @@ spaces (over $\mathbb{F}$)
 
 \[C_n(X)_{0\leq n}\]
 
-$C_0(X)$ is the vector space whose basis elements are simply the vertices of the simplicial complex, and this has dimension 0.
+$C_0(X)$ is the vector space whose basis elements are simply the vertices of the simplicial complex, the 0-dimensional bits.
 
 \begin{definition}[$k$-simplex of a simplicial complex]
 	If $X$ is a simplicial complex then a \emph{$k$-simplex of $X$} is a simplex $\sigma\in\mathcal{S}_X$ such that $|\sigma|=k+1$.
@@ -345,19 +345,22 @@ If $X$ is a \emph{non-empty} simplicial complex, then $H_0(X;\mathbb{F})\neq0$ (
 
 \begin{proof}
 	As $X\neq\emptyset$, we have that $V_X\neq\emptyset$. Let $v\in V_X$ be a vertex and $*$ be the simplicial complex \[*=(\{v\},\{\{v\}\})\] so $*$ consists of one vertex
-	$v$, and one $0$-simplex $\{v\}$. Now define a constant mapping \[c:X\rightarrow *, \,c(x)=v,\,\forall x\in V_X\] We also have a simplicial mapping 
-	\[\iota:*\rightarrow X, \,\iota(v)=v\] so now \[c\circ\iota=\text{id}_*\] and so \[H_0(c)\circ H_0(\iota)=H_0(\text{id}_*)\] but notice that \[H_0(*)=\mathbb{F}\] since we know
+	$v$, and one $0$-simplex $\{v\}$. Now define a constant simplicial mapping \[c:X\rightarrow *, \,c(x)=v,\,\forall x\in V_X\] We also have a simplicial mapping 
+	\[\iota:*\rightarrow X, \,\iota(v)=v\] so now \[c\circ\iota=\text{id}_*\] and so
+	(since both maps are simplicial, hence chain mappings) \[H_0(c)\circ H_0(\iota)=H_0(\text{id}_*)\] but notice that \[H_0(*)=\mathbb{F}\] since we know
 	\[C_0(*)=\mathbb{F}, \,C_r(*)=0,\,r\geq1\] and thus \[H_0(c)\circ H_0(\iota)=\text{id}_\mathbb{F}\] \[c\circ\iota=\text{id}\neq0\] and now note that $c$ is surjective,
 	and $\iota$ is injective. In particular \[H_0(c):H_0(X)\rightarrow\mathbb{F}=H_0(*)\] is surjective, so \[H_0(X)\neq0\]
 \end{proof}
 
-\noindent So we now know if $H_0(X)\neq0$ if $X\neq\emptyset$.
+\noindent So we now know that $H_0(X)\neq0$ if $X\neq\emptyset$.
 
 \vspace{12pt}
 
-Now let $X$ be a simplicial complex. If $v,w\in V_X$, then by a path from $v$ to $w$, we mean
-a sequence of $1$-simplices \[[v_0,v_1],[v_1,v_2],\ldots,[v_{n-1},v_{n-1}],[v_{n-1},v_n]\]
+\begin{definition}
+	Let $X$ be a simplicial complex. If $v,w\in V_X$, then by a path from $v$ to $w$, we mean
+a sequence of $1$-simplices \[[v_0,v_1],[v_1,v_2],\ldots,[v_{n-2},v_{n-1}],[v_{n-1},v_n]\]
 such that $v_0=v$ and $v_n=w$.
+\end{definition}
 
 \begin{proposition}
 	If $X$ is non-empty and connected, then \[H_0(X;\mathbb{F})\cong\mathbb{F}\]
@@ -372,7 +375,7 @@ such that $v_0=v$ and $v_n=w$.
 	Now $\{[v]:v\in V_X\}$ is a basis for $C_0$. Choose a specific $v\in V_X$. By elementary
 	basis change, \[\{[v]\}\cup\{[w]-[v]:w\in V_x,w\neq v\}\] is a basis for $C_0$.
 	However $[w]-[v]\in\text{im}(\partial_1)$ ($w\neq v$). So $C_0(X)/\text{im}(\partial_1)$ has
-	dimension $\leq 1$, and then $\dim H_0(X)\leq 1$ if $X$ is connected. But $X\neq0$, hence
+	dimension $\leq 1$, and then $\dim H_0(X)\leq 1$ if $X$ is connected. But $X\neq\emptyset$, so $H_0(X)\neq0$, hence
 	$\dim H_0(X)=1$, hence \[H_0(X)\cong \mathbb{F}\] when $X$ is connected.
 \end{proof}
 
@@ -414,19 +417,19 @@ If $X$ consists of a single point,
 	suppose $w$ is the cone point. $(w=*)$. By definition, $[v,w]=[v,*]$ is a $1$-simplex of
 	$C(X)$. So we've joined $v$ to $w$. \\
 
-	$(2)$ If neither are the cone point, then, $[v,*]$ and $[w,*]$ are both $1$-simplices, so again,
+	$(2)$ If neither are the cone point, then, $[v,*]$ and $[*,w]$ are both $1$-simplices, so again,
 	we've joined $v$ to $w$. So \[H_0(C(X);\mathbb{F})\cong \mathbb{F}\]
 
-	Now we must show \[H_k(C(X))=0, \,k\geq0\] We define, for each $k>0$, a linear map
+	Now we must show \[H_k(C(X))=0, \,k>0\] We define, for each $k>0$, a linear map
 	\[\mathcal{H}_k:C_k(C(X))\rightarrow C_{k+1}(C(X))\] (called a contracting homotopy)
-	$\mathcal{H}_k$ is defined on a basis by \[\mathcal{H}_k[v_o,\ldots,v_k]=[*,v_0,\ldots,v_k]\]
+	$\mathcal{H}_k$ is defined on a basis by \[\mathcal{H}_k[v_0,\ldots,v_k]=[*,v_0,\ldots,v_k]\]
 	Then,
 	\begin{eqnarray*}
 		\partial_{k+1}\mathcal{H}_k[v_0,\ldots,v_k]&=&\partial_{k+1}[*,v_0,\ldots,v_k] \\
 					&=&[v_0,\ldots,v_k]+\sum_{r=0}^k(-1)^{r+1}[*,v_0,\ldots,\hat{v_r},\ldots,v_k]
 	\end{eqnarray*}
 	\[\partial_{k+1}\mathcal{H}_k
-	([v_0,\ldots,v_k]+\sum_{r=0}^k(-1)^r[*,v_0,\ldots,\hat{v_r},\ldots,v_k])
+	[v_0,\ldots,v_k]+\sum_{r=0}^k(-1)^r[*,v_0,\ldots,\hat{v_r},\ldots,v_k]
 	=[v_0,\ldots,v_k]\] However,
 	\[\mathcal{H}_{k-1}[v_0,\ldots,\hat{v_r},\ldots,v_k]=[*,v_0,\ldots,\hat{v_r},\ldots,v_k]\]
 	and
@@ -453,7 +456,7 @@ Let $X$ be a simplicial complex, $n\geq0$. Then the $n$-skeleton $X^{(n)}$ of $X
 \[V_{X^{(n)}}=V_X\] \[\mathcal{S}_{X^{(n)}}=\{\sigma\in\mathcal{S}_X:|\sigma|\leq n+1\}\]
 i.e., $\dim(\sigma)\leq n$. \\
 
-The standard model $S^n$ of the $n$-sphere
+The standard model $S^n$ of the $n$-sphere is
 \[V_{S^n}=\{0,\ldots,n+1\}\] \[\mathcal{S}_{S^n}=
 \{\sigma\subset\{0,\ldots,n+1\}|\sigma\neq0, |\sigma|\leq n+1\}\]
 i.e., $S^n=\text{$n$-skeleton of } \Delta^{n+1}$
@@ -486,7 +489,7 @@ i.e., $S^n=\text{$n$-skeleton of } \Delta^{n+1}$
 \end{proof}
 
 As $S^n=(\Delta^{n+1})^{(n)}$, ($n\neq0, n\geq 1$) we see that 
-\[H_k(S^{(n)};\mathbb{F})=\begin{cases}\mathbb{F} & k=0 \\ 0 & 1\leq k\leq n-1\end{cases}\]
+\[H_k(S^n;\mathbb{F})=\begin{cases}\mathbb{F} & k=0 \\ 0 & 1\leq k\leq n-1\end{cases}\]
 
 We now still need to compute $H_n(S^n)$.
 
@@ -509,7 +512,8 @@ is exact if and only if $f$ is an isomorphism.
 \begin{proof}
 	The sequence is exact at $V$, so \[\text{im}(f)=\ker(V\rightarrow 0)=V\]
 	so $f$ is surjective. The sequence is exact at $U$, so
-	\[\ker(f)=\text{im}(0\rightarrow U)=0\] so $f$ is injective.
+	\[\ker(f)=\text{im}(0\rightarrow U)=0\] so $f$ is injective. Thus $f$ is bijective
+	and so an isomorphism.
 \end{proof}
 
 \noindent\underline{Short exact sequence}
@@ -531,6 +535,9 @@ To see this, note that \[\text{im}(g)=W\] by exactness.
 \[\dim\ker(g)+\dim\text{im}(g)=\dim(V)\implies\dim\ker(g)+\dim(W)=\dim(V)\] \[\ker(g)=\text{im}(f)\cong U\] (since
 $f$ is injective) and so 
 \[\dim\ker(g)=\dim(U)\] so \[\dim(U)+\dim(W)=\dim(V)\]
+\end{eg}
+
+\begin{eg}
 \[H_k(X)=Z_k(X)/B_k(X)\]
 \[0\rightarrow B_k(X)\xhookrightarrow{} Z_k(X)\rightarrow H_k(X)\rightarrow 0\]
 is a short exact sequence, $z\mapsto[z], \,z+B_k(X)$, so 
@@ -538,7 +545,7 @@ is a short exact sequence, $z\mapsto[z], \,z+B_k(X)$, so
 \end{eg}
 
 \noindent\underline{Exact sequences of chain complexes}
-Let $A_*,B_*,C_*$ be chain complexes and '
+Let $A_*,B_*,C_*$ be chain complexes and
 \[f:A_*\rightarrow B_*, \,g:B_*\rightarrow C_*\]
 Consider the following sequence of chain maps
 \[0\rightarrow A_*\xrightarrow{f} B_*\xrightarrow{g} C_*\rightarrow 0\]
