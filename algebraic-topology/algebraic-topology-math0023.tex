@@ -564,13 +564,16 @@ sequence of the following type
 \xrightarrow{\delta} H_n(A)\xrightarrow{i_*}H_n(B)\ldots\]
 \[\rightarrow H_1(A)\xrightarrow{i_*}H_1(B)\xrightarrow{p_*}H_1(C)\xrightarrow{\delta}
 H_0(A)\xrightarrow{i_*}H_0(B)\xrightarrow{p_*}H_0(C)\rightarrow 0\]
-where in our case, $A_n=B_n=C_n=0$ for $n<0$.
+with $\delta$ called the connecting homomorphism,
+where in our case, $A_n=B_n=C_n=0$ for $n<0$, i.e.,
 
-This requires 
+ 
 \[A_*=(A_n,\partial_n), \,A_n=0,n<0\]
 \[B_*=(B_n,\partial_n), \,B_n=0,n<0\]
 \[C_*=(C_n,\partial_n), \,C_n=0,n<0\]
 The connecting homomorphisms have the following \emph{naturality property}: \\
+
+\noindent\vspace{12pt}
 Suppose we have the following exact sequences of chain complexes,
 \[0\rightarrow A_*\xrightarrow{i} B_*\xrightarrow{p} C_*\rightarrow 0\]
 \[0\rightarrow A'_*\xrightarrow{i} B'_*\xrightarrow{p} C'_*\rightarrow 0\]
@@ -582,7 +585,7 @@ and suppose the following commutes,
 	0 \arrow{r} & A'_* \arrow{r} & B'_* \arrow{r} & C'_* \arrow{r} & 0
 \end{tikzcd}
 \]
-
+(where $\alpha, \,\beta, \,\gamma)$ are chain maps).
 Compare the two long exact sequences,
 \[
 \begin{tikzcd}
@@ -647,9 +650,10 @@ Then we say that $Y$ is a \emph{subcomplex} of $X$ if,
 \end{definition}
 
 \subsection{The Geometric Mayer-Vietoris Theorem: Chain Version}
+\begin{theorem}
 Suppose $X$ is a simplicial complex decomposed as a union $X=X_+\cup X_-$,
 where $X_+, \,X_-$ are subcomplexes. Then there exists an exact sequence
-of chain complexes like this,
+of chain complexes as follows,
 \[0\rightarrow C_*(X_+\cap X_-)\xrightarrow{i} C_*(X_+\oplus X_-)
 \xrightarrow{p} C_*(X)\rightarrow 0\]
 If we apply the algebraic Mayer-Vietoris Theorem, we get the homological version,
@@ -661,11 +665,14 @@ and finishes
 \[\xrightarrow{\delta} H_1(X_+\cap X_-)\rightarrow H_1(X_+)\oplus H_1(X_-)
 \rightarrow H_1(X)\xrightarrow{\delta} H_0(X_+\cap X_-)\] 
 \[\rightarrow H_0(X_+)\oplus H_0(X_-)\rightarrow H_0(X)\rightarrow 0 \]
+\end{theorem}
+\begin{eg}
 Let $S^n=\text{standard model of $n$-sphere}$,
 \[S^n=(\Delta^{n+1})^{(n)}\] We've shown for $n\geq1$,
 \[H_r(S^n;\mathbb{F})=\begin{cases}
 	\mathbb{F} & r=0 \\ 0 & 0<r<n \\ ? & r=n \\ 0 & n < r
 \end{cases}\]
+\end{eg}
 
 We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
 
@@ -713,10 +720,9 @@ We've shown that $H_2(S^2;\mathbb{F})=\mathbb{F}$.
 	which is isomorphic by the very short exact sequence.
 \end{proof}
 
+\subsection{External and internal sum}
 Let $W$ be a vector space over $\mathbb{F}$ and suppose we have two
 vector subspaces of $W$, say $U$ and $V$.
-
-\subsection{External and internal sum}
 \begin{definition}{External sum (coproduct)}
 	\[U\oplus V=\Bigl\{\begin{pmatrix}u \\ v\end{pmatrix}: u\in U, v\in V
 		\Bigr\}\]
@@ -791,7 +797,7 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 		e \\ f
 	\end{pmatrix}\mapsto e+f\]
 	The map is surjective because a basis element of $C_n(X)$ is either in 
-	$C_n(X_+)$ or $C_n(X_-)$. As a basis for the kernel, we have
+	$C_n(X_+)$ or $C_n(X_-)$. As a basis for $\ker(\mu)$, we have
 	\[\begin{pmatrix}
 		[v_0,\ldots,v_n] \\ -[v_0,\ldots,v_n]
 	\end{pmatrix}\] where $\{v_0,\ldots,v_n\}\subset
@@ -804,7 +810,7 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 \end{proof}
 
 \begin{corollary}
-	{(of the geometric Mayer-Vietoris Theorem)}
+	{(of the Geometric Mayer-Vietoris Theorem)}
 	Let $X$ be a finite simplicial complex. Then,
 	\[\dim H_0(X;\mathbb{F})=\{\text{number of connected components of $X$}\}\]
 \end{corollary}
@@ -875,7 +881,14 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	Now suppose we have an exact sequence,
 	\[0\rightarrow V_2\xrightarrow{f_2}V_1\xrightarrow{f_1}V_0\rightarrow 0\]
 	then by the kernel-rank theorem, this implies that
-	\[\dim(V_0)+\dim(V_2)=\dim(V_1)\] and so $P(2)$ is true. Now we prove
+	\[\dim(V_0)+\dim(V_2)=\dim(V_1)\] and so $P(2)$ is true. For $n=3$,
+	\[0\rightarrow V_3\xrightarrow{f_3} V_2\xrightarrow{f_2}V_1\xrightarrow{f_1}V_0\rightarrow 0\] is an exact sequence. Put $K=\ker(f_1)=\text{im}(f_2)$ so we have two exact 
+	sequences
+	\[0\rightarrow K\rightarrow V_1\rightarrow V_0\rightarrow 0\]
+	\[0\rightarrow V_3\rightarrow V_2\rightarrow K\rightarrow 0\]
+	so by the kernel-rank theorem,
+	\[\dim V_0 + \dim V_2 = \dim V_1 + \dim V_3\]
+	 Now we prove
 	that $P(2n)\implies P(2n+1)$. Suppose that $P(2n)$ is true, and take
 	the following exact sequence,
 	\[0\rightarrow V_{2n+1}\xrightarrow{f_{2n+1}}V_{2n}\xrightarrow{f_{2n}}
@@ -918,9 +931,9 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	so $f_1(y)\in\ker(\beta_1)=\text{im}(\beta_0)$.
 	Thus there exists $w\in\beta_0$
 	such that $\alpha_0(w)=f_1(y)$. But $f_0$ is surjective so write
-	\[w=f_0(z), \,\alpha_0 f_0(z)=f(y)\implies f_1\alpha_0(z)=f_1(y)\]
+	\[w=f_0(z), \,\beta_0 f_0(z)=f_1(y)\implies f_1\alpha_0(z)=f_1(y)\]
 	but now $f_1$ is an isomorphism so $y=\alpha_0(z), \,x=\alpha_1(y)=
-	\alpha_1\alpha_0(z)$. By exactness, $\alpha_1\alpha_0=0$, so $\alpha=0$
+	\alpha_1\alpha_0(z)$. By exactness, $\alpha_1\alpha_0=0$, so $x=0$
 
 	\vspace{12pt}
 
@@ -935,7 +948,7 @@ As a consequence, \[\dim(U\cap V)+\dim(U+V)=\dim(U)+\dim(V)\]
 	=\beta_2(b)-f_3\alpha_2(y)=\beta_2(b)-f_3(x)=0\] Thus
 	$b-f_2(y)\in\ker(\beta_2)=\ker(\beta_1)$ so there exists $w\in\beta_1$
 	such that $\beta_1(w)=b-f_2(y)$. $f_1$ is an isomorphism implies that
-	there exists $z\in A_1$ such that $f_1(z)=w$. So \[\beta_1f_1(z)=b-f_2(y)\]
+	there exists $z\in A_1$ such that $f_1(z)=w$. So \[\beta_1f_1(z)=\beta_1(w)=b-f_2(y)\]
 	\[f_2\alpha_1(z)=b-f_2(y)\implies b=f_2(y+\alpha_1(z))\]
 	Let $a=y+\alpha_1(z)$ which implies $b=f_2(a)$. Thus $f_2$ is surjective.
 \end{proof}
