@@ -280,11 +280,18 @@ the site on Topology and Groups by Prof. Jonny Evans.
 \end{proposition}
 
 \begin{definition}[Presentation complex]
-  text
+  Given a group $G$ and its presentation, the presentation complex of $G$ with respect
+  to the given presentation is the 
+  $2$-dimension cell complex with 1 vertex, obtained by attaching a loop (1-cell) at the vertex 
+  for each generator of $G$, and attaching a 2-cell along every relation
+  in the presentation, where the boundary of the 2-cell is attached according to 
+  the appropriate word.
 \end{definition}
 
 \begin{definition}[Cayley graph]
-  text
+  Given a group $G$ and its presentation, and $S$ a (possibly generating) set of $G$,
+  then the Cayley graph $C(G,S)=(G\sqcup G\times I\times S)/\sim$ where the equivalence
+  relation $\sim$ is given by $g\sim(g,0,s)$, $gs\sim(g,1,s)$.
 \end{definition}
 
 \section{Homotopy}
@@ -293,7 +300,8 @@ the site on Topology and Groups by Prof. Jonny Evans.
 
 \begin{definition}
   Let $(X,A)$ be a pair of spaces, where $A\subseteq X$, $f_0,f_1:X\rightarrow Y$. We say
-  $f_0$ and $f_1$ are \emph{homotopic relative} to $A$ if there exists a function $F$ 
+  $f_0$ and $f_1$ are \emph{homotopic relative} to $A$ if there exists a continuous 
+  function $F$ where
   $F:X\times I\rightarrow Y$ such that $F(-,0)=f_0, \,F(-,1)=f_1$ and $F(a,t)=f_0(a)=f_1(a)$ 
   for all $t$. In this case we write $f_0\simeq_A f_1$. \\
 
@@ -355,7 +363,7 @@ the site on Topology and Groups by Prof. Jonny Evans.
 \end{proposition}
 
 \begin{definition}[Retract]
-  Let $A\subseteq X$ be a subspace. $A$ is a \emph{retract} of $X$ if there exists a continuous map $f:X\rightarrow A$ (retraction) such that $r|_A=\text{id}_A$. $A$ is a \emph{deformation
+  Let $A\subseteq X$ be a subspace. $A$ is a \emph{retract} of $X$ if there exists a continuous map $r:X\rightarrow A$ (retraction) such that $r|_A=\text{id}_A$. $A$ is a \emph{deformation
   retract} of $X$ if there exists such a function $r$ such that $r$ is homotopic to 
   $\text{id}_X$ relative to $A$.
 \end{definition}
@@ -428,7 +436,7 @@ the site on Topology and Groups by Prof. Jonny Evans.
 \section{Covering spaces}
 \begin{definition}[Covering map]
   A map $p:X'\rightarrow X$ is a \emph{covering map} if $\forall x\in X$, there exists
-  $U$ and open neighbourhood of $x$, and a discrete set $\Delta$ and a homeomorphism 
+  $U$, an open neighbourhood of $x$, and a discrete set $\Delta$ and a homeomorphism 
   $h_U:U\times\Delta\rightarrow p^{-1}(U)$ such that \[p\circ h_u=\pi_U:U\times\Delta\rightarrow 
   U\] and such a neighbourhood $U$ is called a \emph{covering neighbourhood}.
 \end{definition}
@@ -508,14 +516,12 @@ the site on Topology and Groups by Prof. Jonny Evans.
 \subsection{Covering transformations}
 
 \begin{definition}[Covering transformation]
-  Let$p:X'\rightarrow X$ be a covering map. A \emph{covering transformation} is a homeomorphism $h:X'\rightarrow X'$ such that $p\circ h=p$
+  Let $p:X'\rightarrow X$ be a covering map. A \emph{covering transformation} is a homeomorphism $h:X'\rightarrow X'$ such that $p\circ h=p$
 \end{definition}
 
 \begin{theorem}
   If $X'$ is the universal cover of space $X$, then 
   \[\pi_1(X,x_0)=\{h:X'\rightarrow X'\,|\,p\circ h =p\}\]
 \end{theorem}
-
-\[5\overset{POG}{=}5\]
 
 \end{document}
