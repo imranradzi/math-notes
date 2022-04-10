@@ -1,8 +1,8 @@
-PWD c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology
+PWD c:/Users/yanra/desktop/math-notes/algebraic-topology
 INPUT c:/texlive/2021/texmf.cnf
 INPUT c:/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/yanra/Desktop/mathnotes/math-notes/algebraic-topology/algebraic-topology-math0023.tex
+INPUT c:/Users/yanra/Desktop/math-notes/algebraic-topology/algebraic-topology-math0023.tex
 OUTPUT algebraic-topology-math0023.log
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls

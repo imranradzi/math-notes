@@ -983,7 +983,7 @@ $X=X_+\cup X_-$ and $X_+\cap X_-\subset\partial\hat{\sigma}$ (boundary of $\hat{
 
 \begin{definition}
 	\[Sd(X,\sigma)=C(\partial\sigma)\cup\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\] i.e.,
-	\[Sd(X\sigma)=X_+'\cup X_-'\] where $X_+'$ is the cone on the boundary of $\sigma$ and
+	\[Sd(X,\sigma)=X_+'\cup X_-'\] where $X_+'$ is the cone on the boundary of $\sigma$ and
 	\[X_-'=X_-=\hat{\sigma_1}\cup\ldots\cup\hat{\sigma_N}\] and \[X_+'\cap X_-'=X_+\cap X_-\]
 \end{definition}
 
@@ -1012,7 +1012,7 @@ vertex in }\partial\sigma\] where $*$ is our cone point.
 	Let $K$ be a finite complex. Let $\sigma$ be a principal complex, and let 
 	$\sigma_1,\ldots,\sigma_N$ be the remaining principal simplices and define an extended
 	squash map $Sq:Sd(X,\sigma)\rightarrow X$ by 
-	\[Sq:C(\delta\sigma)\rightarrow\sigma\text{ is a squash mapping}\]
+	\[Sq:C(\partial\sigma)\rightarrow\sigma\text{ is a squash mapping}\]
 	\[Sq:\sigma_i\rightarrow\sigma_i\text{ identity }i=1,\ldots,N\]
 	Then $Sq:H_k(Sd(X,\sigma))\rightarrow H_k(X)$ is an isomorphism for all $k$.
 \end{theorem}
@@ -1025,7 +1025,7 @@ vertex in }\partial\sigma\] where $*$ is our cone point.
 	\adjustbox{scale=0.8,center}{%
 		\begin{tikzcd}
 			H_n(X_+'\cap X_-')\arrow{r}\arrow{d}{\text{id}} & H_n(X_+')\oplus H_n(X_-') \arrow{r}\arrow{d}{M} &
-			H_n(Sd(X,\sigma) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
+			H_n(Sd(X,\sigma)) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
 			H_{n-1}(X_+')\oplus H_{n-1}(X_-') \arrow{d}{M} \\
 			H_n(X_+\cap X_-) \arrow{r} & H_n(X_+)\oplus H_n(X_-) \arrow{r} & H_n(X) \arrow{r}
 			& H_{n-1}(X_+\cap X_-) \arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-)
@@ -1057,7 +1057,7 @@ perform subdivisions at simplices such as these.
 \end{proposition}
 
 \begin{proof}
-	Vertex set of $\Delta^{m+n+1}$ is \[\{0,\ldots,m+n+1\}=\{0,\ldots,m\}\cup\{m+1,\ldots,m+n+1\}\] There is a 1-1 correspondence between the last set and \[0,\ldots,n\] so if we take 
+	Vertex set of $\Delta^{m+n+1}$ is \[\{0,\ldots,m+n+1\}=\{0,\ldots,m\}\cup\{m+1,\ldots,m+n+1\}\] There is a 1-1 correspondence between the last set and \[\{0,\ldots,n\}\] so if we take 
 	as our model of $\Delta^n$ the vertex set $\{m+1,\ldots,m+n+1\}$ and simplices to be all the
 	non-empty subsets, we get $\Delta^{m+n+1}=\Delta^m*\Delta^n$ (the dimension goes up by 1).
 \end{proof}
@@ -1071,7 +1071,7 @@ Join is associative. If $K,L,M$ are simplicial complexes with no vertices in com
 \begin{corollary}
 	If $K,L$ are disjoint complexes, then $C(K)*L\cong C(K*L)$
 \end{corollary}
-So the join of a cone to anything is a cone.
+\noindent So the join of a cone to anything is a cone.
 
 \subsection{Star and Link}
 \begin{definition}[Star neighbourhood]
@@ -1083,15 +1083,12 @@ So the join of a cone to anything is a cone.
 
 \begin{definition}[Link]
 	Let $X$ be a simplicial complex and $\rho,\tau$ be simplices of $X$ such that 
-	$\rho\cap\tau=\emptyset$. We say that $\rho$ is joinable to $\tau$ in $X$ (i.e.,
-	$\rho\cup\tau=p*\tau$). The \emph{link} of $\tau$ in $X$, $Lk(\tau,X)$ consists of all
-	these simplices of $\rho$ of $X$ such that $\rho\cap\tau=\emptyset$ and $\rho\cap\tau$ is
+	$\rho\cap\tau=\emptyset$. We say that $\rho$ is joinable to $\tau$ in $X$ when
+	$\rho\cup\tau=p*\tau$. The \emph{link} of $\tau$ in $X$, $Lk(\tau,X)$ consists of all
+	these simplices of $\rho$ of $X$ such that $\rho\cap\tau=\emptyset$ and $\rho\cup\tau$ is
 	a simplex, i.e., $\rho$ is joinable to $\tau$.
+	\[Lk(\tau, X)=\{\rho\in X\,|\, \rho\cap\tau=\emptyset, \rho\cup\tau\in\mathcal{S}_X\}\]
 \end{definition}
-
-\begin{eg}
-	star and link example
-\end{eg}
 
 \begin{proposition}
 	If $\tau$ is a simplex of $X$, then $St(\tau,X)=\hat{\tau}*Lk(\tau,X)$
@@ -1102,7 +1099,7 @@ So the join of a cone to anything is a cone.
 	Let $\sigma$ be a principal simplex with $\tau\subset\sigma$. Write
 	\[\tau=\{v_0,\ldots,v_m\} \,\,\,m<n\] \[\sigma=\{v_0,\ldots,v_m,v_{m+1},\ldots,v_n\}\]
 	Put $\rho=\{v_{m+1},\ldots,v_n\}$ so then \[\sigma=\tau*\rho\] Do this for every principal
-	simplex which contains $\tau$. Each $\sigma_1=\tau*\rho_i$ for some $\rho_i$, so 
+	simplex which contains $\tau$. Each $\sigma_i=\tau*\rho_i$ for some $\rho_i$, so 
 	\[\bigcup\sigma_i=\tau*(\cup\rho_i)=\tau*Lk(\tau,X)\]
 \end{proof}
 
@@ -1129,14 +1126,14 @@ So the join of a cone to anything is a cone.
 	\adjustbox{scale=0.8,center}{%
 		\begin{tikzcd}
 			H_n(X_+'\cap X_-')\arrow{r}\arrow{d}{\text{id}} & H_n(X_+')\oplus H_n(X_-') \arrow{r}\arrow{d}{M} &
-			H_n(Sd(X,\tau) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
+			H_n(Sd(X,\tau)) \arrow{r} \arrow{d}{Sq} & H_{n-1}(X_+'\cap X_-') \arrow{r} \arrow{d}{\text{id}} & 
 			H_{n-1}(X_+')\oplus H_{n-1}(X_-') \arrow{d}{M} \\
 			H_n(X_+\cap X_-) \arrow{r} & H_n(X_+)\oplus H_n(X_-) \arrow{r} & H_n(X) \arrow{r}
 			& H_{n-1}(X_+\cap X_-) \arrow{r} & H_{n-1}(X_+)\oplus H_{n-1}(X_-)
 		\end{tikzcd}
 	} \\
 	\vspace{12pt}
-	where $M=\begin{pmatrix}Sq&0\\0&\text{id}\end{pmatrix}$. Apply the five lemma to show 
+	where $M=\begin{pmatrix}Sq&0\\0&\text{id}\end{pmatrix}$. By the five lemma,
 	$Sq$ induces an isomorphism.
 \end{proof}
 So now we've proved the following,
@@ -1144,10 +1141,6 @@ So now we've proved the following,
 \begin{theorem}
 	Homology is invariant under subdivision.
 \end{theorem}
-
-\begin{eg}
-	subdivision isomorphism example
-\end{eg}
 
 We now have a functor $H_n$ which takes simplicial complexes to vector spaces, and 
 simplicial maps to linear maps, e.g.,
@@ -1195,19 +1188,20 @@ i.e., if $Y$ subdivides $X$, then $H_n(Y)\cong H_n(X)$.
 
 \vspace{12pt}
 
-Consider $S^2=\Delta^3\text {with the interior missing}$. This is the minimal model
+Consider $S^2=\partial\Delta^3$. This is the minimal model
 of $S^2$. The dodecahedron is also a model of $S^2$ obtained from the minimal model
 by a sequece of subdivisions, hence for any model of $S^2$,
-\[H_k(S^2,\mathbb{F})
+\[H_k(S^2;\mathbb{F})
 	\begin{cases}
 		\mathbb{F}&k=0\\0&k=1\\\mathbb{F}&k=2\\0&k>2
 	\end{cases}\] 
 
 We note that the usual definition of $S^2$ is given by 
 \[S^2=\{\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\in\mathbb{R}^3\,:\,
-x_1^2+x_2^2+x_3^2=1\}\] Now we define $S^1(n)$ to be the model of the circle $S^1$ with
-$n$-subdivision points ($n\geq3$), so \[S^1(n)\sim S^1(m)\,\,\,\forall m,n\geq3\]
+x_1^2+x_2^2+x_3^2=1\}\] which is harder to compute homology with. \\
 
+Now we define $S^1(n)$ to be the model of the circle $S^1$ with
+$n$-subdivision points ($n\geq3$), so \[S^1(n)\sim S^1(m)\,\,\,\forall m,n\geq3\]
 so for example, $S^1(3)$ is the triangle, $S^1(4)$ is the square, $S^1(5)$ the pentagon, and so on.
 
 \section{Orientation Theorem}
