@@ -1,8 +1,8 @@
-PWD c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups
+PWD c:/Users/yanra/Desktop/math-notes/topology-and-groups
 INPUT c:/texlive/2021/texmf.cnf
 INPUT c:/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/yanra/Desktop/mathnotes/math-notes/topology-and-groups/topology-and-groups-math0074.tex
+INPUT c:/Users/yanra/Desktop/math-notes/topology-and-groups/topology-and-groups-math0074.tex
 OUTPUT topology-and-groups-math0074.log
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT c:/texlive/2021/texmf-dist/tex/latex/extsizes/extarticle.cls

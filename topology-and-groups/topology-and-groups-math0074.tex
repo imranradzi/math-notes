@@ -394,7 +394,7 @@ the site on Topology and Groups by Prof. Jonny Evans.
 \begin{definition}[Fundamental group of a space]
   The \emph{fundamental group} of $X$ at $x_0$ is the set (group)
   \[\{[\gamma]\,|\,\gamma\text{ is a loop based at }x_0\}\]
-  which is denoted by $\Pi_1(X,x_0)$.
+  which is denoted by $\pi_1(X,x_0)$.
 \end{definition}
 
 \begin{definition}[$n^{\text{th}}$ homotopy group]
@@ -524,4 +524,117 @@ the site on Topology and Groups by Prof. Jonny Evans.
   \[\pi_1(X,x_0)=\{h:X'\rightarrow X'\,|\,p\circ h =p\}\]
 \end{theorem}
 
+\section{More on fundamental groups and covering spaces}
+\begin{definition}
+  Let $\alpha, \beta$ be paths in a space $X$. We say $\alpha, \beta$ are \textit{composable}
+  if \[\alpha(1)=\beta(0)\text{ (note that the order matters)}\]
+\end{definition}
+
+\noindent If $\alpha,\beta$ are composable, their product $\alpha\cdot\beta$ is the path 
+\[\alpha\cdot\beta=\begin{cases}
+  \alpha(2t) & 0\leq t\leq \frac{1}{2} \\
+  \beta(2t-1) & \frac{1}{2}\leq 1
+\end{cases}\]
+i.e., we traverse through $\alpha, \beta$ with twice the speed. Note that in some sources
+they may write $\beta\cdot\alpha$ instead of $\alpha\cdot\beta$ to mean the same thing.
+
+\begin{definition}
+  If $\alpha$ is a path (not necessarily closed), then $\bar{\alpha}$ is the 
+  pathdefined by $\bar{\alpha}=\alpha(1-t)$, i.e., traversing through $\alpha$ in the 
+  backwards direction. 
+\end{definition}
+
+\begin{theorem}
+  Let $X$ be a \textit{path-connected} space, $x_0$ a basepoint. The set \[\pi(X,x_0)=\{\text{loops based at }x_0\}/\text{path homotopy}\] with multiplication given by $[\alpha]\cdot[\beta]=[\alpha\cdot\beta]$, for any $[\alpha],[\beta]\in
+  \pi(X,x_0)$, and inverses given by $[\alpha]^{-1}=[\bar{\alpha}]$,
+  and the identity given by $1=[x_0]$, defines a group, called the \textit{fundamental group}
+  (of $X$).
+\end{theorem}
+We note that it makes sense to talk about \textit{the} fundamental group, if we restrict 
+the spaces in question to path-connected spaces, so we shall restrict our attention to 
+path-connected spaces from now on.
+
+\begin{theorem}
+  Let $\alpha$ be a path from $x_0$ to $x_1$. The map \[[\alpha]_*:\pi_1(X,x_0)\rightarrow \pi_1(X,x_1)\] defined by 
+  \[[\gamma]\mapsto[\bar{\alpha}\cdot\gamma\cdot\alpha]\] is an isomorphism.
+\end{theorem}
+
+\begin{theorem}
+  Let $(X,x_0)$, $(Y,y_0)$ be two (pointed) path-connected spaces, and 
+  $f:(X,x_0)\rightarrow (Y,y_0)$ be continuous and such that $f(x_0)=y_0$. Then this map 
+  induces the map 
+  \[f_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\] defined by $f_*([\gamma])=[f\circ\gamma]$.
+\end{theorem}
+
+\begin{theorem}
+  With conditions as the previous theorem, along with another path-connected space 
+  $(Z,z_0)$ and another continuous $g:(Y,y_0)\rightarrow (Z,z_0)$, we have 
+  \[(g\circ f)_* = g_*\circ f_*\]
+\end{theorem}
+
+In other words, the previous two theorems show that $\pi$ is a functor taking 
+the category of topological spaces to the category of groups.
+
+\begin{theorem}
+  Let $f_t:X\times I\rightarrow Y$ be a homotopy of $f_0$ and $f_1$, and let $\alpha$ 
+  be the path $f_t(x_0)$ from $f_0(x_0)=y_0$ to $f_1(x_0)=y_1$. Then,
+  \[[\alpha]_*\circ (f_0)_*=(f_1)_*\]
+\end{theorem}
+
+\begin{corollary}
+  Let $X, Y$ be path-connected and homotopy equivalent. Then,
+  \[\pi_1(X)\cong\pi_1(Y)\]
+\end{corollary}
+
+\begin{theorem}[Brouwer's no retraction theorem]
+  There does not exist $r:D^2\rightarrow S^1$ such that $r|_{S^1}=\text{id}_{S^1}$.
+\end{theorem}
+
+\begin{theorem}[Brouwer's fixed point theorem]
+  Let $f:D^2\rightarrow D^2$ be continuous. Then $f$ has a fixed point, i.e.,
+  \[\exists x\in D^2\text{ such that }f(x)=x\]
+\end{theorem}
+
+\subsection{Classification of covering spaces}
+\begin{definition}
+  Let $Y_0, Y_1$ be two covers of a space $X$. We say that $Y_0$ and $Y_1$ are \textit{equivalent} if there exists a homeomorphism $h:Y_0\rightarrow Y_1$ such that 
+  \[p_1\circ h=p_0\] (and $h(y_0)=y_1$ if $Y_0, Y_1$ have base points). \\
+
+  If $Y_0=Y_1$, an equivalence $h:Y_0\rightarrow Y_0$ is a \textit{covering transformation}.
+  It also follows that 
+  \[Aut(Y)=\{h:Y\rightarrow Y \,|\, p\circ h=p\}\]
+\end{definition}
+
+\begin{lemma}
+  Let $p:(Y,y_0)\rightarrow(X,x_0)$ be a cover. Then 
+  \[p_*:\pi_1(Y,y_0)\rightarrow\pi_1(X,x_0)\]
+  is injective.
+\end{lemma}
+This way we get a map from the pointed covering spaces of $(X,x_0)$ (quotient according 
+to equivalences) to the subgroups of $\pi_1(X,x_0)$, where $X$ is path-connected and 
+locally contractible.
+
+\begin{proposition}
+  $p_*(\pi_1(Y,y_0))<\pi_1(X,x_0)$
+\end{proposition}
+
+\begin{theorem}[Classification of covering spaces]
+  Let $X$ be path-connected and locally contractible.
+  \begin{enumerate}
+    \item The map from the set of connected covering spaces under the quotient of equivalence,
+    \[\{(Y,y_0)\}/\text{equiv}\rightarrow\{\text{subgroups of }\pi_1(X,x_0)\}\}\] defined by
+    \[(Y,y_0)\mapsto p_*(\pi(Y,y_0))\] is \textit{bijective}.
+    \item Given (1), $H<\pi_1(X,x_0)$ let $(X_H,x_H)$ be the 
+    cover of $\pi_1(X,x_0)$ corresponding to $H$. $H<K\iff\exists(X_H,x_H)\xrightarrow{h}
+    (X_K,x_K)$
+    \begin{enumerate}
+      \item[i.] $h$ is a cover
+      \item[ii.] $[H:K]=\#h^{-1}(X_K)$
+    \end{enumerate}
+    \item \[Aut(X_H)=\{h:X_H\rightarrow X_H\,|h\text{ a covering transformation}\}\] Then
+    \[X_H\cong N(H)/H\] In particular if $H=1<\pi_1(X,x_0)$, then
+    \[Aut(X_H)\cong\pi_1(X,x_0)\] in which case $X_H$ is the \textit{universal cover}.
+  \end{enumerate}
+  
+\end{theorem}
 \end{document}
