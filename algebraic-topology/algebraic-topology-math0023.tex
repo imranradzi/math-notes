@@ -1359,9 +1359,11 @@ One non-trivial relation is
 Recall that if $\sigma$ is a simplex of $X$, then $Lk(\sigma, X)$ is equal to the complex where simplices $\tau$ satisfy $\sigma\cap\tau=\emptyset$, where $\sigma\cup\tau$ is a simplex
 of $X$. \\
 
-\noindent A simplicial surface $\Sigma$ is a complex in which \[Lk(v,\Sigma)\cong S^1(N)\] where
+\begin{definition}[Simplicial surface]
+	A \textit{simplicial surface} $\Sigma$ is a complex in which \[Lk(v,\Sigma)\cong S^1(N)\] where
 $v$ is a vertex of $\Sigma$ ($N\geq3$). Recall that $S^1(N)$ is the circle with $N$ 
-subdivision points, for example, $S^1(5)$ is 'the' pentagon. \\
+subdivision points, for example, $S^1(5)$ is 'the' pentagon.
+\end{definition} 
 
 Observe that in $S^1(N)$, every vertex belongs to exactly \emph{two} 1-simplices.
 
@@ -1445,13 +1447,13 @@ Observe that in $S^1(N)$, every vertex belongs to exactly \emph{two} 1-simplices
 	\[\langle[v_{\sigma(0)},v_{\sigma(1)},v_{\sigma(2)}],[v_1,v_2]\rangle=sgn(\sigma)\]
 \end{definition}
 
-\begin{proof}[(of Orientation Theorem)]
+\begin{proof}(of Orientation Theorem)
 	For each 1-simplex $\rho$ of $\Sigma$, fix once and for all a specific orientation 
 	$\hat{\rho}$ of $\rho$. \\
 
-	Let $\Sigma_1,\ldots,\Sigma_N$ be a list of the 2-simplices of $\Sigma_1,\ldots,\Sigma_N$
-	be a list of the 2-simplices of $\Sigma$ and $\hat{\Sigma_i}$ fixed orientation of
-	$\Sigma_i$. To change the orientations on 2-simplices, we need a function 
+	Let $\sigma_1,\ldots,\sigma_N$ be a list of the 2-simplices of 
+	$\Sigma$ and $\hat{\sigma_i}$ fixed orientation of
+	$\sigma_i$. To change the orientations on 2-simplices, we need a function 
 	\[\eta:\{1,\ldots,N\}\rightarrow\{\pm1\}\]
 	$\eta(i)\hat{\sigma_i}$ is the oriented 2-simplex which is 
 	\[\begin{cases}
@@ -1464,13 +1466,13 @@ $\partial[\eta]$. \\
 
 Fix a 1-simplex $\rho$ and let $\sigma_s,\sigma_t$ be the adjacent 2-simplices which contain 
 $\rho$. The coefficient of $\hat{\rho}$ in $\partial[\eta]$ is simply
-\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{rho}]=\begin{cases}
+\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{\rho}]=\begin{cases}
 	2\\0\\-2
 \end{cases}\]
 To ensure that $\partial[\eta]=0$ we require $\eta$ to satisfy 
-\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{rho}]=0\]
+\[[\eta(s)\hat{\sigma_s},\hat{\rho}]+[\eta(t)\hat{\sigma_t},\hat{\rho}]=0\]
 i.e.,
-\[\langle\eta(s)\hat{\sigma_s,p}\rangle+\langle\eta(t)\hat{\sigma_t,\hat{rho}}\rangle=0\,\,\,(*)\]
+\[\langle\eta(s)\hat{\sigma_s},\hat{\rho}\rangle+\langle\eta(t)\hat{\sigma_t},\hat{\rho}\rangle=0\,\,\,(*)\]
 whenever $\sigma_s,\sigma_t$ are adjacent, and now we know
 $\Sigma$ is orientable if and only if there exists a function \[\eta:\{1,\ldots,N\}
 \rightarrow\{\pm1\}\] such that we have $(*)$ whenever $\sigma_s,\sigma_t$ are adjacent. \\
@@ -1485,7 +1487,7 @@ Let us consider the elements
 \[\sum_{s=1}^N a_s\hat{\sigma}_s\in C_2(\Sigma;\mathbb{F})\] where $a_s\in\mathbb{F}$.
 Suppose that $\rho$ is a 1-simplex and $\sigma_s,\sigma_t$ are adjacent 2-simplices which contain $\rho$. \\
 
-We calculate $\partial(\sum a_s\sigma_s)$. The coefficients of $\hat{rho}$ is simply 
+We calculate $\partial(\sum a_s\sigma_s)$. The coefficients of $\hat{\rho}$ is simply 
 $a_s\langle\hat{\sigma_t},\hat{\rho}\rangle + a_t\langle\hat{\sigma_t},\hat{\rho}\rangle$.
 If we want $\partial(\Sigma a_s\sigma_s)=0$ then 
 \[a_s\langle\hat{\sigma_t},\hat{\rho}\rangle + a_t\langle\hat{\sigma_t},\hat{\rho}\rangle=0\]
@@ -1504,11 +1506,11 @@ If $\Sigma $ is orientable, there exists global orientation $\eta:\{1,\ldots,N\}
 \{\pm 1\}$ and $[\eta]$ generates $H_2(\Sigma;\mathbb{F})$ \\
 
 If $\Sigma$ is non-orientable, $\partial[\eta]\neq0$ for any such $\eta$ and if 
-$\alpha\in Z_2(\Sigma;\mathbb{F})$, $\alpha=\sum a_s\hat{\sigma_s}$, \[\alpha=a_o0[\eta]
-\,\,\,\partial(\alpha)=a_0\partial[\eta]\]
+$\alpha\in Z_2(\Sigma;\mathbb{F})$, $\alpha=\sum a_s\hat{\sigma_s}$, \[\alpha=a_0[\eta]
+\,\,\,,\partial(\alpha)=a_0\partial[\eta]\]
 
 \[\partial(\alpha)=0\implies a_0\partial[\eta]=0\] but $\partial[\eta]\neq0$ and $\alpha=0$,
-so $a_0=0$, so then \[H_2(\Sigma;\mathbb{F})\] However if $1+1=0$, then 
+so $a_0=0$, so then \[H_2(\Sigma;\mathbb{F})=0\] However if $1+1=0$, then 
 \[\partial(\sum_{s=1}^N \hat{\sigma_s})=0\] as $\pm 2=0$ and $H_2(\Sigma;\mathbb{F})\cong
 \mathbb{F}$.
 \end{proof}
@@ -1550,7 +1552,7 @@ whether the surface is orientable or not. $H_1$ in a sense tells us how 'big' th
     \end{multicols}
 
 In general for $\Sigma_g^+=\text{$n$-fold torus}$, we have 
-\[H_k\begin{cases}
+\[H_k=\begin{cases}
 	\mathbb{F}&k=0\\
 	H_1=\mathbb{F}\oplus\ldots\oplus\mathbb{F}\,\,(2g\text{ times})&k=1\\
 	\mathbb{F}&k=2
@@ -1605,8 +1607,8 @@ we have
 \begin{remark}
 	Note that in general $Tr(AB)\neq Tr(A)Tr(B)$. For example, take 
 	\[A=\begin{pmatrix}
-		0&1\\1&0=B
-	\end{pmatrix}\] so that \[AB=\begin{pmatrix}
+		0&1\\1&0
+	\end{pmatrix}=B\] so that \[AB=\begin{pmatrix}
 		1&0\\0&1
 	\end{pmatrix}\] and \[Tr(A)=Tr(B)=0,\,\,\,Tr(AB)=2\]
 \end{remark}
