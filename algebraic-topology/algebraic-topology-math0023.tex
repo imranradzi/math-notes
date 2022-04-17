@@ -2039,6 +2039,136 @@ $P(n,1)$ is true for all $n$. It is enough to prove
 	$i_*:H_p(X)\xrightarrow{\cong} H_p(X\times\Delta^m)$ is isomorphic for all $p$, so 
 	\[P(n,k-1)\wedge P(n-1)\implies P(n,k)\]
 \end{proof}
+So now we know that 
+\[H_*(X\times\Delta^m)\cong H_*(X)\] for any finite complex $X$ and any $m$.
+
+As $\chi$ is expressable in terms of $H_*$, we know,
+
+\begin{theorem}
+	\[\chi(X\times\Delta^m)=\chi(X)\] for any finite complex $X$.
+\end{theorem}
+
+Next we will prove that \[\chi(X\times Y)=\chi(X)\chi(Y)\] for any finite complexes 
+$X$, $Y$.
+
+\begin{lemma}
+	Suppose $X=X_+\cup X_-$, where $X$ is a finite complex, $X_+,X_-$ subcomplexes. Then,
+	\[\chi(X)+\chi(X_+\cap X_-)=\chi(X_+)+\chi(X_-)\]
+\end{lemma}
+
+\begin{proof}
+	We know that there exists an exact sequence of chain complexes,
+	\[0\rightarrow C_*(X_+\cap X_-)\rightarrow C_*(X_+)\oplus C_*(X_-)\rightarrow C_*(X)
+	\rightarrow 0\] In particular, for each $n$, we have an exact sequence 
+	\[0\rightarrow C_n(X_+\cap X_-)\rightarrow C_n(X_+)\oplus C_n(X_-)\rightarrow C_n(X)
+	\rightarrow 0\]
+	so \[\dim C_n(X) + \dim C_n(X_+\cap X_-)=\dim C_n(X_+)+\dim C_n (X_-)\] and so if 
+	we take alternating sums, 
+	\[\chi(X)+\chi(X_+\cap X_-)=\chi(X_+)+\chi(X_-)\]
+\end{proof}
+
+\begin{theorem}
+	Let $X,Y$ be finite simplicial complexes, then 
+	\[\chi(X\times Y)=\chi(X)\chi(Y)\]
+\end{theorem}
+
+\begin{proof}
+	Fix $X$. Define statements $Q(n,k)$ as follows,
+	\[Q(n,k); \chi(X\times Y)=\chi(X)\chi(Y)\] when $Y$ is a finite complex of dimension 
+	$\leq n$ having precisely $k$ $n$-simplices. 
+	We know that $\chi(X\times\Delta^m)=\chi(X)=\chi(X)\chi(\Delta^n)$ because 
+	$\chi(\Delta^n)=1$. So $Q(n,1)$ is true for all $n$. Next we prove that 
+	$Q(0,k)$ is true for all $k$. This says that if $X=\{y_1\}\cup\ldots\cup \{y_k\}$, 
+	where $y_1,\ldots,y_k$ are points, then 
+	\[\chi(X\times Y)=\chi(X)k\] because $\chi(Y)=k$. 
+
+	\vspace{12pt}
+
+	We prove this by induction on $k$. $Q(0,0)=\emptyset$, $Q(0,1)$ is true since 
+	\[X\times\{y_1\}\cong X\] so \[\chi(X\times\{y_1\})=\chi(X)=\chi(X)\chi(\{y_1\})\]
+
+	\vspace{12pt}
+
+	Now suppose this is true for some $k$, and 
+	\[Y=\{y_1\}\cup\ldots\cup\{y_{k+1}\}\] where $y_1,\ldots,y_{k+1}$ are points, 
+	\[Y'=\{y_1\}\cup\ldots\cup\{y_k\}\]
+	\[Y=Y'\cup\{y_{k+1}\}, \,\,\,Y'\cup\{y_{k+1}\}=\emptyset\] so then 
+	\[X\times Y=(X\times Y')\cup(X\times\{y_{k+1}\})\] and applying $\chi$, we have 
+	\[\chi(X\times Y)+\chi(X\times(Y'\cap\{y_{k+1}\}))=\chi(X\times Y')+\chi(X)
+	\chi(\{y_{k+1}\})\] Given that $Y'\cap\{y_{k+1}\}=\emptyset$, we have 
+	\[X\times(Y'\times\{y_{k+1}\})=\emptyset\] \[\chi(X\times(Y'\times\{y_{k+1}\}))=0\]
+	\[\chi(X\times Y)=\chi(X\times Y')+\chi(X)\] because $\chi(\{y_{k+1}\})=1$.
+	By hypothesis $P(0,k)$,
+	\[\chi(X\times Y')=\chi(X)\chi(Y')\] so 
+	\begin{eqnarray*}
+		\chi(X\times Y)&=&\chi(X)\chi(Y')+\chi(X) \\
+		&=& \chi(X)[\chi(Y')+1] \\
+		&=&\chi(X)\chi(Y)
+	\end{eqnarray*}
+	so $Q(0,k)\implies Q(0,k+1)$.
+
+	\vspace{12pt}
+
+	Now define $Q(n-1)=\wedge_k Q(n-1,k)$. We now know that $Q(0)$ is true. Also,
+	\[Q(1,0)\equiv Q(0)\] We also know that $Q(n-1)$ is true.
+
+	\vspace{12pt}
+
+	For our final induction step, we prove that 
+	\[Q(n,k)\wedge Q(n-1)\implies Q(n,k+1) (*)\]
+	This then shows each $Q(n,k)$ is true so $Q(n)$ is true, so then we proceed with
+	\[Q(n+1,k)\wedge Q(n)\implies Q(n+1,k+1)\] and so on. So to prove $(*)$, 
+	let $Y$ be a finite complex of dimension $\leq n$ having precisely $k+1$ $n$-simplices.
+	In particular, the $n$-simplices of $Y$ are principal simplices. Let $\sigma_1,\ldots,
+	\sigma_k,\sigma_{k+1}$ be the $n$-simplices of $Y$. 
+
+	\vspace{12pt}
+
+	Let $Y'$ be the subcomplex of $Y$ where the principal $n$-simplices are 
+	$\sigma_1,\ldots,\sigma_k$. Write \[Y=Y'\cup\hat{\sigma_{k+1}}\] where 
+	$\hat{\sigma_{k+1}}$ is the subcomplex of $Y$ consisting of $\sigma_{k+1}$ and all
+	of its faces. Observe $Y'\cap\hat{\sigma_{k+1}}$ has dimension $\leq n-1$.
+
+	\[X\times Y=(X\times Y')\cup X\times\hat{\sigma_{k+1}}\]
+	\[\chi(X\times Y)=\chi(X\times Y')+\chi(X\times\hat{\sigma_{k+1}})-
+	\chi(X\times(Y'\cap\hat{\sigma_{k+1}}))\]
+	By hypothesis $Q(n,k)$ \[\chi(X\times Y')=\chi(X)\chi(Y')\]
+	By $Q(n,1)$ \[\chi(X\times\hat{\sigma_{k+1}})=\chi(X)\]
+	\[\chi(X\times\hat{\sigma_{k+1}})=\chi(X)\chi(\hat{\sigma_{k+1}})\]
+	By $Q(n-1)$ \[\chi(X\times(Y'\cap\hat{\sigma_{k+1}}))=\chi(X)\chi(Y'\cap\hat{\sigma_{k+1}})\]
+
+	Thus by $Q(n,k)$, $Q(n,1)$, $Q(n-1)$, together we get 
+	\begin{eqnarray*}
+		\chi(X\times Y)&=&\chi(X)\chi(Y')+\chi(X)\chi(\hat{\sigma_{k+1}})-\chi(X)\chi(Y'\cap
+		\hat{\sigma_{k+1}}) \\
+		&=& \chi(X)[\chi(Y')+\chi(\hat{\sigma_{k+1}}-\chi(Y'\cap\hat{\sigma_{k+1}}))] \\
+		&=& \chi(X)\chi(Y)
+	\end{eqnarray*}
+	hence \[\chi(X\times Y)=\chi(X)\chi(Y)\] for any finite complexes $X, Y$.
+\end{proof}
+
+\begin{definition}[$n$-manifold]
+	An $n$-manifold $X$ is a complex in which \[Lk(v,X)\sim S^{n-1}\] for any vertex.
+\end{definition}
+
+If $X$ is an $m$-manifold, $Y$ an $n$-manifold, then $X\times Y$ is an $m+n$-manifold.
+
+\begin{eg}
+	$S^n$ is an $n$-manifold. $S^4$ is a 4-manifold, and so is $S^2\times S^2$. We have that 
+	\[\chi(S^4)=2\] since \[H_k(S^4)=\begin{cases}
+		\mathbb{F} & k=0,4 \\ 0 & \text{otherwise}
+	\end{cases}\]
+
+	We also know $\chi(S^2)=2$, and so $\chi(S^2\times S^2)=4$. $S^1\times S^3$ is also a 
+	4-manifold, however \[\chi(S^1\times S^3)=\chi(S^1)\times\chi(S^3)=0\]
+	since $\chi$ of any odd dimenisonal compact manifold is equal to $0$.
+	
+	\vspace{12pt}
+
+	Consider $S^1\times S^7$, $S^3\times S^5$. Both are $8$-manifolds, and both have 
+	$\chi=0$, however both are distinguished by the Künneth theorem.
+\end{eg}
+
 
 
 \end{document}
