@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  12 APR 2022 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  17 APR 2022 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -571,34 +571,39 @@ Overfull \hbox (10.05885pt too wide) in paragraph at lines 329--330
  []
 
 [6] [7]
-Overfull \hbox (3.19485pt too wide) in paragraph at lines 406--407
+Overfull \hbox (3.19485pt too wide) in paragraph at lines 423--424
 []\OT1/cmr/bx/n/14.4 Definition. []\OT1/cmr/m/n/14.4 A loop based at $\OML/cmm/m/it/14.4 x[]$ \OT1/cmr/m/n/14.4 is null-homotopic if it is path-homotopic
  []
 
 [8] [9] [10] [11]
-Overfull \hbox (2.0608pt too wide) in paragraph at lines 570--572
+Overfull \hbox (2.0608pt too wide) in paragraph at lines 587--589
 \OT1/cmr/m/n/14.4 other path-connected space $(\OML/cmm/m/it/14.4 Z; z[]\OT1/cmr/m/n/14.4 )$ and an-other con-tin-u-ous $\OML/cmm/m/it/14.4 g \OT1/cmr/m/n/14.4 : (\OML/cmm/m/it/14.4 Y; y[]\OT1/cmr/m/n/14.4 ) \OMS/cmsy/m/n/14.4 !
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 601--602
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 
  []
 
-[12] [13] [14] (./topology-and-groups-math0074.aux) ) 
+[13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 726--729
+
+ []
+
+[16] [17] (./topology-and-groups-math0074.aux) ) 
 Here is how much of TeX's memory you used:
- 16912 strings out of 478599
- 343731 string characters out of 5858101
- 618483 words of memory out of 5000000
- 34485 multiletter control sequences out of 15000+600000
+ 17108 strings out of 478599
+ 348326 string characters out of 5858101
+ 623483 words of memory out of 5000000
+ 34681 multiletter control sequences out of 15000+600000
  411855 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,15n,108p,483b,1044s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on topology-and-groups-math0074.pdf (16 pages, 173013 bytes).
+<c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on topology-and-groups-math0074.pdf (19 pages, 188926 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

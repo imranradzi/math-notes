@@ -1716,7 +1716,7 @@ simplex $\sigma$ of $K$ such that $f(\sigma)=\sigma$. $\lambda(f)$ is called the
 	\[
 	\begin{tikzcd}
 		0\arrow{r} & Z_k(K) \arrow{r}
-		\arrow{d}{Z_k(f)} & C_k(K) \arrow{r} \arrow{d}{C_k(F)} &
+		\arrow{d}{Z_k(f)} & C_k(K) \arrow{r} \arrow{d}{C_k(f)} &
 		B_{k-1}(K) \arrow{r}\arrow{d}{B_{k-1}(f)} & 0\\
 		0 \arrow{r}& Z_k(K) \arrow{r} & C_k(K) \arrow{r}
 		& B_{k-1}(K) \arrow{r} & 0
@@ -1761,7 +1761,7 @@ $C_k(f)$ is an $N\times N$ matrix. The $(i,i)$ entry of $C_k(f)$ is non-zero if 
 only if $f(\sigma)=\pm\sigma$, so if no $k$-simplex if fixed by $f$ then the diagonal of 
 $C_k(f)$ is $0$ and $Tr(C_k(f))=0$. \\
 
-\begin{proof}[of Lefschetz fixed simplex theorem]
+\begin{proof}(of Lefschetz fixed simplex theorem)
 	Formally put, 
 \[f\text{ fixes no $k$-simplex}\implies Tr \,C_k(f)=0\]
 \[\text{ so $f$ fixes no simplex}\implies Tr \,C_k(f)=0\text{ for all $k$}\]
@@ -1780,7 +1780,7 @@ Recall that
 \end{proposition}
 
 \begin{proof}
-	IF $v,w$ are vertices of $K$, then $|v|-|w|\in\Im\partial_1$, so 
+	If $v,w$ are vertices of $K$, then $|v|-|w|\in\text{im } \partial_1$, so 
 	$[v]=[w]$ in $H_0(K)$. Hence $[f(v)]=[v]$ in $H_0(K)$ for any vertex $v$. But any 
 	vertex $v$ generates $H_0$ ($K$ connected), so 
 	\[H_0(f)=\text{id}:\text{generator}\rightarrow\text{itself}\]
@@ -1793,7 +1793,7 @@ Recall that
 
 \begin{corollary}
 	Let $f:K\rightarrow K$ be a simplicial map, where $K$ is a finite connected simplicial 
-	complex and \[H_k(K;\mathbb{F})\text{ for }k>0\] then $\lambda(f)=1$.
+	complex and \[H_k(K;\mathbb{F})=0\text{ for }k>0\] then $\lambda(f)=1$.
 \end{corollary}
 
 \begin{corollary}
@@ -1837,21 +1837,21 @@ $|g|$ fixes a point.
 
 \begin{proof}
 	Suppose $f:X\rightarrow X$ does not have a fixed point. $X$ compact, so there exists 
-	$\epsilon>0$ such that $\epsilon||f(x)-x||$ for all $x$. Suppose 
+	$\epsilon>0$ such that $\epsilon\leq||f(x)-x||$ for all $x$. Suppose 
 	$g(m):K(m)\rightarrow K(m)$, then 
 	\[||f(x)-x||\leq||f(x)-g_m(x)||+||g_m(x)-x||\] so 
 	\[\forall\eta\,\,\,\exists m \,||f(x)-g_m(x)||<\eta\,\,\,\forall x\]
 	Choose $m$ so that $||f(x)-g_m(x)||<\frac{\epsilon}{2}$ so then 
 	\[\frac{\epsilon}{2}\leq||g_m(x)-x||\,\,\,\forall x\] which is a contradiction, thus 
-	$g_m(x)$ has a fixed point.
+	$f$ has a fixed point.
 \end{proof}
 
 \section{Posets and products}
 \begin{theorem}[Künneth theorem (will not be proven here)]
-	\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\oplus H_{n-r}(Y;\mathbb{F})\]
+	\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\otimes H_{n-r}(Y;\mathbb{F})\]
 \end{theorem}
 
-however we will prove the following, 
+\noindent however we will prove the following, 
 \[\chi(X\times Y)=\chi(X)\chi(Y)\]
 where $X,Y$ are finite simplicial complexes. To see applications of this, consider 
 $S^2\times S^2$ and $S^4$, both of which are simply connected compact 4-manifolds. 
@@ -1878,14 +1878,10 @@ Now let $(X,\leq)$ be a finite poset. Construct a simplicial complex $N(X,\leq)$
  $(X,\leq)$, $(Y,\leq')$ are totally ordered then $(X\times Y,\preccurlyeq)$ isnt, 
  except trivially. \\
 
- From now on we will always use the symbol '$\leq$'.
-
-\begin{eg}
-	posets and triangulation
-\end{eg}
+\noindent From now on we will always use the symbol '$\leq$'.
 
 \begin{proposition}
-	If $X$ is a finite simplicial, we can write \[X=N(\mathcal{X},\leq)\] for some $\mathcal{X}$.
+	If $X$ is a finite simplicial complex, we can write \[X=N(\mathcal{X},\leq)\] for some $\mathcal{X}$.
 \end{proposition}
 
 \begin{proof}
@@ -1907,17 +1903,17 @@ regarded as an ordered simplicial complex,
 If $X,Y$ are ordered simplicial complexes, then so is $X\times Y$.
 
 \begin{eg}
-	\[\Delta^n=N(\{0,\ldots,n\})\] under the standard ordering.
+	\[\Delta^n=N(\{0,\ldots,n\})\]
 \end{eg}
 
 \begin{definition}
-	\[\Delta^m\times\Delta^n=N(\{o,\ldots,m\}\times\{0,\ldots,n\})\]
+	\[\Delta^m\times\Delta^n=N(\{0		,\ldots,m\}\times\{0,\ldots,n\})\]
 \end{definition}
 
 $\Delta^m\times\Delta^n$ has dimension $m+n$ and has $\frac{(m+n)!}{m!n!}$ principal simplices.
 
-\begin{eg}[$\Delta^1\times\Delta^1$]
-	placeholder
+\begin{eg}
+	$\Delta^1\times\Delta^1$ as defined before is equivalent to $I\times I$ but triangulated.
 \end{eg}
 
 Every finite simplicial complex $K$ can be represented as an \emph{ordered simplicial complex},
@@ -1926,7 +1922,8 @@ as shown before.
 \subsection{Product structure on $X\times Y$}
 Let $X,Y$ be finite simplicial complexes. Represent them as ordered simplicial complexes.
 If $\sigma\in\mathcal{S}_X, \,\,\,\tau\in\mathcal{S}_Y$, we make the isomorphisms 
-\[\sigma\cong\Delta^m, \,\,\,\tau\cong\Delta^n\]
+\[\sigma\cong\Delta^m, \,\,\,\tau\cong\Delta^n\] and triangulate $\sigma\times\tau$ by 
+corresponding triangulation on $\Delta^m\times\Delta^n$.
 Write \[X=\bigcup_{\sigma\in\mathcal{S}_X}\sigma,\,\,\,Y=\bigcup_{\tau\in\mathcal{S}_Y} \tau\]
 and 
 \[X\times Y=\bigcup_{\sigma\in\mathcal{S}_X, \,\tau\in\mathcal{S}_Y}\sigma\times\tau\]
@@ -1937,10 +1934,10 @@ on $X,Y$. \\
 
 Now we wish to prove 
 \[\chi(X\times Y)=\chi(X)\chi(Y)\]
-Recall the Künneth theorem ,
-\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\oplus H_{n-r}(Y;\mathbb{F})\]
+Recall the Künneth theorem,
+\[H_n(X\times Y;\mathbb{F})=\bigoplus_{r=0}^n H_r(X;\mathbb{F})\otimes H_{n-r}(Y;\mathbb{F})\]
 
-In the special case where $Y=\Delta^m$, 
+\noindent In the special case where $Y=\Delta^m$, 
 \[H_{n-k}(Y)=\begin{cases}
 	\mathbb{F}&n-k=0\\0\text{ otherwise}
 \end{cases}\]
@@ -1986,7 +1983,7 @@ cone.
 \end{proposition}
 
 \begin{proof}
-	Here $X$ is a $0$-dimensional complex with $k$-points. Note that for $k=0$, this isnt
+	Here $X$ is a $0$-dimensional complex with $k$-points. Note that for $k=0$, this is
 	true, so $P(0,0)$ is true. We proceed by induction. \\
 
 	Suppose that the statement is proven for $k-1$. Then
@@ -2003,7 +2000,7 @@ cone.
 	\Delta^m)\]
 	We know \[H_*((X_0\sqcup\{x_k\})\times\Delta^m)\cong H_*(X)\] and 
 	\[H_*(X_0\times\Delta^m)\oplus H_*(\{x_k\}\times
-	\Delta^m)\cong H_*(X_0)\oplus H_*(\{x_k)\] so $P(0,k)$ for all $k$.
+	\Delta^m)\cong H_*(X_0)\oplus H_*(\{x_k\})\] so $P(0,k)$ for all $k$.
 \end{proof}
 
 Now let $P(n)=\wedge_{k\geq0} P(n,k)$. So now we know $P(0)$ is true. Also,

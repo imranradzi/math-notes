@@ -5,10 +5,10 @@
 \contentsline {subsection}{\numberline {1.4}Quotient spaces}{4}{}%
 \contentsline {section}{\numberline {2}Homotopy}{6}{}%
 \contentsline {subsection}{\numberline {2.1}Homotopy}{6}{}%
-\contentsline {subsection}{\numberline {2.2}Paths and path-homotopy}{7}{}%
+\contentsline {subsection}{\numberline {2.2}Paths and path-homotopy}{8}{}%
 \contentsline {section}{\numberline {3}Covering spaces}{9}{}%
-\contentsline {subsection}{\numberline {3.1}Path/Homotopy lifting lemma}{9}{}%
+\contentsline {subsection}{\numberline {3.1}Path/Homotopy lifting lemma}{10}{}%
 \contentsline {subsection}{\numberline {3.2}Winding numbers}{10}{}%
-\contentsline {subsection}{\numberline {3.3}Covering transformations}{10}{}%
+\contentsline {subsection}{\numberline {3.3}Covering transformations}{11}{}%
 \contentsline {section}{\numberline {4}More on fundamental groups and covering spaces}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Classification of covering spaces}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Classification of covering spaces}{13}{}%

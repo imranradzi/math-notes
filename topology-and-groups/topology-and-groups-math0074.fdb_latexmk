@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1649755974 "c:/Users/yanra/Desktop/math-notes/topology-and-groups/topology-and-groups-math0074.tex" "topology-and-groups-math0074.pdf" "topology-and-groups-math0074" 1649775496
-  "c:/Users/yanra/Desktop/math-notes/topology-and-groups/topology-and-groups-math0074.tex" 1649775493 24233 26c982c03dfd255c9939d4e41a63d259 ""
+["pdflatex"] 1650192286 "c:/Users/yanra/Desktop/math-notes/topology-and-groups/topology-and-groups-math0074.tex" "topology-and-groups-math0074.pdf" "topology-and-groups-math0074" 1650195241
+  "c:/Users/yanra/Desktop/math-notes/topology-and-groups/topology-and-groups-math0074.tex" 1650195239 28004 28549443aca149f82c168f1f6d907ea3 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1633370390 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1633368693 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1633368693 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -26,6 +26,7 @@
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1633368693 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1633368693 32762 7fee39e011c23b3589931effd97b9702 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1633368693 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1633368693 32716 08e384dc442464e7285e891af9f45947 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1633368693 36118 fad905eba93cff5bce1e185fe980a177 ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1633368693 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb" 1633368948 25452 d4e98a3bf6b13d4b7dcffd6302990a65 ""
@@ -146,11 +147,11 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1633373519 4399729 ba2bdf7099c8a2ba97051a2b802eaeb0 ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1633373579 2797775 495a6adcc42a9e296b830b350fe2629e ""
   "c:/texlive/2021/texmf.cnf" 1633373501 713 e69b156964470283e0530f5060668171 ""
-  "topology-and-groups-math0074.aux" 1649755975 1625 7d36fe119c4d262a219cb3ef0a76b03b "pdflatex"
-  "topology-and-groups-math0074.tex" 1649775493 24233 26c982c03dfd255c9939d4e41a63d259 ""
-  "topology-and-groups-math0074.toc" 1649755975 981 9f6d202ffec542dc3d30262e57a366c0 "pdflatex"
+  "topology-and-groups-math0074.aux" 1650192287 1626 cdc16e65dca2f67a639cce2cacb2e1a9 "pdflatex"
+  "topology-and-groups-math0074.tex" 1650195239 28004 28549443aca149f82c168f1f6d907ea3 ""
+  "topology-and-groups-math0074.toc" 1650192287 982 42ee089523eacff58d2021626140f719 "pdflatex"
   (generated)
-  "topology-and-groups-math0074.aux"
-  "topology-and-groups-math0074.toc"
   "topology-and-groups-math0074.log"
   "topology-and-groups-math0074.pdf"
+  "topology-and-groups-math0074.aux"
+  "topology-and-groups-math0074.toc"
