@@ -2169,7 +2169,139 @@ If $X$ is an $m$-manifold, $Y$ an $n$-manifold, then $X\times Y$ is an $m+n$-man
 	$\chi=0$, however both are distinguished by the Künneth theorem.
 \end{eg}
 
+\section{Classification Theorem for Surfaces}
+Recall the theorem,
+\begin{theorem}
+	Let $\Sigma$ be a finite connected surface, then $\Sigma$ is combinatorially equivalent to
+	precisely one of the following,
+	\begin{enumerate}
+		\item $S^2$, $T^2=S^1\times S^1,\ldots,\Sigma_g^1=T^2\#\ldots\# T^2$ (where $g\geq2$)
+		\item $\mathbb{R}P(2)$, $\mathbb{R}P(2)\#\mathbb{R}P(2),\ldots,\Sigma_g^-=\mathbb{R}P(2)
+		\#\ldots\#\mathbb{R}P(2)$ ($g+1$ times, where $g\geq 2$)
+	\end{enumerate}
+	and \[T^2\#\mathbb{R}(2)\sim\mathbb{R}P(2)\#\mathbb{R}P(2)\#\mathbb{R}P(2)\]
+\end{theorem}
 
+\begin{theorem}
+	Let $\Sigma$ be a finite connected surface. If $\Sigma$ contains a Mobius band, then
+	\[\Sigma\sim\Sigma'\#\mathbb{R}P(2)\] for some connected surface $\Sigma'$ and 
+	\[\dim_{\mathbb{F}_2} H_1(\Sigma')=\dim_{\mathbb{F}_2} H_1(\Sigma)-1\]
+\end{theorem}
+
+In the following proof we will only use $H_*(-;\mathbb{F}_2)$, $\mathbb{F}_2=\{0,1\}$, the field with 2 elements.
+
+\begin{proof}
+	Suppose $M\subset\Sigma$ is a Mobius band, then \[\partial M\sim S^1\]
+	Let $Y$ be the subcomplex of $\Sigma$ obtained by removign the $2$-simplices of $M$, so 
+	\[\partial Y=\partial M\sim S^1\] Let $D',D$ be (disjoint) 2-dimensional discs.
+	\[\partial D'\sim \partial D\sim S^1\] Define 
+	\[\Sigma'=Y\bigcup_{\partial Y\equiv\partial D'} D'\]
+	\[\Sigma''=M\bigcup_{\partial M=\partial D} D\]
+	If we reverse the process, we see that
+	\[\Sigma=\Sigma'\#\Sigma''\] but $\Sigma''\sim\mathbb{R}P(2)$ ($\mathbb{R}P(2)-$2-disc $
+	\equiv$ Mobius). So if $\Sigma$ contains a Mobius band, then 
+	\[\Sigma\sim \Sigma'\#\mathbb{R}P(2)\] Now we compute $\chi$,
+	\[\chi(\Sigma)=\chi(\Sigma')+\chi(\mathbb{R}(2))-2, \,\,\,\chi(\mathbb{R}(2))=1\]
+	\[\chi(\Sigma)=\chi(\Sigma')-1\] Write 
+	\[\chi(\Sigma)=h_0-h_1+h_2\] \[h_0=\dim_{\mathbb{F}_2}H_2(\Sigma;\mathbb{F}_2)\]
+	\[\chi(\Sigma')=h_0'-h_1'+h_2'\] \[h_i'=\dim_{\mathbb{F}_2}H_i(\Sigma';\mathbb{F}_2)\]
+	$\Sigma'$ both connected, so $h_0=h_0'=1$. By the orientation theorem, using 
+	$\mathbb{F}_2$ as the coefficients, $h_2=h_2'=1$ so \[\chi(\Sigma)=2-h_1\]
+	\[\chi(\Sigma')=2-h_1'\]
+	\[2-h_1=2-h_1'-1\iff h_1'=h_1-1\]
+\end{proof}
+
+Later we will prove
+\begin{theorem}
+	If $\Sigma$ is a finite connected surface which does not contain a Mobius band, then either
+	\begin{enumerate}
+		\item $H_1(\Sigma;\mathbb{F}_2)=0$ or 
+		\item $\Sigma\sim\Sigma'\# T^2$ where \[\dim H_1(\Sigma';\mathbb{F}_2)=\dim H_1(
+			\Sigma;\mathbb{F}_2)-2\]
+	\end{enumerate}        
+\end{theorem}
+
+\begin{proposition}[Regular neighbourhoods of embedded $S^1$]
+	Suppose $\Sigma$ is a finite connected surface and \[C\xhookrightarrow{}\Sigma\] be a 
+	subcomplex such that $C\sim S^1$. Then there exists a neighbourhood $N$ of $C$ in $\Sigma$
+	such that either $N\sim$ Mob or $N\sim$ cylinder.
+\end{proposition}
+
+\begin{proposition}
+	Let $\Sigma$ be a finite conneted surface such that $H_1(\Sigma;\mathbb{F}_2)\neq0$. Then
+	there exists an embedded circle $C\xhookrightarrow{}\Sigma$ ($C\sim S^1$) such that 
+	the class $[C]\in H_1(\Sigma;\mathbb{F}_2)$ satisfies $[C]=0$.
+\end{proposition}
+
+\begin{theorem}
+	Let $\Sigma$ be a finite connected surface which 
+	\begin{enumerate}
+		\item contains no Mob and 
+		\item $H_1(\Sigma;\mathbb{F}_2)\neq0$ 
+	\end{enumerate}
+	then there exists a $T_0^2\subset\Sigma$
+\end{theorem}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{corollary}
+	Let $\Sigma$ be a finite connected surface which contains no Mob and such that 
+	$H_1(\Sigma;\mathbb{F}_2)\neq0$. Then $\Sigma\sim T^2\#\Sigma'$ where $\Sigma'$ is a finite
+	connected surface which contains no Mob, and 
+	\[\dim H_1(\Sigma';\mathbb{F}_2)=\dim H_1(\Sigma;\mathbb{F}_2)-2\]
+\end{corollary}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{theorem}
+	Let $\Sigma$ be a finite connected surface with $H_1(\Sigma;\mathbb{F}_2)\neq0$. Then 
+	either,
+	\begin{enumerate}
+		\item $\Sigma\sim\mathbb{R}P(2)\#\ldots\#\mathbb{R}P(2)\# S$ ($m$ connected sums) or 
+		\item $\Sigma\sim\mathbb{R}P(2)\#\ldots\#\mathbb{R}P(2)\#T^2\ldots\#T^2\# S$ ($m$ and 
+		$n$ connected sums) or
+		\item $\Sigma\sim T^2\#\ldots\# T^2\# S$ ($n$ connected sums)
+	\end{enumerate}
+	where in every case $S$ is a finite connected surface with \[H_1(S;\mathbb{F}_2)=0\]
+\end{theorem}
+
+\begin{corollary}
+	$X\# S^2\sim X$
+\end{corollary}
+
+\begin{theorem}
+	If $S$ is a finite connected surface with $H_1(S;\mathbb{F}_2)=0$, then $S\sim S^2$.
+\end{theorem}
+
+\begin{proposition}
+	Suppose $S$ is a finite connected surface with $H_1(S;\mathbb{F}_2)=0$. Let $D$ be the
+	bounded surface $D=S^2-\{\text{2-simplex}\}$. Then \[H_1(D;\mathbb{F}_2)=0\]
+\end{proposition}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{theorem}
+	If $D$ is a finite bounded surface with $\partial D\sim S^1$ and $H_1(D;\mathbb{F}_2)=0$,
+	then \[D\sim\Delta^2\]
+\end{theorem}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{corollary}
+	If $S$ is a finite connected surface with $H_1(S;\mathbb{F}_2)=0$, then $S\sim S^2$.
+\end{corollary}
+
+\begin{proof}
+	
+\end{proof}
 
 \end{document}
 

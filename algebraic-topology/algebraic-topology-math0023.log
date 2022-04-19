@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  17 APR 2022 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.4)  19 APR 2022 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -800,7 +800,17 @@ Overfull \hbox (53.69733pt too wide) in paragraph at lines 2031--2032
 [][]
  []
 
-[67] [68] [69] [70] [71] [72] (./algebraic-topology-math0023.aux) ) 
+[67] [68] [69] [70] [71]
+Overfull \hbox (2.50757pt too wide) in paragraph at lines 2179--2181
+[]$\U/bbold/m/n/14.4 R\OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (2)$, $\U/bbold/m/n/14.4 R\OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (2)#\U/bbold/m/n/14.4 R\OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (2)\OML/cmm/m/it/14.4 ; [] ; \OT1/cmr/m/n/14.4 ^^F[] = \U/bbold/m/n/14.4 R\OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (2)# [] #\U/bbold/m/n/14.4 R\OML/cmm/m/it/14.4 P\OT1/cmr/m/n/14.4 (2)$ ($\OML/cmm/m/it/14.4 g \OT1/cmr/m/n/14.4 + 1$ times,
+ []
+
+[72] [73] [74]
+Overfull \hbox (18.41261pt too wide) in paragraph at lines 2290--2291
+[]\OT1/cmr/bx/n/14.4 Theorem. []\OT1/cmr/m/n/14.4 If $\OML/cmm/m/it/14.4 D$ \OT1/cmr/m/n/14.4 is a fi-nite bounded sur-face with $\OML/cmm/m/it/14.4 @D \OMS/cmsy/m/n/14.4 ^^X \OML/cmm/m/it/14.4 S[]$ \OT1/cmr/m/n/14.4 and $\OML/cmm/m/it/14.4 H[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 D\OT1/cmr/m/n/14.4 ; \U/bbold/m/n/14.4 F[]\OT1/cmr/m/n/14.4 ) =
+ []
+
+[75] [76] (./algebraic-topology-math0023.aux) ) 
 Here is how much of TeX's memory you used:
  18198 strings out of 478599
  376239 string characters out of 5858101
@@ -810,10 +820,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  102i,16n,108p,481b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on algebraic-topology-math0023.pdf (74 pages, 346107 bytes).
+Output written on algebraic-topology-math0023.pdf (78 pages, 353479 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
+ 340 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  19 words of extra memory for PDF output out of 10000 (max. 10000000)
 

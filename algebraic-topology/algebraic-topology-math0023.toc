@@ -25,3 +25,4 @@
 \contentsline {section}{\numberline {7}Lefschetz Fixed Simplex Theorem}{57}{}%
 \contentsline {section}{\numberline {8}Posets and products}{61}{}%
 \contentsline {subsection}{\numberline {8.1}Product structure on $X\times Y$}{64}{}%
+\contentsline {section}{\numberline {9}Classification Theorem for Surfaces}{72}{}%
