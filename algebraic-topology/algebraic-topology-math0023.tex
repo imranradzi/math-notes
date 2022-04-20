@@ -30,7 +30,7 @@
 \maketitle
 
 \pagenumbering{roman}
-Notes based on the Autumn 2021 Algebraic Topology lectures by Prof FEA Johnson.
+Notes based on the Autumn 2021 Algebraic Topology lectures by Prof FEA Johnson. 
 \begingroup
 \let\cleardoublepage\clearpage
 \tableofcontents
@@ -2243,7 +2243,21 @@ Later we will prove
 \end{theorem}
 
 \begin{proof}
-	
+	Look at all elements $\xi\in H_1(\Sigma;\mathbb{F}_2), \xi\neq0$ adn choose one represented 
+	by an embedded circle $C\xhookrightarrow{\Sigma}$, i.e., $[C]=\xi\in H_1(\Sigma;\mathbb{F}_2)$. \\
+
+	Thicken $C$ to a connected neighbourhood $N$. As $\Sigma$ contains no Mob, then $N\sim$ 
+	cylinder. \\
+
+	Consider $\Sigma-N$. We show that $\Sigma-N$ is connected. Suppose not. $\partial X_+=
+	C_+, \partial(X_+\cup N_+)=C$ which means that \[\xi=[C]=0\in H_1(\Sigma;\mathbb{F}_2)\]
+	This is a contradiction so $\Sigma-N$ is connected. \\
+
+	Take a vertex $v_+\in C_+, v_-\in C_-$, and join them by an arc in $\Sigma-N$, and call
+	this arc $C'$. \\
+
+	Thicken $C'$ to a canonical neighbourhood $N'$. $N'$ is a cylinder as $\Sigma$ contains
+	no Mob, so $N\cup N'$ is a torus-disk, $N\cup N'\sim T_0^2$.
 \end{proof}
 
 \begin{corollary}
@@ -2254,7 +2268,17 @@ Later we will prove
 \end{corollary}
 
 \begin{proof}
-	
+	By the previous theorem, choose $T_0^2\subset\Sigma$. Then $\partial(\Sigma-T_0^2)=\partial(
+		T_0^2)\sim S^1$. Put $\Sigma_0'=\Sigma-T_0^2$. Define \[\Sigma'=\Sigma_0'\bigcup_{\partial
+		=\partial}\Delta^2\] \[T^2=T_0^2\bigcup_{\partial=\partial}\Delta^2\] Reverse the 
+		process to see that $\Sigma\sim T^2\# \Sigma'$. To complete the proof, it suffices
+		to show that 
+		\[\dim H_1(\Sigma';\mathbb{F}_2)=\dim H_1(\Sigma;\mathbb{F}_2)-2\] We know that 
+		$\chi(\Sigma)=\chi(\Sigma')+\chi(T^2)-2$ and $\chi(T^2)=0$. $\chi(\Sigma)=\chi(\Sigma')-2$.
+		Put $h_1=\dim H_2(\Sigma;\mathbb{F}_2)$, $h_2'=\dim H_1(\Sigma';\mathbb{F}_2)$.
+		\[h_0-h_1+h_2=h_0'-h_1'+h_2'-2\]\[h_0=h_0'=1 (\text{ connected})\]
+		\[h_2=h_2'=1\text{ orienation theorem with $\mathbb{F}_2$ coefficients}\]
+		thus \[h_1'=h_1-2\]
 \end{proof}
 
 \begin{theorem}
@@ -2283,7 +2307,16 @@ Later we will prove
 \end{proposition}
 
 \begin{proof}
-	
+	Write $S^2=D\cup D', D'=\Delta^2$ and $D\cap D'=S^1$ and use the Mayer-Vietoris sequence.
+	\[\begin{tikzcd}
+		H_2(D)\oplus H_2(D')\xrightarrow{}H_2(S)\xrightarrow{}H_1(D\cap D')\xrightarrow{}
+		H_1(D)\oplus H_1(D')\xrightarrow{} H_1(S^2)
+	\end{tikzcd}\]
+	and since $H_2(D)=0$, we get the exact sequence
+	\[\begin{tikzcd}
+		0\xrightarrow{}\mathbb{F}\xrightarrow{}\mathbb{F}\xrightarrow{}H_1(D)\xrightarrow{}0	
+	\end{tikzcd}
+	\] so by Whitehead's lemma, $H_1(D)=0$.
 \end{proof}
 
 \begin{theorem}
@@ -2291,17 +2324,9 @@ Later we will prove
 	then \[D\sim\Delta^2\]
 \end{theorem}
 
-\begin{proof}
-	
-\end{proof}
-
 \begin{corollary}
 	If $S$ is a finite connected surface with $H_1(S;\mathbb{F}_2)=0$, then $S\sim S^2$.
 \end{corollary}
-
-\begin{proof}
-	
-\end{proof}
 
 \end{document}
 
