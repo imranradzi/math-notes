@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {3.3}Covering transformations}{11}{}%
 \contentsline {section}{\numberline {4}More on fundamental groups and covering spaces}{11}{}%
 \contentsline {subsection}{\numberline {4.1}Classification of covering spaces}{13}{}%
+\contentsline {section}{\numberline {5}Free groups}{17}{}%

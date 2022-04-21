@@ -731,5 +731,103 @@ in statement (1) of the theorem for classification of covering spaces.
   If such an $\tilde{X}$ exists, then \[Aut(\tilde{X})\cong G\text{ and }X_H=\tilde{X}/H\] In
   particular, $X=\tilde{X}/G$.
 \end{definition}
+
+\section{Free groups}
+\begin{definition}
+  A group $F$ is free on $S\subseteq F$ if for every group $G$ and map $\phi:S\rightarrow G$ there 
+  exists a unique homomorphism $f:F\rightarrow G$ such that $f|_S=\phi$. $S$ is said 
+  to be a \textit{basis} for $F$.
+\end{definition}
+
+  Given $S$, we construct $F_S$ as follows,
+  \begin{enumerate}
+    \item $S$ is a \textit{set}, thought of as a collection of symbols.
+    \item We extend $S$ to $S^{\pm}=S\cup S^-$, where $S^-=\{s^{-1}\mid s\in S\}$. 
+    \item Define $(S^{\pm})^*=\bigcup_{n\in\mathbb{N}}\{w:n\rightarrow S^{\pm}\}$.
+    An element
+    of $(S^{\pm})^*$ is a \textit{word}.
+    \item There is a special word $\epsilon:0\rightarrow S^{\pm}$, the unique string of length 0.
+  \end{enumerate}
+
+\begin{definition}
+  A word $w$ is \textit{reduced} if $w(i)=s\implies w(i-1)\neq s^{-1}=\neq w(i+1)$ for all $s\in S$, and also $w(i)=s^{-1}\implies w(i-1)\neq s\neq w(i+1)$ for all $s^{-1}\in S$.
+\end{definition}
+
+We write $w\rightarrow w'$ is $w'$ is obtained from $w$ by deleting an adjacent pair of $ss^{-1}$
+or $s^{-1}s$ from $w$.
+
+\begin{definition}
+  $w$ reduces to $w'$ if there exists a sequence
+  \[w=w_0\rightarrow w_1\rightarrow w_2\rightarrow\ldots\rightarrow w_k=w'\]
+  where in this case, we write $w\implies w'$.
+\end{definition}
+
+\begin{lemma}
+  If $w\implies w'$ and $w\implies w''$, then $w'=w''$.
+\end{lemma}
+
+\begin{definition}
+  $F_S=\{\text{reduced words in }(S^\pm)^*\}$
+\end{definition}
+
+\begin{proposition}
+  $F_S$ is a group, where $e=\epsilon$ is the empty string, $w^-1$ is $w$ in reverse, and swapping the signs of each letter. $w_1\cdot w_2$ is the unique word that $w_1w_2$ reduces 
+  to.
+\end{proposition}
+
+\noindent\underline{Universal property} \\ 
+Identify $s\in S$ with the string $s:1\rightarrow S^\pm$, $s(1)=s$. Given 
+$\phi:S\rightarrow G$ (group), extend this to a homomorphism,
+\[f(e)=e\]\[f(s)=\phi(s), f(s^{-1})=f(s)^{-1}\] Now define $f(w)=f(w(0))\cdot f(w(1))\cdot
+f(w(2))\cdot\ldots\cdot f(w(n-1))$ when $w:n\rightarrow S^\pm$. It can be checked that 
+this indeed defines a homomorphism.
+
+\begin{definition}
+  $w$ and $w'$ are homotopic if there exists $w=w_0,w_1,\ldots,w_n=w'$ such that either 
+  $w_i\rightarrow w_{i+1}$ or $w_i\leftarrow w_{i+1}$ for all $i$.
+\end{definition}
+
+\begin{theorem}
+  If $w$ and $w'$ are homotopic and reduced then $w=w'$.
+\end{theorem}
+Alternatively we could have also defined $F_S$ to be the set of homotopy classes of words.
+The real important thing is that reduced representative is \textit{unique}.
+
+\begin{definition}
+  A presentation is a pair $\langle S\mid R\rangle$, where $S$ is a set and $R$ is 
+  a collection of words in $S^\pm$. $\langle S\mid R\rangle$ is a presentation of $G$ if 
+  $G\cong F_S/\langle\langle R'\rangle\rangle$ where $R'=\{\text{reduced words equivalent to elements in $R$}\}$. Recall that $\langle\langle R'\rangle\rangle$ is the smallest 
+  normal subgroup containing $R'$.
+\end{definition}
+
+\begin{theorem}
+  Let $X$ be a connected graph, then $\pi_1(X)$ is free.
+\end{theorem}
+
+\begin{definition}
+  A \textit{graph} is a 1-dimensional CW-complex.
+\end{definition}
+
+\begin{corollary}
+  Subgroups of free groups are free.
+\end{corollary}
+
+\begin{corollary}
+  Every group is a quotient of a free group by a free group.
+\end{corollary}
+
+\begin{definition}
+  A group $G$ is finitely generated if $\exists f:F_S\rightarrow G, |S|<\infty$.
+\end{definition}
+
+\begin{definition}
+  A \textit{forest} is a graph with no embedded $S^1$'s (1-complex homeomorphic to $S^1$).
+  A \textit{tree} is a connected forest. A forest $F\subseteq X$ is \textit{maximal} if for any 
+  $F\subsetneq Y\subseteq X$, $Y$ is not a forest.
+\end{definition}
+
+\begin{proposition}
+  Any graph $X$ contains a maximal forest, and if $X$ is connected, $F$ is free.
+\end{proposition}
 \end{document}
 

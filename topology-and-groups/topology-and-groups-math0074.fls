@@ -688,9 +688,9 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT topology-and-groups-math0074.toc
 OUTPUT topology-and-groups-math0074.pdf
 INPUT c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT topology-and-groups-math0074.toc
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd
@@ -699,6 +699,10 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
 INPUT topology-and-groups-math0074.aux
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
